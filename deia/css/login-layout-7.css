@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/*Login Form Layout 7
+© WebTrendy 2019*/
+/*Mixins*/
+/*Variables*/
+/*General Styles*/
+.form-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+  .form-wrapper .text-sm {
+    font-size: 85%; }
+  .form-wrapper .float-right {
+    float: right; }
+  .form-wrapper .brand-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+    .form-wrapper .brand-logo img {
+      max-width: 100px;
+      max-height: 40px; }
+  .form-wrapper .illustration {
+    max-width: 100%; }
+  .form-wrapper .right-align {
+    text-align: right; }
+  .form-wrapper .side-area {
+    height: 100vh;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: white; }
+    .form-wrapper .side-area:before {
+      content: '';
+      position: absolute;
+      right: -150%;
+      bottom: 0;
+      width: 150%;
+      height: 200%;
+      background-color: #2176fd;
+      background-image: linear-gradient(19deg, #2176fd 0%, #af51f3 45%);
+      transform: rotate(-45deg);
+      transform-origin: bottom left; }
+    .form-wrapper .side-area .welcome {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      z-index: 99;
+      padding: 60px 15px 60px 100px;
+      text-align: right; }
+      .form-wrapper .side-area .welcome h2 {
+        font-size: 2.5em;
+        margin-bottom: 0; }
+  .form-wrapper .form-area {
+    display: flex;
+    align-items: center;
+    height: 100vh; }
+    .form-wrapper .form-area .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+      z-index: 999; }
+      .form-wrapper .form-area .content p {
+        font-size: 85%;
+        font-weight: 300;
+        margin-top: 0; }
+      .form-wrapper .form-area .content h2 {
+        margin-bottom: 10px;
+        font-size: 2em; }
+      .form-wrapper .form-area .content a {
+        color: #0087ff;
+        text-decoration: none; }
+        .form-wrapper .form-area .content a:hover {
+          color: #006ccc; }
+      .form-wrapper .form-area .content .box-wrapper {
+        margin: 5px 0px 20px 0px; }
+        .form-wrapper .form-area .content .box-wrapper label {
+          cursor: pointer; }
+      .form-wrapper .form-area .content form {
+        width: 100%;
+        margin-top: 30px; }
+      .form-wrapper .form-area .content label {
+        display: inline-block;
+        font-size: 85%;
+        font-weight: 300;
+        margin-bottom: 5px; }
+      .form-wrapper .form-area .content .input-wrapper {
+        margin-bottom: 20px;
+        position: relative; }
+        .form-wrapper .form-area .content .input-wrapper span.icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 15px; }
+        .form-wrapper .form-area .content .input-wrapper input {
+          padding: 13px 10px 13px 40px;
+          border-radius: 100px;
+          border: 2px solid #f4f1ef;
+          background-color: transparent;
+          min-width: 290px;
+          font-weight: 300;
+          font-size: 90%;
+          width: 100%;
+          transition: all 300ms ease; }
+          .form-wrapper .form-area .content .input-wrapper input:focus {
+            outline: none;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+      .form-wrapper .form-area .content button {
+        text-decoration: none;
+        padding: 13px 25px;
+        border-radius: 100px;
+        font-size: 85%; }
+        .form-wrapper .form-area .content button:focus {
+          outline: none; }
+      .form-wrapper .form-area .content button[type=submit] {
+        color: white;
+        background-color: #0087ff;
+        border: none;
+        cursor: pointer; }
+        .form-wrapper .form-area .content button[type=submit] i {
+          vertical-align: text-bottom; }
+        .form-wrapper .form-area .content button[type=submit]:hover {
+          background-color: #007ff0; }
+      .form-wrapper .form-area .content .social {
+        width: 100%;
+        font-size: 85%; }
+        .form-wrapper .form-area .content .social .social-btn {
+          text-decoration: none;
+          padding: 12px 25px;
+          border-radius: 100px;
+          font-size: 90%;
+          color: white;
+          margin-left: 5px;
+          display: inline-block; }
+          .form-wrapper .form-area .content .social .social-btn.fb {
+            background-color: #3b5998; }
+          .form-wrapper .form-area .content .social .social-btn.tw {
+            background-color: #3fbdff; }
+
+/*Media Queries*/
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .form-wrapper .side-area:before {
+    transform: rotate(-70deg); }
+  .form-wrapper .form-area .content .social {
+    margin-top: 20px; } }
+
+/*# sourceMappingURL=login-layout-7.css.map */

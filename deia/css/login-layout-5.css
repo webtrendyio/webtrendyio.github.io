@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/*Login Form Layout 5
+© WebTrendy 2019*/
+/*Mixins*/
+/*Variables*/
+/*General Styles*/
+.form-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+  .form-wrapper .text-sm {
+    font-size: 85%; }
+  .form-wrapper .float-right {
+    float: right; }
+  .form-wrapper .brand-logo {
+    position: absolute;
+    top: 15px;
+    left: 15px; }
+    .form-wrapper .brand-logo img {
+      max-width: 100px;
+      max-height: 40px; }
+  .form-wrapper .illustration {
+    max-width: 100%; }
+  .form-wrapper .side-area {
+    height: 100vh;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f1ef; }
+    .form-wrapper .side-area .welcome {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      position: relative;
+      z-index: 99;
+      padding: 5% 10%;
+      padding-bottom: 10px; }
+      .form-wrapper .side-area .welcome h2 {
+        font-size: 1.6em;
+        font-weight: 300;
+        margin: 20px 0px 0px; }
+  .form-wrapper .form-area {
+    display: flex;
+    align-items: center;
+    height: 100vh; }
+    .form-wrapper .form-area .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 999; }
+      .form-wrapper .form-area .content p {
+        font-size: 85%;
+        font-weight: 500;
+        margin-top: 40px; }
+      .form-wrapper .form-area .content a {
+        color: #42c1f2;
+        text-decoration: none; }
+        .form-wrapper .form-area .content a:hover {
+          color: #0fa0d9; }
+      .form-wrapper .form-area .content .box-wrapper {
+        margin: 5px 0; }
+        .form-wrapper .form-area .content .box-wrapper label {
+          cursor: pointer; }
+      .form-wrapper .form-area .content form {
+        width: 70%;
+        margin: 0 auto; }
+      .form-wrapper .form-area .content label {
+        display: inline-block;
+        font-size: 85%;
+        font-weight: 700;
+        margin-bottom: 5px; }
+      .form-wrapper .form-area .content .input-wrapper {
+        margin-bottom: 20px;
+        position: relative; }
+        .form-wrapper .form-area .content .input-wrapper span.icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 15px; }
+        .form-wrapper .form-area .content .input-wrapper input {
+          padding: 10px 10px 10px 40px;
+          border-radius: 100px;
+          border: 1px solid #eae4e0;
+          min-width: 290px;
+          background-color: #f4f1ef;
+          font-weight: 300;
+          font-size: 90%;
+          width: 100%;
+          transition: all 300ms ease; }
+          .form-wrapper .form-area .content .input-wrapper input:focus {
+            outline: none;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+      .form-wrapper .form-area .content button, .form-wrapper .form-area .content .btn-google {
+        text-decoration: none;
+        padding: 13px 20px;
+        border-radius: 5px;
+        font-size: 85%; }
+        .form-wrapper .form-area .content button:focus, .form-wrapper .form-area .content .btn-google:focus {
+          outline: none; }
+      .form-wrapper .form-area .content .login-btn {
+        display: flex;
+        margin-top: 15px; }
+        .form-wrapper .form-area .content .login-btn a, .form-wrapper .form-area .content .login-btn button {
+          width: 50%; }
+      .form-wrapper .form-area .content .btn-google {
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+        color: #002b72;
+        text-align: center; }
+      .form-wrapper .form-area .content button[type=submit] {
+        color: white;
+        background-color: #42c1f2;
+        border: none;
+        margin-right: 50px;
+        cursor: pointer; }
+        .form-wrapper .form-area .content button[type=submit] i {
+          transform: translateX(-10px);
+          opacity: 0;
+          vertical-align: text-bottom;
+          transition: all 300ms ease; }
+        .form-wrapper .form-area .content button[type=submit]:hover {
+          background-color: #34bcf1; }
+          .form-wrapper .form-area .content button[type=submit]:hover i {
+            transform: translateY(0);
+            opacity: 1; }
+
+/*Media Queries*/
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .form-area .content form {
+    width: 100% !important; }
+  .form-area .content .login-btn {
+    flex-direction: column; }
+    .form-area .content .login-btn a, .form-area .content .login-btn button {
+      width: 100% !important;
+      margin-bottom: 10px; } }
+
+/*# sourceMappingURL=login-layout-5.css.map */

@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/*Login Form Layout 2
+© WebTrendy 2019*/
+/*Mixins*/
+/*Variables*/
+/*General Styles*/
+.form-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+  .form-wrapper .text-sm {
+    font-size: 85%; }
+  .form-wrapper .brand-logo {
+    position: absolute;
+    top: 15px;
+    left: 15px; }
+    .form-wrapper .brand-logo img {
+      max-width: 100px;
+      max-height: 40px; }
+  .form-wrapper .side-area {
+    background-image: url(../img/portrait5.jpg);
+    background-size: cover;
+    height: 100vh;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .form-wrapper .side-area:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(147deg, #ffe53bab 0%, #ff25259e 79%); }
+    .form-wrapper .side-area .welcome {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      align-items: center;
+      position: relative;
+      z-index: 99; }
+      .form-wrapper .side-area .welcome h2 {
+        font-size: 2em;
+        margin: 10px 0px; }
+      .form-wrapper .side-area .welcome p {
+        margin: 10px 0px; }
+      .form-wrapper .side-area .welcome a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 100px;
+        border: 1px solid white;
+        margin-top: 15px;
+        font-size: 85%;
+        transition: all 100ms ease; }
+        .form-wrapper .side-area .welcome a:hover {
+          transform: scale(1.03); }
+  .form-wrapper .form-area {
+    display: flex;
+    align-items: center;
+    height: 100vh; }
+    .form-wrapper .form-area .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      text-align: center; }
+      .form-wrapper .form-area .content h2 {
+        color: #36b28d;
+        font-size: 2em;
+        margin: 10px 0px 20px 0px; }
+      .form-wrapper .form-area .content .social a {
+        color: #333;
+        background-color: #eaeaea;
+        font-size: 80%;
+        display: inline-flex;
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none; }
+      .form-wrapper .form-area .content .box-wrapper {
+        margin: 5px 0; }
+        .form-wrapper .form-area .content .box-wrapper label {
+          cursor: pointer; }
+      .form-wrapper .form-area .content .input-wrapper {
+        margin: 5px 0;
+        position: relative; }
+        .form-wrapper .form-area .content .input-wrapper label {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 15px; }
+        .form-wrapper .form-area .content .input-wrapper input {
+          padding: 8px 10px 8px 40px;
+          border-radius: 100px;
+          border: 1px solid #e2e2e2;
+          min-width: 290px;
+          transition: all 300ms ease;
+          font-weight: 300;
+          font-size: 90%; }
+          .form-wrapper .form-area .content .input-wrapper input:focus {
+            outline: none;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+      .form-wrapper .form-area .content button {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 100px;
+        font-size: 85%;
+        transition: all 100ms ease; }
+        .form-wrapper .form-area .content button:hover {
+          transform: scale(1.03); }
+        .form-wrapper .form-area .content button:focus {
+          outline: none; }
+      .form-wrapper .form-area .content button[type=submit] {
+        color: white;
+        background-color: #36b28d;
+        border: none;
+        margin-top: 15px;
+        cursor: pointer;
+        min-width: 100px; }
+        .form-wrapper .form-area .content button[type=submit]:hover {
+          background-color: #32a684; }
+
+/*# sourceMappingURL=login-layout-2.css.map */

@@ -1,0 +1,153 @@
+/*Login Form Layout 1
+© WebTrendy 2019*/
+
+
+
+
+/*Mixins*/
+@mixin transition($property: all, $duration: 300ms, $ease: ease) {
+	transition: $property $duration $ease;
+}
+
+/*Variables*/
+$c1l1: #36b28d;
+$dark: #333;  
+$gray: #efefef;
+
+
+/*General Styles*/
+.form-wrapper {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	.text-sm {
+		font-size: 85%;
+	}
+	.brand-logo {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		img {
+			max-width: 100px;
+		    max-height: 40px;
+		}
+	}
+	.side-area {
+		background-color: $c1l1;
+		height: 100vh;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.welcome {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			color: white;
+			text-align: center;
+			align-items: center;
+			h2 {
+			    font-size: 2em;
+			    margin: 10px 0px;
+			}
+			p {
+				margin: 10px 0px;
+			}
+			a {
+				text-decoration: none;
+				color: white;
+				padding: 10px 20px;
+				border-radius: 100px;
+				border: 1px solid white;
+				margin-top: 15px;
+				font-size: 85%;
+			}
+		}
+	}
+	.form-area {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+		.content {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-items: center;
+			width: 100%;
+			text-align: center;
+			h2 {
+				color: $c1l1;
+				font-size: 2em;
+			    margin: 10px 0px 20px 0px;
+			}
+			.social {
+				a {
+					color: $dark;
+					background-color: darken($gray, 2%);
+					font-size: 80%;
+					display: inline-flex;
+					height: 30px;
+					width: 30px;
+				    align-items: center;
+				    justify-content: center;
+				    border-radius: 50%;
+				    text-decoration: none;
+				}
+			}
+			.box-wrapper {
+				margin:5px 0;
+				label {
+					cursor: pointer;
+				}
+			}
+			.input-wrapper {
+				margin:5px 0;
+				position: relative;
+				label {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 15px;
+				}
+				input {
+					padding: 8px 10px 8px 40px;
+					border-radius: 100px;
+					border: 1px solid darken($gray, 5%);
+					min-width: 290px;
+					@include transition;
+					font-weight: 300;
+				    font-size: 90%;
+					&:focus {
+						outline:none;
+						box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+					}
+				}
+			}
+			button {
+				text-decoration: none;
+				padding: 10px 20px;
+				border-radius: 100px;
+				font-size: 85%;
+				@include transition;
+				&:hover {
+					box-shadow: 2px 2px 10px rgba(0,0,0,.3);
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			button[type=submit] {
+				color: white;
+				background-color: $c1l1;
+				border:none;
+				margin-top: 15px;
+				cursor: pointer;
+				min-width: 100px;
+				&:hover {
+					background-color: darken($c1l1, 3%);
+				}
+			}
+		}
+	}
+}

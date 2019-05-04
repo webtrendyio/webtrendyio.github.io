@@ -1,0 +1,175 @@
+/*Login Form Layout 3
+© WebTrendy 2019*/
+
+
+
+
+/*Mixins*/
+@mixin transition($property: all, $duration: 300ms, $ease: ease) {
+	transition: $property $duration $ease;
+}
+
+/*Variables*/
+$c1l1: #36b28d;
+$dark: #333;  
+$gray: #efefef;
+
+
+/*General Styles*/
+.form-wrapper {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	.text-sm {
+		font-size: 85%;
+	}
+	.brand-logo {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		img {
+			max-width: 100px;
+		    max-height: 40px;
+		}
+	}
+	.side-area {
+		background-image: url(../img/portrait9.jpg);
+		background-size: cover;
+		height: 100vh;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		overflow: hidden;
+		&:before {
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(19deg, rgba(33, 212, 253, 0.7) 0%, rgba(183, 33, 255, 0.8) 100%);
+		}
+		.welcome {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			color: white;
+			text-align: center;
+			align-items: center;
+			position: relative;
+			z-index: 99;
+			padding: 5% 10%;
+			padding-bottom: 10px;
+			h2 {
+			    font-size: 1.6em;
+			    font-weight: 300;
+			    margin: 0px;
+			}
+			p {
+				margin: 10px 0px;
+				font-size: 85%;
+			}
+			a {
+				text-decoration: none;
+				color: white;
+				padding: 10px 20px;
+				border-radius: 100px;
+				border: 1px solid white;
+				margin-top: 15px;
+				font-size: 75%;
+				@include transition(all, 100ms, ease);
+				&:hover {
+			    	transform: scale(1.03);
+			    }
+			}
+		}
+	}
+	.form-area {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+		.content {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-items: center;
+			width: 100%;
+			text-align: center;
+			h2 {
+				color: $c1l1;
+				font-size: 2em;
+			    margin: 10px 0px 20px 0px;
+			}
+			.social {
+				a {
+					color: $dark;
+					background-color: darken($gray, 2%);
+					font-size: 80%;
+					display: inline-flex;
+					height: 30px;
+					width: 30px;
+				    align-items: center;
+				    justify-content: center;
+				    border-radius: 50%;
+				    text-decoration: none;
+				}
+			}
+			.box-wrapper {
+				margin:5px 0;
+				label {
+					cursor: pointer;
+				}
+			}
+			.input-wrapper {
+				margin:5px 0;
+				position: relative;
+				label {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 15px;
+				}
+				input {
+					padding: 8px 10px 8px 40px;
+					border-radius: 100px;
+					border: 1px solid darken($gray, 5%);
+					min-width: 290px;
+					@include transition;
+					font-weight: 300;
+				    font-size: 90%;
+					&:focus {
+						outline:none;
+						box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+					}
+				}
+			}
+			button {
+				text-decoration: none;
+				padding: 10px 20px;
+				border-radius: 100px;
+				font-size: 85%;
+				@include transition(all, 100ms, ease);
+				&:hover {
+					transform: scale(1.03);
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			button[type=submit] {
+				color: white;
+				background-color: $c1l1;
+				border:none;
+				margin-top: 15px;
+				cursor: pointer;
+				min-width: 100px;
+				&:hover {
+					background-color: darken($c1l1, 3%);
+				}
+			}
+		}
+	}
+}

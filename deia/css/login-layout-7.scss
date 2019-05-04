@@ -1,0 +1,214 @@
+/*Login Form Layout 7
+© WebTrendy 2019*/
+
+
+
+
+/*Mixins*/
+@mixin transition($property: all, $duration: 300ms, $ease: ease) {
+	transition: $property $duration $ease;
+}
+
+/*Variables*/
+$primary: #0087ff;
+$secondary: #f4f1ef;
+$dark: #002b72;  
+$gray: #efefef;
+
+
+/*General Styles*/
+.form-wrapper {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	.text-sm {
+		font-size: 85%;
+	}
+	.float-right {
+		float: right;
+	}
+	.brand-logo {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		img {
+			max-width: 100px;
+		    max-height: 40px;
+		}
+	}
+	.illustration {
+		max-width: 100%;
+	}
+	.right-align {
+		text-align: right;
+	}
+	.side-area {
+		height: 100vh;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		color: white;
+		&:before {
+			content: '';
+		    position: absolute;
+		    right: -150%;
+		    bottom: 0;
+		    width: 150%;
+		    height: 200%;
+			background-color: #2176fd;
+			background-image: linear-gradient(19deg, #2176fd 0%, #af51f3 45%);
+		    transform: rotate(-45deg);
+		    transform-origin: bottom left;
+		}
+		.welcome {
+			display: flex;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: flex-end;
+			position: relative;
+			z-index: 99;
+			padding: 60px 15px 60px 100px;
+			text-align: right;
+			p {
+				
+			}
+			h2 {
+				font-size: 2.5em;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.form-area {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+		.content {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 100%;
+			position: relative;
+			z-index: 999;
+			p {
+				font-size: 85%;
+				font-weight: 300;
+				margin-top: 0;
+			}
+			h2 {
+				margin-bottom: 10px;
+				font-size: 2em;
+			}
+			a {
+				color: $primary;
+				text-decoration: none;
+				&:hover {
+					color: darken($primary, 10%);
+				}
+			}
+			.box-wrapper {
+				margin:5px 0px 20px 0px;
+				label {
+					cursor: pointer;
+				}
+			}
+			form {
+				width: 100%;
+				margin-top: 30px;
+			}
+			label {
+				display: inline-block;
+			    font-size: 85%;
+			    font-weight: 300;
+			    margin-bottom: 5px;
+			}
+			.input-wrapper {
+				margin-bottom: 20px;
+				position: relative;
+				span.icon {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 15px;
+				}
+				input {
+					padding: 13px 10px 13px 40px;
+					border-radius: 100px;
+					border: 2px solid $secondary;
+					background-color: transparent;
+					min-width: 290px;
+				    font-weight: 300;
+				    font-size: 90%;
+				    width: 100%;
+					@include transition;
+					&:focus {
+						outline:none;
+						background: white;
+						box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+					}
+				}
+			}
+			button {
+				text-decoration: none;
+				padding: 13px 25px;
+				border-radius: 100px;
+				font-size: 85%;
+				&:focus {
+					outline: none;
+				}
+			}
+			
+			button[type=submit] {
+				color: white;
+				background-color: $primary;
+				border:none;
+				cursor: pointer;
+				& i {
+					vertical-align: text-bottom;
+				}
+				&:hover {
+					background-color: darken($primary, 3%);
+				}
+			}
+			.social {
+				width: 100%;
+				font-size: 85%;
+				.social-btn {
+					text-decoration: none;
+					padding: 12px 25px;
+					border-radius: 100px;
+					font-size: 90%;
+					color: white;
+					margin-left: 5px;
+					display: inline-block;
+					&.fb {
+						background-color: #3b5998;
+					}
+					&.tw {
+						background-color: #3fbdff;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*Media Queries*/
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.form-wrapper {
+		.side-area {
+			&:before {
+			    transform: rotate(-70deg);
+			}
+		}
+		.form-area {
+			.content {
+				.social {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
