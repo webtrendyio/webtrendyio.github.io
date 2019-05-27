@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*!
+ * Sado Hero Header Effects - Template 8
+ * Version: 1.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We are born of LOVE, lover is our mother." -Rumi
+ *
+ */
+/*Reset*/
+body {
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+ul.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+ul.list li {
+  display: inline-block;
+}
+ul.list a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  text-shadow: 1px 1px 5px black;
+}
+ul.list a:hover {
+  color: orange;
+}
+
+/*Variables*/
+/*Main Styles*/
+.sado-header {
+  position: relative;
+  overflow: hidden; }
+  .sado-header .header-image {
+    position: relative; }
+    .sado-header .header-image:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transition: all 600ms ease;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2); }
+    .sado-header .header-image img {
+      width: 100%;
+      object-fit: cover;
+      transform-origin: 90% center; }
+  .sado-header .header-content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    left: 0;
+    padding: 0px 40px;
+    color: white; }
+    .sado-header .header-content .title {
+      font-size: 60px;
+      margin: 0px;
+      transition: all 600ms ease;
+      color: white;
+      transform-origin: center left; }
+    .sado-header .header-content .subtitle {
+      font-size: 28px;
+      margin: 0;
+      transition: all 600ms ease;
+      opacity: 0;
+      transform: translateY(-50px); }
+  .sado-header.active .header-content {
+    color: #333; }
+    .sado-header.active .header-content .title {
+      transform: scale(0.8);
+      color: #333; }
+    .sado-header.active .header-content .subtitle {
+      opacity: 1;
+      transform: translateY(0); }
+  .sado-header.active .header-image:before {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+.body-content {
+  background-color: white;
+  position: relative;
+  z-index: 999;
+  padding: 20px 50px;
+  font-size: 22px;
+  line-height: 1.5; }
+
+/*Media Queries*/
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .sado-header .header-image img {
+    min-height: 100vh;
+    transform-origin: bottom; }
+  .sado-header .header-content {
+    text-align: center; }
+    .sado-header .header-content .title {
+      font-size: 40px; }
+    .sado-header .header-content .subtitle {
+      font-size: 22px; }
+  .sado-header.active .header-content {
+    color: white; }
+    .sado-header.active .header-content .title {
+      transform: scale(0.9);
+      color: white; }
+
+  .body-content {
+    font-size: 18px;
+    padding: 0px 20px; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/*24 May 2019*/
+
+/*# sourceMappingURL=sado-header-temp8.css.map */
