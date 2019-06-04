@@ -1,0 +1,2486 @@
+/*!
+ * Putin Text Input Effects
+ * Version: 1.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Be melting snow, wash yourself of yourself" -Rumi
+ *
+ */
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1.0 Variables > Line 31
+	2.0 General Styles > Line 73
+	3.0 Input Effects > Line 148
+	4.0 Input Sizes > Line 1196
+	5.0 Typography > Line 1236
+	6.0 Horizontal Alignment > Line 1251
+	7.0 Vertical Movement > Line 1347
+	8.0 Input Color > Line 1446
+	9.0 Label Color > Line 1587
+	10.0 Border Color 1 > Line 1783
+	11.0 Border Color 2 > Line 2087
+	12.0 Label Shrink > Line 2381
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+Variables used inside the library. Update per your needs.
+--------------------------------------------------------------*/
+$padding_normal: .5em .3em; /*Default Padding*/
+$padding_small: .4em .3em;
+$padding_large: .6em .5em;
+
+$font_size_small: 12px;
+$font_size_normal: 14px; /*Default font size*/
+$font_size_large: 16px;
+
+$border_height: 3px; 
+
+$color_1: #595F6E; /*Default input color*/
+$color_2: #845EC2; /*Default border overlay color*/
+$color_3: #1C1259;
+$color_4: #D65DB1;
+$color_5: #7F4782;
+$color_6: #FF6F91;
+$color_7: #e2598b;
+$color_8: #ee7777;
+$color_9: #FF9671;
+$color_10: #ff8246;
+$color_11: #ffdc27;
+$color_12: #FFC75F;
+$color_13: #F9F871;
+$color_14: #49beb7;
+$color_15: #bfcd7e;
+$color_16: #15cda8;
+$color_17: #ff5959;
+$color_18: #f34573;
+$color_19: #fd5f00;
+$color_20: #4592af;
+$color_21: #6c5ce7;
+$color_22: #00D2FC;
+$color_23: #eeeeee; /*Default border color*/
+$color_24: #f2eee0;
+$color_25: #323232; /*Default label color*/
+$color_26: #4e4e4e;
+$color_27: #fff;
+
+
+
+/*--------------------------------------------------------------
+2.0 General Styles
+Styles applied to all effects.
+--------------------------------------------------------------*/
+.putin {
+	font-size: $font_size_normal;
+	position: relative;
+	margin-top: 20px;
+	.input-field {
+		padding: $padding_normal;
+		width: 100%;
+		border: none;
+		font-size: 1.6em;
+		background-color: transparent;
+		position: relative;
+		z-index: 99;
+		color: $color_1;
+		transition: all 300ms;
+		&:focus {
+			outline:none;
+		}
+	}
+	.input-label {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		user-select: none;
+		.label-text {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 100;
+			transition: all 300ms;
+			pointer-events: none;
+			color: $color_25;
+			padding: $padding_normal;
+		}
+		&:before {
+			content:'';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: $border_height;
+			background-color: $color_23;
+			transition: all 300ms;
+		}
+		&:after {
+			content:'';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0%;
+			height: $border_height;
+			transition: all 300ms;
+			background-color: $color_2;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				top: -10px;
+			}
+			&:after {
+				width: 100%;
+				transition-delay: 150ms;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+3.0 Input Effects
+Effects for inputs.
+--------------------------------------------------------------*/
+
+/*Effect 1 - This is default*/
+.effect-1 {
+	.input-label {
+		.label-text {
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+		}
+		&:before {
+			width: 100%;
+			height: $border_height;
+		}
+		&:after {
+			width: 0%;
+			height: $border_height;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				top: -10px;
+				bottom: auto;
+			}
+			&:after {
+				width: 100%;
+				transition-delay: 150ms;
+			}
+		}
+	}	
+}
+
+/*Effect 2*/
+.effect-2 {
+	.input-label {
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 0%;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				height: 100%;
+				transition-delay: 150ms;
+			}
+			&:after {
+				width: 0%;
+			}
+		}
+	}	
+}
+
+/*Effect 3*/
+.effect-3 {
+	.input-label {
+		&:before {
+			width: 100%;
+			top: auto;
+			bottom: -10px;
+		}
+		&:after {
+			width: 100%;
+			top: -10px;
+			bottom: auto;
+			background-color: $color_23;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				bottom: 0;
+			}
+			&:after {
+				top: 0;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 4*/
+.effect-4 {
+	.input-label {
+		.label-text {
+			transition-delay: 300ms;
+		}
+		&:before {
+			width: 100%;
+			transition-delay: 300ms;
+		}
+		&:after {
+			width: 100%;
+			height: 0px;
+			top: 0;
+			background-color: $color_23;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				transition-delay: 0ms;
+				bottom: calc(100% - #{$border_height});
+			}
+			&:after {
+				height: 100%;
+				transition-delay: 300ms;
+			}
+		}
+	}	
+}
+
+/*Effect 5*/
+.effect-5 {
+	.input-label {
+		.label-text {
+			margin: 0px 5px;
+		}
+		&:before {
+			width: 100%;
+			height: 100%;
+		}
+		&:after {
+			width: 100%;
+			height: 0;
+			border: 0 solid $color_23;
+			background-color: $color_27;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				bottom: 100%;
+				height: 50%;
+			}
+			&:after {
+				border-width: $border_height;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+	}	
+}
+
+/*Effect 6*/
+.effect-6 {
+	.input-label {
+		perspective: 2000px;
+		&:before {
+			width: 100%;
+			height: 100%;
+		    transform: rotateX(90deg);
+		    transform-origin: bottom;
+		}
+		&:after {
+			width: 100%;
+			background-color: darken($color_23, 10%);
+			transform-origin: top;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				transform: rotateX(0deg);
+				transition-delay: 0ms;
+			}
+			&:after {
+				transform: rotateX(-90deg);		    
+			}
+		}
+	}	
+}
+
+/*Effect 7*/
+.effect-7 {
+	.input-field {
+		width: 65%;
+	}
+	.input-label {
+		.label-text {
+			padding: .5em .6em;
+		}
+		&:before {
+			width: 100%;
+			height: 100%;
+			right: 0;
+			left: auto;
+		}
+		&:after {
+			width: 100%;
+			height: 100%;
+			background-color: transparent !important;
+			border: $border_height solid $color_23;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				top: 50%;
+				left: 100%;
+				width: auto;
+				transform: translate(-100%, -50%);
+			}
+			&:before {
+				width: 35%;
+				transition-delay: 0ms;
+			}
+			&:after {
+				/*width: 0%;*/
+			}
+		}
+	}	
+}
+/*Effect 8*/
+.effect-8 {
+	.input-label {
+		.label-text {
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+		}
+		&:before {
+			width: 100%;
+			height: $border_height;
+		}
+		&:after {
+			width: 0%;
+			right: 0;
+			left: auto;
+			height: $border_height;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				top: -10px;
+				bottom: auto;
+			}
+			&:after {
+				width: 100%;
+				transition-delay: 150ms;
+			}
+		}
+	}	
+}
+
+/*Effect 9*/
+.effect-9 {
+	.input-label {
+		.label-text {
+			width: 100%;
+			text-align: center;
+		}
+		&:before {
+			width: 50%;
+			height: 100%;
+			border: $border_height solid $color_23;
+			border-right: 0;
+			background-color: transparent !important;
+		}
+		&:after {
+			width: 50%;
+			height: 100%;
+			right: 0;
+			left: auto;
+			border: $border_height solid $color_23;
+			border-left: 0;
+			background-color: transparent !important;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				transform:translateX(-10px);
+			}
+			&:after {
+				width: 50%;
+				transform:translateX(10px);
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 10*/
+.effect-10 {
+	.input-label {
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 100%;
+			background-color: $color_23;
+			height: 0;
+			top: 0;
+			bottom: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			&:after {
+				height: 100%;
+			}
+		}
+	}	
+}
+
+/*Effect 11*/
+.effect-11 {
+	.input-label {
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 0;
+			background-color: $color_23;
+			height: 100%;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width: 0;
+			}
+			&:after {
+				width: 100%;
+			}
+		}
+	}	
+}
+
+/*Effect 12*/
+.effect-12 {
+	.input-field {
+		width: 65%;
+		margin-left: 35%;
+	}
+	.input-label {
+		.label-text {
+			padding: .5em .6em;
+			right: 0;
+			left: auto;
+		}
+		&:before {
+			width: 100%;
+			height: 100%;
+		}
+		&:after {
+			width: 100%;
+			height: 100%;
+			background-color: transparent !important;
+			border: $border_height solid $color_23;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				top: 50%;
+				right: 100% !important;
+				width: auto;
+				transform: translate(100%, -50%) !important;
+			}
+			&:before {
+				width: 35%;
+				transition-delay: 0ms;
+			}
+			&:after {
+				/*width: 0%;*/
+			}
+		}
+	}	
+}
+
+/*Effect 13*/
+.effect-13 {
+	.input-label {
+		perspective: 2000px;
+		&:before {
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: auto;
+		    transform: rotateX(-90deg);
+		    transform-origin: top;
+		}
+		&:after {
+			width: 100%;
+			background-color: darken($color_23, 10%);
+			transform-origin: bottom;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				transform: rotateX(0deg);
+				transition-delay: 0ms;
+			}
+			&:after {
+				transform: rotateX(-90deg);		    
+			}
+		}
+	}	
+}
+
+/*Effect 14*/
+.effect-14 {
+	.input-label {
+		&:before {
+			width: 100%;
+			right: 0;
+			left: auto;
+		}
+		&:after {
+			width: 0;
+			background-color: $color_23;
+			height: 100%;
+			right: 0;
+			left: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width: 0;
+			}
+			&:after {
+				width: 100%;
+			}
+		}
+	}	
+}
+
+/*Effect 15*/
+.effect-15 {
+	.input-label {
+		.label-text {
+			margin: 0px 5px;
+		}
+		&:before {
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			
+		}
+		&:after {
+			width: 100%;
+			height: 100%;
+			background-color: $color_23;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				border: $border_height solid $color_23;
+			}
+			&:after {
+				opacity: 0;
+			}
+		}
+	}	
+}
+
+/*Effect 16*/
+.effect-16 {
+	.input-label {
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 0;
+			/*background-color: $color_23;*/
+			top: 0;
+			bottom: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width:0;
+			}
+			&:after {
+				width: 100%;
+				transition-delay: 300ms;
+			}
+		}
+	}	
+}
+
+/*Effect 17*/
+.effect-17 {
+	.input-label {
+		border-bottom: $border_height solid $color_23;
+		&:before {
+			width: 0;
+			left: 50%;
+			background-color: $color_2;
+			bottom: -$border_height;
+		}
+		&:after {
+			width: 0;
+			right: 50%;
+			left: auto;
+			bottom: -$border_height;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 18*/
+.effect-18 {
+	.input-label {
+		border-bottom: $border_height solid $color_23;
+		&:before {
+			width: 0;
+			background-color: $color_2;
+			bottom: -$border_height;
+			right: 0;
+			left: auto;
+		}
+		&:after {
+			width: 0;
+			bottom: -$border_height;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 19*/
+.effect-19 {
+	::-webkit-input-placeholder { 
+	  font-weight:lighter;
+	  font-size: 75%;
+	  transition: all 300ms ease;
+	  color: darken($color_23, 10%);
+	}
+	::-moz-placeholder { 
+	  font-weight:lighter;
+	  font-size: 75%;
+	  transition: all 300ms ease;
+	  color: darken($color_23, 10%);
+	}
+	:-ms-input-placeholder {
+	  font-weight:lighter;
+	  font-size: 75%;
+	  transition: all 300ms ease;
+	  color: darken($color_23, 10%);
+	}
+	:-moz-placeholder {
+	  font-weight:lighter;
+	  font-size: 75%;
+	  transition: all 300ms ease;
+	  color: darken($color_23, 10%);
+	}
+	.input-label {
+		overflow: hidden;
+		.label-text {
+		    bottom: 0;
+		    top: auto;
+		    transform: translateY(100%);
+		    font-size: 12px;
+		    margin: 0px 5px;
+		}
+		&:before {
+			width: 100%;
+			height: 0;
+		}
+		&:after {
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border: $border_height solid $color_23;
+		}
+	}
+	&.active {
+		::-webkit-input-placeholder { 
+			  opacity:0;
+			}
+			::-moz-placeholder { 
+			  opacity:0;
+			}
+			:-ms-input-placeholder { 
+			  opacity:0;
+			}
+			:-moz-placeholder { 
+			  opacity:0;
+			}
+		.input-field {
+			margin-bottom: 20px;
+		}
+		.input-label {
+			.label-text {
+			    transform: none;
+			    bottom: 0;
+			    top: auto;
+			}
+			&:before {
+				height: 40%;
+			}
+			&:after {
+				/*width: 50%;
+				transition-delay: 0ms;*/
+			}
+		}
+	}	
+}
+
+/*Effect 20*/
+.effect-20 {
+	.input-label {
+		border-bottom: $border_height solid $color_23;
+		.label-text {
+			&:after {
+		    	content:'';
+				position: absolute;
+				bottom: 0;
+				opacity: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			    border-top: 5px solid $color_2;
+			    border-right: 5px solid transparent;
+			    border-left: 5px solid transparent;
+			    transition: all 300ms ease;
+		    }
+		}
+		&:before {
+			width: 0;
+			background-color: $color_2;
+			bottom: -$border_height;
+			right: 0;
+			left: auto;
+		}
+		&:after {
+			width: 0;
+			bottom: -$border_height;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				background-color: $color_2;
+				color: white !important;
+				border-radius: 4px;
+			    padding: .3em .5em;
+			    &:after {
+			    	opacity:1;
+			    	bottom:-4px;
+			    }
+			}
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 21*/
+.effect-21 {
+	.input-label {
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 100%;
+			height: 0;
+			background-color: transparent;
+			border: $border_height solid $color_23;
+			opacity: 0;
+		}
+	}
+	&.active {
+		.input-label {
+			&:after {
+				opacity: 1;
+				height: 100%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 22*/
+.effect-22 {
+	.input-label {
+		.label-text {
+			margin: 0px 5px;
+		}
+		&:before {
+			height: 100%;
+			width: $border_height;
+		}
+		&:after {
+			height: 100%;
+			width: 0;
+			background-color: transparent;
+			border: $border_height solid $color_23;
+			opacity: 0;
+		}
+	}
+	&.active {
+		.input-label {
+			&:after {
+				opacity: 1;
+				width: 100%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 23*/
+.effect-23 {
+	.input-label {
+		border-bottom: $border_height solid $color_23;
+		&:before {
+			width: 0;
+			height: 100%;
+			bottom: -$border_height;
+			right: 0;
+			left: auto;
+		}
+		&:after {
+			width: 0;
+			height: 100%;
+			background-color: $color_23;
+			bottom: -$border_height;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 24*/
+.effect-24 {
+	.input-label {
+		border-bottom: $border_height solid $color_23;
+		&:before {
+			width: 0;
+			height: 100%;
+			bottom: -$border_height;
+			left: 50%;
+		}
+		&:after {
+			width: 0;
+			height: 100%;
+			background-color: $color_23;
+			bottom: -$border_height;
+			right: 50%;
+			left: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 25*/
+.effect-25 {
+	.input-field {
+		transition: all 300ms;
+	}
+	.input-label {
+		border: $border_height solid $color_23;
+		transition: all 300ms;
+		&:before {
+			width: 0;
+			height: 100%;
+		}
+	}
+	&.active {
+		.input-field {
+			transform: translateY(100%);
+		}
+		.input-label {
+			transform: translateY(100%);
+			.label-text {
+				top: -65%;
+			}
+			&:before {
+				width: 100%;
+			}
+			&:after {
+				width: 0%;
+			}
+		}
+	}	
+}
+
+/*Effect 26*/
+.effect-26 {
+	.input-label {
+		background-color: $color_23;
+		.label-text {
+			margin: 0px 5px;
+		}
+		&:before {
+			width: 0;
+			height: 100%;
+			bottom: -$border_height;
+			left: 50%;
+			background-color: $color_27;
+		}
+		&:after {
+			width: 0;
+			height: 100%;
+			background-color: $color_27;
+			bottom: -$border_height;
+			right: 50%;
+			left: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				margin: 0px 5px;
+			}
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 27*/
+.effect-27 {
+	.input-field {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.input-label {
+		background-color: $color_23;
+		border-radius: 100px;
+		border: $border_height solid transparent;
+		.label-text {
+			margin: 0px 5px;
+		}
+		&:before {
+			width: 0;
+			height: 100%;
+			left: 50%;
+			background-color: $color_27;
+			border-top-right-radius: 100px;
+			border-bottom-right-radius: 100px;
+		}
+		&:after {
+			width: 0;
+			height: 100%;
+			background-color: $color_27;
+			border-top-left-radius: 100px;
+			border-bottom-left-radius: 100px;
+			right: 50%;
+			left: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			border-color: $color_23;
+			.label-text {
+				margin: 0px 5px;
+			}
+			&:before {
+				width: 50%;
+			}
+			&:after {
+				width: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 28*/
+.effect-28 {
+	.input-field {
+		padding-left: 30px;
+	}
+	.input-label {
+		.label-icon {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			font-size: 1.3em;
+			transition: all 300ms;
+		}
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 0;
+			right: 0;
+			left: auto;
+		}
+	}
+	&.active {
+		.label-icon {
+			right: calc(100% - 20px);
+
+		}
+		.input-label {
+			&:after {
+				width:100%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 29*/
+.effect-29 {
+	.input-label {
+		border-bottom: $border_height solid $color_23;
+		.label-icon {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			font-size: 1.3em;
+			transition: all 300ms;
+		}
+		&:before {
+			width: 0%;
+			right: 0;
+			left: auto;
+			background-color: $color_2;
+			bottom: -$border_height;
+		}
+		&:after {
+			width: 0;
+			bottom: -$border_height;
+		}
+	}
+	&.active {
+		.label-icon {
+			top: 100%;
+			transform: translateY(50%);
+			color: darken($color_23, 15%);
+		}
+		.input-label {
+			&:before {
+				width: 50%;
+				right: 50%;
+			}
+			&:after {
+				width:50%;
+				left: 50%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+/*Effect 30*/
+.effect-30 {
+	.input-field {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	.input-label {
+		.label-icon {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%) scale(1.2);
+			font-size: 1.3em;
+			transition: all 300ms;
+		}
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 100%;
+			height: 100%;
+			transform: scale(0);
+			opacity: 0;
+			border-radius: 100px;
+			background-color: $color_23;
+		}
+	}
+	&.active {
+		.label-icon {
+			transform: translateY(-50%) scale(0);
+			opacity: 0;
+		}
+		.input-label {
+			&:before {
+				width:0;
+			}
+			&:after {
+				opacity: 1;
+				transform: scale(1);
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+
+
+/*--------------------------------------------------------------
+4.0 Input Sizes
+Small, normal and large inputs
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-normal {
+	font-size: $font_size_normal;
+	.input-field {
+		padding: $padding_normal;
+	}
+	.input-label {
+		.label-text {
+			padding: $padding_normal;
+		}
+	}
+}
+.putin-small {
+	font-size: $font_size_small;
+	.input-field {
+		padding: $padding_small;
+	}
+	.input-label {
+		.label-text {
+			padding: $padding_small;
+		}
+	}
+}
+.putin-large {
+	font-size: $font_size_large;
+	.input-field {
+		padding: $padding_large;
+	}
+	.input-label {
+		.label-text {
+			padding: $padding_large;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+5.0 Typography
+Light and bold formats
+--------------------------------------------------------------*/
+
+.putin-bold {
+	.input-field {
+		font-weight: bold;
+	}
+}
+.putin-light {
+	.input-field {
+		font-weight: lighter;
+	}
+}
+
+/*--------------------------------------------------------------
+6.0 Horizontal Alignment
+Left, center and right labels
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-left {
+	.input-label {
+		.label-text {
+			left: 0;
+			right: auto;
+		}
+	}
+}
+.putin-right {
+	.input-label {
+		.label-text {
+			right: 0;
+			left: auto;
+		}
+	}
+}
+.putin-center {
+	.input-label {
+		.label-text {
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+.putin-center.effect-12 {
+	.input-label {
+		.label-text {
+			right: 50%;
+			left: auto;
+			transform: translate(50%, -50%);
+		}
+	}
+}
+.putin-center.effect-19 {
+	.input-label {
+		.label-text {
+			right: 50%;
+			left: auto;
+			transform: translate(50%, 100%);
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				transform: translate(50%, 0%);
+			}
+		}
+	}
+}
+.putin-right.effect-28 {
+	.input-field {
+		padding-left: .3em;
+		padding-right: 30px;
+	}
+	.input-label {
+		.label-icon {
+			right: auto;
+			left: 0;
+		}
+		&:before {
+			width: 100%;
+		}
+		&:after {
+			width: 0;
+			left: 0;
+			right: auto;
+		}
+	}
+	&.active {
+		.label-icon {
+			left: calc(100% - 20px);
+
+		}
+		.input-label {
+			&:after {
+				width:100%;
+				transition-delay: 0ms;
+			}
+		}
+	}	
+}
+.putin-right.effect-29 {
+	.input-label {
+		.label-icon {
+			right: auto;
+			left: 0;
+		}
+	}	
+}
+
+/*--------------------------------------------------------------
+7.0 Vertical Movement
+Move top and move down labels
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-up {
+	.input-label {
+		.label-text {
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				bottom: auto;
+				top: -10px;
+			}
+		}
+	}
+}
+.putin-down:not(.effect-7):not(.effect-12):not(.effect-19) {
+	.input-label {
+		.label-text {
+			bottom: 50%;
+			top: auto;
+			transform: translateY(50%);
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				top: auto;
+				bottom: -10px;
+			}
+		}
+	}
+}
+.putin-down.putin-center:not(.effect-7):not(.effect-12):not(.effect-19) {
+	.input-label {
+		.label-text {
+			transform: translate(-50%, 50%);
+		}
+	}
+}
+.effect-5.putin-down {
+	.input-label {
+		&:before {
+			top:0;
+			bottom: auto;
+		}
+		&:after {
+			top:0;
+			bottom: auto;
+		}
+	}
+	&.active {
+		.input-label {
+			&:before {
+				top: 100%;
+				height: 50%;
+			}
+		}
+	}	
+}
+.effect-17.putin-down, .effect-29.putin-down {
+	&.active {
+		.input-label {
+			.label-text {
+				bottom: -15px !important;
+			}
+		}
+	}
+}
+.effect-20.putin-down {
+	.input-label {
+		.label-text {
+			&:after {
+				bottom: auto;
+				top: 0;
+			    border-bottom: 5px solid $color_2;
+			    border-top: none;
+		    }
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				bottom: -25px !important;
+			    &:after {
+			    	top: -4px;
+			    	bottom: auto;
+			    }
+			}
+		}
+	}	
+}
+
+/*--------------------------------------------------------------
+8.0 Input Color
+Input text color
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-color-1 {
+	.input-field {
+		color: $color_1;
+	}
+}
+.putin-color-2 {
+	.input-field {
+		color: $color_2;
+	}
+}
+.putin-color-3 {
+	.input-field {
+		color: $color_3;
+	}
+}
+.putin-color-4 {
+	.input-field {
+		color: $color_4;
+	}
+}
+.putin-color-5 {
+	.input-field {
+		color: $color_5;
+	}
+}
+.putin-color-6 {
+	.input-field {
+		color: $color_6;
+	}
+}
+.putin-color-7 {
+	.input-field {
+		color: $color_7;
+	}
+}
+.putin-color-8 {
+	.input-field {
+		color: $color_8;
+	}
+}
+.putin-color-9 {
+	.input-field {
+		color: $color_9;
+	}
+}
+.putin-color-10 {
+	.input-field {
+		color: $color_10;
+	}
+}
+.putin-color-11 {
+	.input-field {
+		color: $color_11;
+	}
+}
+.putin-color-12 {
+	.input-field {
+		color: $color_12;
+	}
+}
+.putin-color-13 {
+	.input-field {
+		color: $color_13;
+	}
+}
+.putin-color-14 {
+	.input-field {
+		color: $color_14;
+	}
+}
+.putin-color-15 {
+	.input-field {
+		color: $color_15;
+	}
+}
+.putin-color-16 {
+	.input-field {
+		color: $color_16;
+	}
+}
+.putin-color-17 {
+	.input-field {
+		color: $color_17;
+	}
+}
+.putin-color-18 {
+	.input-field {
+		color: $color_18;
+	}
+}
+.putin-color-19 {
+	.input-field {
+		color: $color_19;
+	}
+}
+.putin-color-20 {
+	.input-field {
+		color: $color_20;
+	}
+}
+.putin-color-21 {
+	.input-field {
+		color: $color_21;
+	}
+}
+.putin-color-22 {
+	.input-field {
+		color: $color_22;
+	}
+}
+.putin-color-23 {
+	.input-field {
+		color: $color_23;
+	}
+}
+.putin-color-24 {
+	.input-field {
+		color: $color_24;
+	}
+}
+.putin-color-25 {
+	.input-field {
+		color: $color_25;
+	}
+}
+.putin-color-26 {
+	.input-field {
+		color: $color_26;
+	}
+}
+.putin-color-27 {
+	.input-field {
+		color: $color_27;
+	}
+}
+
+/*--------------------------------------------------------------
+9.0 Label Color
+Label text color
+--------------------------------------------------------------*/
+.putin-label-color-1 {
+	.input-label {
+		.label-text {
+			color: $color_1;
+		}
+	}
+}
+.putin-label-color-2 {
+	.input-label {
+		.label-text {
+			color: $color_2;
+		}
+	}
+}
+.putin-label-color-3 {
+	.input-label {
+		.label-text {
+			color: $color_3;
+		}
+	}
+}
+.putin-label-color-4 {
+	.input-label {
+		.label-text {
+			color: $color_4;
+		}
+	}
+}
+.putin-label-color-5 {
+	.input-label {
+		.label-text {
+			color: $color_5;
+		}
+	}
+}
+.putin-label-color-6 {
+	.input-label {
+		.label-text {
+			color: $color_6;
+		}
+	}
+}
+.putin-label-color-7 {
+	.input-label {
+		.label-text {
+			color: $color_7;
+		}
+	}
+}
+.putin-label-color-8 {
+	.input-label {
+		.label-text {
+			color: $color_8;
+		}
+	}
+}
+.putin-label-color-9 {
+	.input-label {
+		.label-text {
+			color: $color_9;
+		}
+	}
+}
+.putin-label-color-10 {
+	.input-label {
+		.label-text {
+			color: $color_10;
+		}
+	}
+}
+.putin-label-color-11 {
+	.input-label {
+		.label-text {
+			color: $color_11;
+		}
+	}
+}
+.putin-label-color-12 {
+	.input-label {
+		.label-text {
+			color: $color_12;
+		}
+	}
+}
+.putin-label-color-13 {
+	.input-label {
+		.label-text {
+			color: $color_13;
+		}
+	}
+}
+.putin-label-color-14 {
+	.input-label {
+		.label-text {
+			color: $color_14;
+		}
+	}
+}
+.putin-label-color-15 {
+	.input-label {
+		.label-text {
+			color: $color_15;
+		}
+	}
+}
+.putin-label-color-16 {
+	.input-label {
+		.label-text {
+			color: $color_16;
+		}
+	}
+}
+.putin-label-color-17 {
+	.input-label {
+		.label-text {
+			color: $color_17;
+		}
+	}
+}
+.putin-label-color-18 {
+	.input-label {
+		.label-text {
+			color: $color_18;
+		}
+	}
+}
+.putin-label-color-19 {
+	.input-label {
+		.label-text {
+			color: $color_19;
+		}
+	}
+}
+.putin-label-color-20 {
+	.input-label {
+		.label-text {
+			color: $color_20;
+		}
+	}
+}
+.putin-label-color-21 {
+	.input-label {
+		.label-text {
+			color: $color_21;
+		}
+	}
+}
+.putin-label-color-22 {
+	.input-label {
+		.label-text {
+			color: $color_22;
+		}
+	}
+}
+.putin-label-color-23 {
+	.input-label {
+		.label-text {
+			color: $color_23;
+		}
+	}
+}
+.putin-label-color-24 {
+	.input-label {
+		.label-text {
+			color: $color_24;
+		}
+	}
+}
+/*This is default*/
+.putin-label-color-25 {
+	.input-label {
+		.label-text {
+			color: $color_25;
+		}
+	}
+}
+.putin-label-color-26 {
+	.input-label {
+		.label-text {
+			color: $color_26;
+		}
+	}
+}
+.putin-label-color-27 {
+	.input-label {
+		.label-text {
+			color: $color_27;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+10.0 Border Color 1
+Input border1 color (some effects have 2 borders, some have a border that appears when the input is focused, this border is border 2.)
+--------------------------------------------------------------*/
+.putin-border1-color-1 {
+	.input-label {
+		&:before {
+			background-color: $color_1;
+			border-color: $color_1;
+		}
+		&:after {
+			border-color: $color_1;
+		}
+	}
+}
+.putin-border1-color-2 {
+	.input-label {
+		&:before {
+			background-color: $color_2;
+			border-color: $color_2;
+		}
+		&:after {
+			border-color: $color_2;
+		}
+	}
+}
+.putin-border1-color-3 {
+	.input-label {
+		&:before {
+			background-color: $color_3;
+			border-color: $color_3;
+		}
+		&:after {
+			border-color: $color_3;
+		}
+	}
+}
+.putin-border1-color-4 {
+	.input-label {
+		&:before {
+			background-color: $color_4;
+			border-color: $color_4;
+		}
+		&:after {
+			border-color: $color_4;
+		}
+	}
+}
+.putin-border1-color-5 {
+	.input-label {
+		&:before {
+			background-color: $color_5;
+			border-color: $color_5;
+		}
+		&:after {
+			border-color: $color_5;
+		}
+	}
+}
+.putin-border1-color-6 {
+	.input-label {
+		&:before {
+			background-color: $color_6;
+			border-color: $color_6;
+		}
+		&:after {
+			border-color: $color_6;
+		}
+	}
+}
+.putin-border1-color-7 {
+	.input-label {
+		&:before {
+			background-color: $color_7;
+			border-color: $color_7;
+		}
+		&:after {
+			border-color: $color_7;
+		}
+	}
+}
+.putin-border1-color-8 {
+	.input-label {
+		&:before {
+			background-color: $color_8;
+			border-color: $color_8;
+		}
+		&:after {
+			border-color: $color_8;
+		}
+	}
+}
+.putin-border1-color-9 {
+	.input-label {
+		&:before {
+			background-color: $color_9;
+			border-color: $color_9;
+		}
+		&:after {
+			border-color: $color_9;
+		}
+	}
+}
+.putin-border1-color-10 {
+	.input-label {
+		&:before {
+			background-color: $color_10;
+			border-color: $color_10;
+		}
+		&:after {
+			border-color: $color_10;
+		}
+	}
+}
+.putin-border1-color-11 {
+	.input-label {
+		&:before {
+			background-color: $color_11;
+			border-color: $color_11;
+		}
+		&:after {
+			border-color: $color_11;
+		}
+	}
+}
+.putin-border1-color-12 {
+	.input-label {
+		&:before {
+			background-color: $color_12;
+			border-color: $color_12;
+		}
+		&:after {
+			border-color: $color_12;
+		}
+	}
+}
+.putin-border1-color-13 {
+	.input-label {
+		&:before {
+			background-color: $color_13;
+			border-color: $color_13;
+		}
+		&:after {
+			border-color: $color_13;
+		}
+	}
+}
+.putin-border1-color-14 {
+	.input-label {
+		&:before {
+			background-color: $color_14;
+			border-color: $color_14;
+		}
+		&:after {
+			border-color: $color_14;
+		}
+	}
+}
+.putin-border1-color-15 {
+	.input-label {
+		&:before {
+			background-color: $color_15;
+			border-color: $color_15;
+		}
+		&:after {
+			border-color: $color_15;
+		}
+	}
+}
+.putin-border1-color-16 {
+	.input-label {
+		&:before {
+			background-color: $color_16;
+			border-color: $color_16;
+		}
+		&:after {
+			border-color: $color_16;
+		}
+	}
+}
+.putin-border1-color-17 {
+	.input-label {
+		&:before {
+			background-color: $color_17;
+			border-color: $color_17;
+		}
+		&:after {
+			border-color: $color_17;
+		}
+	}
+}
+.putin-border1-color-18 {
+	.input-label {
+		&:before {
+			background-color: $color_18;
+			border-color: $color_18;
+		}
+		&:after {
+			border-color: $color_18;
+		}
+	}
+}
+.putin-border1-color-19 {
+	.input-label {
+		&:before {
+			background-color: $color_19;
+			border-color: $color_19;
+		}
+		&:after {
+			border-color: $color_19;
+		}
+	}
+}
+.putin-border1-color-20 {
+	.input-label {
+		&:before {
+			background-color: $color_20;
+			border-color: $color_20;
+		}
+		&:after {
+			border-color: $color_20;
+		}
+	}
+}
+.putin-border1-color-21 {
+	.input-label {
+		&:before {
+			background-color: $color_21;
+			border-color: $color_21;
+		}
+		&:after {
+			border-color: $color_21;
+		}
+	}
+}
+.putin-border1-color-22 {
+	.input-label {
+		&:before {
+			background-color: $color_22;
+			border-color: $color_22;
+		}
+		&:after {
+			border-color: $color_22;
+		}
+	}
+}
+/*This is default*/
+.putin-border1-color-23 {
+	.input-label {
+		&:before {
+			background-color: $color_23;
+			border-color: $color_23;
+		}
+		&:after {
+			border-color: $color_23;
+		}
+	}
+}
+.putin-border1-color-24 {
+	.input-label {
+		&:before {
+			background-color: $color_24;
+			border-color: $color_24;
+		}
+		&:after {
+			border-color: $color_24;
+		}
+	}
+}
+.putin-border1-color-25 {
+	.input-label {
+		&:before {
+			background-color: $color_25;
+			border-color: $color_25;
+		}
+		&:after {
+			border-color: $color_25;
+		}
+	}
+}
+.putin-border1-color-26 {
+	.input-label {
+		&:before {
+			background-color: $color_26;
+			border-color: $color_26;
+		}
+		&:after {
+			border-color: $color_26;
+		}
+	}
+}
+.putin-border1-color-27 {
+	.input-label {
+		&:before {
+			background-color: $color_27;
+			border-color: $color_27;
+		}
+		&:after {
+			border-color: $color_27;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+11.0 Border  Color2
+Input border2 color (The secondary border that appears on top or when the input is focused)
+--------------------------------------------------------------*/
+.putin-border2-color-1 {
+	.input-label {
+		&:after {
+			background-color: $color_1;
+			border-color: $color_1;
+		}
+		&:before {
+			border-color: $color_1;
+		}
+	}
+}
+/*This is default*/
+.putin-border2-color-2 {
+	.input-label {
+		&:after {
+			background-color: $color_2;
+			border-color: $color_2;
+		}
+		&:before {
+			border-color: $color_2;
+		}
+	}
+}
+.putin-border2-color-3 {
+	.input-label {
+		&:after {
+			background-color: $color_3;
+			border-color: $color_3;
+		}
+		&:before {
+			border-color: $color_3;
+		}
+	}
+}
+.putin-border2-color-4 {
+	.input-label {
+		&:after {
+			background-color: $color_4;
+			border-color: $color_4;
+		}
+		&:before {
+			border-color: $color_4;
+		}
+	}
+}
+.putin-border2-color-5 {
+	.input-label {
+		&:after {
+			background-color: $color_5;
+			border-color: $color_5;
+		}
+		&:before {
+			border-color: $color_5;
+		}
+	}
+}
+.putin-border2-color-6 {
+	.input-label {
+		&:after {
+			background-color: $color_6;
+			border-color: $color_6;
+		}
+		&:before {
+			border-color: $color_6;
+		}
+	}
+}
+.putin-border2-color-7 {
+	.input-label {
+		&:after {
+			background-color: $color_7;
+			border-color: $color_7;
+		}
+		&:before {
+			border-color: $color_7;
+		}
+	}
+}
+.putin-border2-color-8 {
+	.input-label {
+		&:after {
+			background-color: $color_8;
+			border-color: $color_8;
+		}
+		&:before {
+			border-color: $color_8;
+		}
+	}
+}
+.putin-border2-color-9 {
+	.input-label {
+		&:after {
+			background-color: $color_9;
+			border-color: $color_9;
+		}
+		&:before {
+			border-color: $color_9;
+		}
+	}
+}
+.putin-border2-color-10 {
+	.input-label {
+		&:after {
+			background-color: $color_10;
+			border-color: $color_10;
+		}
+		&:before {
+			border-color: $color_10;
+		}
+	}
+}
+.putin-border2-color-11 {
+	.input-label {
+		&:after {
+			background-color: $color_11;
+			border-color: $color_11;
+		}
+		&:before {
+			border-color: $color_11;
+		}
+	}
+}
+.putin-border2-color-12 {
+	.input-label {
+		&:after {
+			background-color: $color_12;
+			border-color: $color_12;
+		}
+		&:before {
+			border-color: $color_12;
+		}
+	}
+}
+.putin-border2-color-13 {
+	.input-label {
+		&:after {
+			background-color: $color_13;
+			border-color: $color_13;
+		}
+		&:before {
+			border-color: $color_13;
+		}
+	}
+}
+.putin-border2-color-14 {
+	.input-label {
+		&:after {
+			background-color: $color_14;
+			border-color: $color_14;
+		}
+		&:before {
+			border-color: $color_14;
+		}
+	}
+}
+.putin-border2-color-15 {
+	.input-label {
+		&:after {
+			background-color: $color_15;
+			border-color: $color_15;
+		}
+		&:before {
+			border-color: $color_15;
+		}
+	}
+}
+.putin-border2-color-16 {
+	.input-label {
+		&:after {
+			background-color: $color_16;
+			border-color: $color_16;
+		}
+		&:before {
+			border-color: $color_16;
+		}
+	}
+}
+.putin-border2-color-17 {
+	.input-label {
+		&:after {
+			background-color: $color_17;
+			border-color: $color_17;
+		}
+		&:before {
+			border-color: $color_17;
+		}
+	}
+}
+.putin-border2-color-18 {
+	.input-label {
+		&:after {
+			background-color: $color_18;
+			border-color: $color_18;
+		}
+		&:before {
+			border-color: $color_18;
+		}
+	}
+}
+.putin-border2-color-19 {
+	.input-label {
+		&:after {
+			background-color: $color_19;
+			border-color: $color_19;
+		}
+		&:before {
+			border-color: $color_19;
+		}
+	}
+}
+.putin-border2-color-20 {
+	.input-label {
+		&:after {
+			background-color: $color_20;
+			border-color: $color_20;
+		}
+		&:before {
+			border-color: $color_20;
+		}
+	}
+}
+.putin-border2-color-21 {
+	.input-label {
+		&:after {
+			background-color: $color_21;
+			border-color: $color_21;
+		}
+		&:before {
+			border-color: $color_21;
+		}
+	}
+}
+.putin-border2-color-22 {
+	.input-label {
+		&:after {
+			background-color: $color_22;
+			border-color: $color_22;
+		}
+		&:before {
+			border-color: $color_22;
+		}
+	}
+}
+.putin-border2-color-23 {
+	.input-label {
+		&:after {
+			background-color: $color_23;
+			border-color: $color_23;
+		}
+		&:before {
+			border-color: $color_23;
+		}
+	}
+}
+.putin-border2-color-24 {
+	.input-label {
+		&:after {
+			background-color: $color_24;
+			border-color: $color_24;
+		}
+		&:before {
+			border-color: $color_24;
+		}
+	}
+}
+.putin-border2-color-25 {
+	.input-label {
+		&:after {
+			background-color: $color_25;
+			border-color: $color_25;
+		}
+		&:before {
+			border-color: $color_25;
+		}
+	}
+}
+.putin-border2-color-26 {
+	.input-label {
+		&:after {
+			background-color: $color_26;
+			border-color: $color_26;
+		}
+		&:before {
+			border-color: $color_26;
+		}
+	}
+}
+.putin-border2-color-27 {
+	.input-label {
+		&:after {
+			background-color: $color_27;
+			border-color: $color_27;
+		}
+		&:before {
+			border-color: $color_27;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+12.0 Label Shrink
+When input is focused the label will shrink (beside moving).
+--------------------------------------------------------------*/
+
+.putin-label-shrink:not(.effect-19) {
+	.input-label {
+		.label-text {
+			transform-origin: top left;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				transform:scale(.8);
+			}
+		}
+	}	
+}
+.putin-right.putin-label-shrink {
+	.input-label {
+		.label-text {
+			transform-origin: top right;
+		}
+	}	
+}
+.putin-center.putin-label-shrink:not(.effect-19) {
+	.input-label {
+		.label-text {
+			transform-origin: top center;
+		}
+	}	
+	&.active {
+		.input-label {
+			.label-text {
+				transform: translate(-50%, -50%) scale(0.8);
+			}
+		}
+	}
+}
+.putin-down.putin-label-shrink:not(.effect-19) {	
+	.input-label {
+		.label-text {
+			transform-origin: bottom;
+		}
+	}
+	&.active {
+		.input-label {
+			.label-text {
+				transform: translateY(50%) scale(0.8);
+			}
+		}
+	}
+}
+.putin-down.putin-label-shrink.putin-right {	
+	.input-label {
+		.label-text {
+			transform-origin: bottom right !important;
+		}
+	}
+}
+.putin-down.putin-label-shrink:not(.effect-19) {	
+	.input-label {
+		.label-text {
+			transform-origin: bottom left;
+		}
+	}
+}
+.putin-center.putin-label-shrink.putin-down:not(.effect-19) {
+	.input-label {
+		.label-text {
+			transform-origin: bottom center;
+		}
+	}	
+	&.active {
+		.input-label {
+			.label-text {
+				transform: translate(-50%, 50%) scale(0.8);
+			}
+		}
+	}
+}
+    
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/*1 Jun 2019*/
+
+

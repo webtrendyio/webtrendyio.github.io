@@ -1,0 +1,1540 @@
+@charset "UTF-8";
+/*!
+ * Putin Text Input Effects
+ * Version: 1.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Be melting snow, wash yourself of yourself" -Rumi
+ *
+ */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1.0 Variables > Line 31
+	2.0 General Styles > Line 73
+	3.0 Input Effects > Line 148
+	4.0 Input Sizes > Line 1196
+	5.0 Typography > Line 1236
+	6.0 Horizontal Alignment > Line 1251
+	7.0 Vertical Movement > Line 1347
+	8.0 Input Color > Line 1446
+	9.0 Label Color > Line 1587
+	10.0 Border Color 1 > Line 1783
+	11.0 Border Color 2 > Line 2087
+	12.0 Label Shrink > Line 2381
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+Variables used inside the library. Update per your needs.
+--------------------------------------------------------------*/
+/*Default Padding*/
+/*Default font size*/
+/*Default input color*/
+/*Default border overlay color*/
+/*Default border color*/
+/*Default label color*/
+/*--------------------------------------------------------------
+2.0 General Styles
+Styles applied to all effects.
+--------------------------------------------------------------*/
+.putin {
+  font-size: 14px;
+  position: relative;
+  margin-top: 20px; }
+  .putin .input-field {
+    padding: 0.5em 0.3em;
+    width: 100%;
+    border: none;
+    font-size: 1.6em;
+    background-color: transparent;
+    position: relative;
+    z-index: 99;
+    color: #595F6E;
+    -webkit-transition: all 300ms;
+    transition: all 300ms; }
+    .putin .input-field:focus {
+      outline: none; }
+  .putin .input-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .putin .input-label .label-text {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      z-index: 100;
+      -webkit-transition: all 300ms;
+      transition: all 300ms;
+      pointer-events: none;
+      color: #323232;
+      padding: 0.5em 0.3em; }
+    .putin .input-label:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #eeeeee;
+      -webkit-transition: all 300ms;
+      transition: all 300ms; }
+    .putin .input-label:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      -webkit-transition: all 300ms;
+      transition: all 300ms;
+      background-color: #845EC2; }
+  .putin.active .input-label .label-text {
+    top: -10px; }
+  .putin.active .input-label:after {
+    width: 100%;
+    -webkit-transition-delay: 150ms;
+            transition-delay: 150ms; }
+
+/*--------------------------------------------------------------
+3.0 Input Effects
+Effects for inputs.
+--------------------------------------------------------------*/
+/*Effect 1 - This is default*/
+.effect-1 .input-label .label-text {
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+.effect-1 .input-label:before {
+  width: 100%;
+  height: 3px; }
+.effect-1 .input-label:after {
+  width: 0%;
+  height: 3px; }
+.effect-1.active .input-label .label-text {
+  top: -10px;
+  bottom: auto; }
+.effect-1.active .input-label:after {
+  width: 100%;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms; }
+
+/*Effect 2*/
+.effect-2 .input-label:before {
+  width: 100%; }
+.effect-2 .input-label:after {
+  width: 0%; }
+.effect-2.active .input-label:before {
+  height: 100%;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms; }
+.effect-2.active .input-label:after {
+  width: 0%; }
+
+/*Effect 3*/
+.effect-3 .input-label:before {
+  width: 100%;
+  top: auto;
+  bottom: -10px; }
+.effect-3 .input-label:after {
+  width: 100%;
+  top: -10px;
+  bottom: auto;
+  background-color: #eeeeee; }
+.effect-3.active .input-label:before {
+  bottom: 0; }
+.effect-3.active .input-label:after {
+  top: 0;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 4*/
+.effect-4 .input-label .label-text {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms; }
+.effect-4 .input-label:before {
+  width: 100%;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms; }
+.effect-4 .input-label:after {
+  width: 100%;
+  height: 0px;
+  top: 0;
+  background-color: #eeeeee; }
+.effect-4.active .input-label:before {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  bottom: calc(100% - 3px); }
+.effect-4.active .input-label:after {
+  height: 100%;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms; }
+
+/*Effect 5*/
+.effect-5 .input-label .label-text {
+  margin: 0px 5px; }
+.effect-5 .input-label:before {
+  width: 100%;
+  height: 100%; }
+.effect-5 .input-label:after {
+  width: 100%;
+  height: 0;
+  border: 0 solid #eeeeee;
+  background-color: #fff; }
+.effect-5.active .input-label:before {
+  bottom: 100%;
+  height: 50%; }
+.effect-5.active .input-label:after {
+  border-width: 3px;
+  height: 100%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
+
+/*Effect 6*/
+.effect-6 .input-label {
+  -webkit-perspective: 2000px;
+          perspective: 2000px; }
+  .effect-6 .input-label:before {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom; }
+  .effect-6 .input-label:after {
+    width: 100%;
+    background-color: #d5d5d5;
+    -webkit-transform-origin: top;
+            transform-origin: top; }
+.effect-6.active .input-label:before {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+.effect-6.active .input-label:after {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg); }
+
+/*Effect 7*/
+.effect-7 .input-field {
+  width: 65%; }
+.effect-7 .input-label .label-text {
+  padding: .5em .6em; }
+.effect-7 .input-label:before {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: auto; }
+.effect-7 .input-label:after {
+  width: 100%;
+  height: 100%;
+  background-color: transparent !important;
+  border: 3px solid #eeeeee; }
+.effect-7.active .input-label .label-text {
+  top: 50%;
+  left: 100%;
+  width: auto;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%); }
+.effect-7.active .input-label:before {
+  width: 35%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+.effect-7.active .input-label:after {
+  /*width: 0%;*/ }
+
+/*Effect 8*/
+.effect-8 .input-label .label-text {
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+.effect-8 .input-label:before {
+  width: 100%;
+  height: 3px; }
+.effect-8 .input-label:after {
+  width: 0%;
+  right: 0;
+  left: auto;
+  height: 3px; }
+.effect-8.active .input-label .label-text {
+  top: -10px;
+  bottom: auto; }
+.effect-8.active .input-label:after {
+  width: 100%;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms; }
+
+/*Effect 9*/
+.effect-9 .input-label .label-text {
+  width: 100%;
+  text-align: center; }
+.effect-9 .input-label:before {
+  width: 50%;
+  height: 100%;
+  border: 3px solid #eeeeee;
+  border-right: 0;
+  background-color: transparent !important; }
+.effect-9 .input-label:after {
+  width: 50%;
+  height: 100%;
+  right: 0;
+  left: auto;
+  border: 3px solid #eeeeee;
+  border-left: 0;
+  background-color: transparent !important; }
+.effect-9.active .input-label:before {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px); }
+.effect-9.active .input-label:after {
+  width: 50%;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 10*/
+.effect-10 .input-label:before {
+  width: 100%; }
+.effect-10 .input-label:after {
+  width: 100%;
+  background-color: #eeeeee;
+  height: 0;
+  top: 0;
+  bottom: auto; }
+.effect-10.active .input-label:after {
+  height: 100%; }
+
+/*Effect 11*/
+.effect-11 .input-label:before {
+  width: 100%; }
+.effect-11 .input-label:after {
+  width: 0;
+  background-color: #eeeeee;
+  height: 100%; }
+.effect-11.active .input-label:before {
+  width: 0; }
+.effect-11.active .input-label:after {
+  width: 100%; }
+
+/*Effect 12*/
+.effect-12 .input-field {
+  width: 65%;
+  margin-left: 35%; }
+.effect-12 .input-label .label-text {
+  padding: .5em .6em;
+  right: 0;
+  left: auto; }
+.effect-12 .input-label:before {
+  width: 100%;
+  height: 100%; }
+.effect-12 .input-label:after {
+  width: 100%;
+  height: 100%;
+  background-color: transparent !important;
+  border: 3px solid #eeeeee; }
+.effect-12.active .input-label .label-text {
+  top: 50%;
+  right: 100% !important;
+  width: auto;
+  -webkit-transform: translate(100%, -50%) !important;
+          transform: translate(100%, -50%) !important; }
+.effect-12.active .input-label:before {
+  width: 35%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+.effect-12.active .input-label:after {
+  /*width: 0%;*/ }
+
+/*Effect 13*/
+.effect-13 .input-label {
+  -webkit-perspective: 2000px;
+          perspective: 2000px; }
+  .effect-13 .input-label:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: auto;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    -webkit-transform-origin: top;
+            transform-origin: top; }
+  .effect-13 .input-label:after {
+    width: 100%;
+    background-color: #d5d5d5;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom; }
+.effect-13.active .input-label:before {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+.effect-13.active .input-label:after {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg); }
+
+/*Effect 14*/
+.effect-14 .input-label:before {
+  width: 100%;
+  right: 0;
+  left: auto; }
+.effect-14 .input-label:after {
+  width: 0;
+  background-color: #eeeeee;
+  height: 100%;
+  right: 0;
+  left: auto; }
+.effect-14.active .input-label:before {
+  width: 0; }
+.effect-14.active .input-label:after {
+  width: 100%; }
+
+/*Effect 15*/
+.effect-15 .input-label .label-text {
+  margin: 0px 5px; }
+.effect-15 .input-label:before {
+  width: 100%;
+  height: 100%;
+  background-color: transparent; }
+.effect-15 .input-label:after {
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee; }
+.effect-15.active .input-label:before {
+  border: 3px solid #eeeeee; }
+.effect-15.active .input-label:after {
+  opacity: 0; }
+
+/*Effect 16*/
+.effect-16 .input-label:before {
+  width: 100%; }
+.effect-16 .input-label:after {
+  width: 0;
+  /*background-color: $color_23;*/
+  top: 0;
+  bottom: auto; }
+.effect-16.active .input-label:before {
+  width: 0; }
+.effect-16.active .input-label:after {
+  width: 100%;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms; }
+
+/*Effect 17*/
+.effect-17 .input-label {
+  border-bottom: 3px solid #eeeeee; }
+  .effect-17 .input-label:before {
+    width: 0;
+    left: 50%;
+    background-color: #845EC2;
+    bottom: -3px; }
+  .effect-17 .input-label:after {
+    width: 0;
+    right: 50%;
+    left: auto;
+    bottom: -3px; }
+.effect-17.active .input-label:before {
+  width: 50%; }
+.effect-17.active .input-label:after {
+  width: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 18*/
+.effect-18 .input-label {
+  border-bottom: 3px solid #eeeeee; }
+  .effect-18 .input-label:before {
+    width: 0;
+    background-color: #845EC2;
+    bottom: -3px;
+    right: 0;
+    left: auto; }
+  .effect-18 .input-label:after {
+    width: 0;
+    bottom: -3px; }
+.effect-18.active .input-label:before {
+  width: 50%; }
+.effect-18.active .input-label:after {
+  width: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 19*/
+.effect-19 ::-webkit-input-placeholder {
+  font-weight: lighter;
+  font-size: 75%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #d5d5d5; }
+.effect-19 ::-moz-placeholder {
+  font-weight: lighter;
+  font-size: 75%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #d5d5d5; }
+.effect-19 :-ms-input-placeholder {
+  font-weight: lighter;
+  font-size: 75%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #d5d5d5; }
+.effect-19 :-moz-placeholder {
+  font-weight: lighter;
+  font-size: 75%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #d5d5d5; }
+.effect-19 .input-label {
+  overflow: hidden; }
+  .effect-19 .input-label .label-text {
+    bottom: 0;
+    top: auto;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    font-size: 12px;
+    margin: 0px 5px; }
+  .effect-19 .input-label:before {
+    width: 100%;
+    height: 0; }
+  .effect-19 .input-label:after {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 3px solid #eeeeee; }
+.effect-19.active ::-webkit-input-placeholder {
+  opacity: 0; }
+.effect-19.active ::-moz-placeholder {
+  opacity: 0; }
+.effect-19.active :-ms-input-placeholder {
+  opacity: 0; }
+.effect-19.active :-moz-placeholder {
+  opacity: 0; }
+.effect-19.active .input-field {
+  margin-bottom: 20px; }
+.effect-19.active .input-label .label-text {
+  -webkit-transform: none;
+          transform: none;
+  bottom: 0;
+  top: auto; }
+.effect-19.active .input-label:before {
+  height: 40%; }
+.effect-19.active .input-label:after {
+  /*width: 50%;
+  transition-delay: 0ms;*/ }
+
+/*Effect 20*/
+.effect-20 .input-label {
+  border-bottom: 3px solid #eeeeee; }
+  .effect-20 .input-label .label-text:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    border-top: 5px solid #845EC2;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease; }
+  .effect-20 .input-label:before {
+    width: 0;
+    background-color: #845EC2;
+    bottom: -3px;
+    right: 0;
+    left: auto; }
+  .effect-20 .input-label:after {
+    width: 0;
+    bottom: -3px; }
+.effect-20.active .input-label .label-text {
+  background-color: #845EC2;
+  color: white !important;
+  border-radius: 4px;
+  padding: .3em .5em; }
+  .effect-20.active .input-label .label-text:after {
+    opacity: 1;
+    bottom: -4px; }
+.effect-20.active .input-label:before {
+  width: 50%; }
+.effect-20.active .input-label:after {
+  width: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 21*/
+.effect-21 .input-label:before {
+  width: 100%; }
+.effect-21 .input-label:after {
+  width: 100%;
+  height: 0;
+  background-color: transparent;
+  border: 3px solid #eeeeee;
+  opacity: 0; }
+.effect-21.active .input-label:after {
+  opacity: 1;
+  height: 100%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 22*/
+.effect-22 .input-label .label-text {
+  margin: 0px 5px; }
+.effect-22 .input-label:before {
+  height: 100%;
+  width: 3px; }
+.effect-22 .input-label:after {
+  height: 100%;
+  width: 0;
+  background-color: transparent;
+  border: 3px solid #eeeeee;
+  opacity: 0; }
+.effect-22.active .input-label:after {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 23*/
+.effect-23 .input-label {
+  border-bottom: 3px solid #eeeeee; }
+  .effect-23 .input-label:before {
+    width: 0;
+    height: 100%;
+    bottom: -3px;
+    right: 0;
+    left: auto; }
+  .effect-23 .input-label:after {
+    width: 0;
+    height: 100%;
+    background-color: #eeeeee;
+    bottom: -3px; }
+.effect-23.active .input-label:before {
+  width: 50%; }
+.effect-23.active .input-label:after {
+  width: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 24*/
+.effect-24 .input-label {
+  border-bottom: 3px solid #eeeeee; }
+  .effect-24 .input-label:before {
+    width: 0;
+    height: 100%;
+    bottom: -3px;
+    left: 50%; }
+  .effect-24 .input-label:after {
+    width: 0;
+    height: 100%;
+    background-color: #eeeeee;
+    bottom: -3px;
+    right: 50%;
+    left: auto; }
+.effect-24.active .input-label:before {
+  width: 50%; }
+.effect-24.active .input-label:after {
+  width: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 25*/
+.effect-25 .input-field {
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+.effect-25 .input-label {
+  border: 3px solid #eeeeee;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+  .effect-25 .input-label:before {
+    width: 0;
+    height: 100%; }
+.effect-25.active .input-field {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
+.effect-25.active .input-label {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
+  .effect-25.active .input-label .label-text {
+    top: -65%; }
+  .effect-25.active .input-label:before {
+    width: 100%; }
+  .effect-25.active .input-label:after {
+    width: 0%; }
+
+/*Effect 26*/
+.effect-26 .input-label {
+  background-color: #eeeeee; }
+  .effect-26 .input-label .label-text {
+    margin: 0px 5px; }
+  .effect-26 .input-label:before {
+    width: 0;
+    height: 100%;
+    bottom: -3px;
+    left: 50%;
+    background-color: #fff; }
+  .effect-26 .input-label:after {
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    bottom: -3px;
+    right: 50%;
+    left: auto; }
+.effect-26.active .input-label .label-text {
+  margin: 0px 5px; }
+.effect-26.active .input-label:before {
+  width: 50%; }
+.effect-26.active .input-label:after {
+  width: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 27*/
+.effect-27 .input-field {
+  padding-left: 15px;
+  padding-right: 15px; }
+.effect-27 .input-label {
+  background-color: #eeeeee;
+  border-radius: 100px;
+  border: 3px solid transparent; }
+  .effect-27 .input-label .label-text {
+    margin: 0px 5px; }
+  .effect-27 .input-label:before {
+    width: 0;
+    height: 100%;
+    left: 50%;
+    background-color: #fff;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px; }
+  .effect-27 .input-label:after {
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    right: 50%;
+    left: auto; }
+.effect-27.active .input-label {
+  border-color: #eeeeee; }
+  .effect-27.active .input-label .label-text {
+    margin: 0px 5px; }
+  .effect-27.active .input-label:before {
+    width: 50%; }
+  .effect-27.active .input-label:after {
+    width: 50%;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms; }
+
+/*Effect 28*/
+.effect-28 .input-field {
+  padding-left: 30px; }
+.effect-28 .input-label .label-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.3em;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+.effect-28 .input-label:before {
+  width: 100%; }
+.effect-28 .input-label:after {
+  width: 0;
+  right: 0;
+  left: auto; }
+.effect-28.active .label-icon {
+  right: calc(100% - 20px); }
+.effect-28.active .input-label:after {
+  width: 100%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 29*/
+.effect-29 .input-label {
+  border-bottom: 3px solid #eeeeee; }
+  .effect-29 .input-label .label-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 1.3em;
+    -webkit-transition: all 300ms;
+    transition: all 300ms; }
+  .effect-29 .input-label:before {
+    width: 0%;
+    right: 0;
+    left: auto;
+    background-color: #845EC2;
+    bottom: -3px; }
+  .effect-29 .input-label:after {
+    width: 0;
+    bottom: -3px; }
+.effect-29.active .label-icon {
+  top: 100%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  color: #c8c8c8; }
+.effect-29.active .input-label:before {
+  width: 50%;
+  right: 50%; }
+.effect-29.active .input-label:after {
+  width: 50%;
+  left: 50%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*Effect 30*/
+.effect-30 .input-field {
+  padding-left: .5em;
+  padding-right: .5em; }
+.effect-30 .input-label .label-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%) scale(1.2);
+          transform: translateY(-50%) scale(1.2);
+  font-size: 1.3em;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+.effect-30 .input-label:before {
+  width: 100%; }
+.effect-30 .input-label:after {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  border-radius: 100px;
+  background-color: #eeeeee; }
+.effect-30.active .label-icon {
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+  opacity: 0; }
+.effect-30.active .input-label:before {
+  width: 0; }
+.effect-30.active .input-label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+/*--------------------------------------------------------------
+4.0 Input Sizes
+Small, normal and large inputs
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-normal {
+  font-size: 14px; }
+  .putin-normal .input-field {
+    padding: 0.5em 0.3em; }
+  .putin-normal .input-label .label-text {
+    padding: 0.5em 0.3em; }
+
+.putin-small {
+  font-size: 12px; }
+  .putin-small .input-field {
+    padding: 0.4em 0.3em; }
+  .putin-small .input-label .label-text {
+    padding: 0.4em 0.3em; }
+
+.putin-large {
+  font-size: 16px; }
+  .putin-large .input-field {
+    padding: 0.6em 0.5em; }
+  .putin-large .input-label .label-text {
+    padding: 0.6em 0.5em; }
+
+/*--------------------------------------------------------------
+5.0 Typography
+Light and bold formats
+--------------------------------------------------------------*/
+.putin-bold .input-field {
+  font-weight: bold; }
+
+.putin-light .input-field {
+  font-weight: lighter; }
+
+/*--------------------------------------------------------------
+6.0 Horizontal Alignment
+Left, center and right labels
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-left .input-label .label-text {
+  left: 0;
+  right: auto; }
+
+.putin-right .input-label .label-text {
+  right: 0;
+  left: auto; }
+
+.putin-center .input-label .label-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.putin-center.effect-12 .input-label .label-text {
+  right: 50%;
+  left: auto;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%); }
+
+.putin-center.effect-19 .input-label .label-text {
+  right: 50%;
+  left: auto;
+  -webkit-transform: translate(50%, 100%);
+          transform: translate(50%, 100%); }
+.putin-center.effect-19.active .input-label .label-text {
+  -webkit-transform: translate(50%, 0%);
+          transform: translate(50%, 0%); }
+
+.putin-right.effect-28 .input-field {
+  padding-left: .3em;
+  padding-right: 30px; }
+.putin-right.effect-28 .input-label .label-icon {
+  right: auto;
+  left: 0; }
+.putin-right.effect-28 .input-label:before {
+  width: 100%; }
+.putin-right.effect-28 .input-label:after {
+  width: 0;
+  left: 0;
+  right: auto; }
+.putin-right.effect-28.active .label-icon {
+  left: calc(100% - 20px); }
+.putin-right.effect-28.active .input-label:after {
+  width: 100%;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms; }
+
+.putin-right.effect-29 .input-label .label-icon {
+  right: auto;
+  left: 0; }
+
+/*--------------------------------------------------------------
+7.0 Vertical Movement
+Move top and move down labels
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-up .input-label .label-text {
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+.putin-up.active .input-label .label-text {
+  bottom: auto;
+  top: -10px; }
+
+.putin-down:not(.effect-7):not(.effect-12):not(.effect-19) .input-label .label-text {
+  bottom: 50%;
+  top: auto;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%); }
+.putin-down:not(.effect-7):not(.effect-12):not(.effect-19).active .input-label .label-text {
+  top: auto;
+  bottom: -10px; }
+
+.putin-down.putin-center:not(.effect-7):not(.effect-12):not(.effect-19) .input-label .label-text {
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%); }
+
+.effect-5.putin-down .input-label:before {
+  top: 0;
+  bottom: auto; }
+.effect-5.putin-down .input-label:after {
+  top: 0;
+  bottom: auto; }
+.effect-5.putin-down.active .input-label:before {
+  top: 100%;
+  height: 50%; }
+
+.effect-17.putin-down.active .input-label .label-text, .effect-29.putin-down.active .input-label .label-text {
+  bottom: -15px !important; }
+
+.effect-20.putin-down .input-label .label-text:after {
+  bottom: auto;
+  top: 0;
+  border-bottom: 5px solid #845EC2;
+  border-top: none; }
+.effect-20.putin-down.active .input-label .label-text {
+  bottom: -25px !important; }
+  .effect-20.putin-down.active .input-label .label-text:after {
+    top: -4px;
+    bottom: auto; }
+
+/*--------------------------------------------------------------
+8.0 Input Color
+Input text color
+--------------------------------------------------------------*/
+/*This is default*/
+.putin-color-1 .input-field {
+  color: #595F6E; }
+
+.putin-color-2 .input-field {
+  color: #845EC2; }
+
+.putin-color-3 .input-field {
+  color: #1C1259; }
+
+.putin-color-4 .input-field {
+  color: #D65DB1; }
+
+.putin-color-5 .input-field {
+  color: #7F4782; }
+
+.putin-color-6 .input-field {
+  color: #FF6F91; }
+
+.putin-color-7 .input-field {
+  color: #e2598b; }
+
+.putin-color-8 .input-field {
+  color: #ee7777; }
+
+.putin-color-9 .input-field {
+  color: #FF9671; }
+
+.putin-color-10 .input-field {
+  color: #ff8246; }
+
+.putin-color-11 .input-field {
+  color: #ffdc27; }
+
+.putin-color-12 .input-field {
+  color: #FFC75F; }
+
+.putin-color-13 .input-field {
+  color: #F9F871; }
+
+.putin-color-14 .input-field {
+  color: #49beb7; }
+
+.putin-color-15 .input-field {
+  color: #bfcd7e; }
+
+.putin-color-16 .input-field {
+  color: #15cda8; }
+
+.putin-color-17 .input-field {
+  color: #ff5959; }
+
+.putin-color-18 .input-field {
+  color: #f34573; }
+
+.putin-color-19 .input-field {
+  color: #fd5f00; }
+
+.putin-color-20 .input-field {
+  color: #4592af; }
+
+.putin-color-21 .input-field {
+  color: #6c5ce7; }
+
+.putin-color-22 .input-field {
+  color: #00D2FC; }
+
+.putin-color-23 .input-field {
+  color: #eeeeee; }
+
+.putin-color-24 .input-field {
+  color: #f2eee0; }
+
+.putin-color-25 .input-field {
+  color: #323232; }
+
+.putin-color-26 .input-field {
+  color: #4e4e4e; }
+
+.putin-color-27 .input-field {
+  color: #fff; }
+
+/*--------------------------------------------------------------
+9.0 Label Color
+Label text color
+--------------------------------------------------------------*/
+.putin-label-color-1 .input-label .label-text {
+  color: #595F6E; }
+
+.putin-label-color-2 .input-label .label-text {
+  color: #845EC2; }
+
+.putin-label-color-3 .input-label .label-text {
+  color: #1C1259; }
+
+.putin-label-color-4 .input-label .label-text {
+  color: #D65DB1; }
+
+.putin-label-color-5 .input-label .label-text {
+  color: #7F4782; }
+
+.putin-label-color-6 .input-label .label-text {
+  color: #FF6F91; }
+
+.putin-label-color-7 .input-label .label-text {
+  color: #e2598b; }
+
+.putin-label-color-8 .input-label .label-text {
+  color: #ee7777; }
+
+.putin-label-color-9 .input-label .label-text {
+  color: #FF9671; }
+
+.putin-label-color-10 .input-label .label-text {
+  color: #ff8246; }
+
+.putin-label-color-11 .input-label .label-text {
+  color: #ffdc27; }
+
+.putin-label-color-12 .input-label .label-text {
+  color: #FFC75F; }
+
+.putin-label-color-13 .input-label .label-text {
+  color: #F9F871; }
+
+.putin-label-color-14 .input-label .label-text {
+  color: #49beb7; }
+
+.putin-label-color-15 .input-label .label-text {
+  color: #bfcd7e; }
+
+.putin-label-color-16 .input-label .label-text {
+  color: #15cda8; }
+
+.putin-label-color-17 .input-label .label-text {
+  color: #ff5959; }
+
+.putin-label-color-18 .input-label .label-text {
+  color: #f34573; }
+
+.putin-label-color-19 .input-label .label-text {
+  color: #fd5f00; }
+
+.putin-label-color-20 .input-label .label-text {
+  color: #4592af; }
+
+.putin-label-color-21 .input-label .label-text {
+  color: #6c5ce7; }
+
+.putin-label-color-22 .input-label .label-text {
+  color: #00D2FC; }
+
+.putin-label-color-23 .input-label .label-text {
+  color: #eeeeee; }
+
+.putin-label-color-24 .input-label .label-text {
+  color: #f2eee0; }
+
+/*This is default*/
+.putin-label-color-25 .input-label .label-text {
+  color: #323232; }
+
+.putin-label-color-26 .input-label .label-text {
+  color: #4e4e4e; }
+
+.putin-label-color-27 .input-label .label-text {
+  color: #fff; }
+
+/*--------------------------------------------------------------
+10.0 Border Color 1
+Input border1 color (some effects have 2 borders, some have a border that appears when the input is focused, this border is border 2.)
+--------------------------------------------------------------*/
+.putin-border1-color-1 .input-label:before {
+  background-color: #595F6E;
+  border-color: #595F6E; }
+.putin-border1-color-1 .input-label:after {
+  border-color: #595F6E; }
+
+.putin-border1-color-2 .input-label:before {
+  background-color: #845EC2;
+  border-color: #845EC2; }
+.putin-border1-color-2 .input-label:after {
+  border-color: #845EC2; }
+
+.putin-border1-color-3 .input-label:before {
+  background-color: #1C1259;
+  border-color: #1C1259; }
+.putin-border1-color-3 .input-label:after {
+  border-color: #1C1259; }
+
+.putin-border1-color-4 .input-label:before {
+  background-color: #D65DB1;
+  border-color: #D65DB1; }
+.putin-border1-color-4 .input-label:after {
+  border-color: #D65DB1; }
+
+.putin-border1-color-5 .input-label:before {
+  background-color: #7F4782;
+  border-color: #7F4782; }
+.putin-border1-color-5 .input-label:after {
+  border-color: #7F4782; }
+
+.putin-border1-color-6 .input-label:before {
+  background-color: #FF6F91;
+  border-color: #FF6F91; }
+.putin-border1-color-6 .input-label:after {
+  border-color: #FF6F91; }
+
+.putin-border1-color-7 .input-label:before {
+  background-color: #e2598b;
+  border-color: #e2598b; }
+.putin-border1-color-7 .input-label:after {
+  border-color: #e2598b; }
+
+.putin-border1-color-8 .input-label:before {
+  background-color: #ee7777;
+  border-color: #ee7777; }
+.putin-border1-color-8 .input-label:after {
+  border-color: #ee7777; }
+
+.putin-border1-color-9 .input-label:before {
+  background-color: #FF9671;
+  border-color: #FF9671; }
+.putin-border1-color-9 .input-label:after {
+  border-color: #FF9671; }
+
+.putin-border1-color-10 .input-label:before {
+  background-color: #ff8246;
+  border-color: #ff8246; }
+.putin-border1-color-10 .input-label:after {
+  border-color: #ff8246; }
+
+.putin-border1-color-11 .input-label:before {
+  background-color: #ffdc27;
+  border-color: #ffdc27; }
+.putin-border1-color-11 .input-label:after {
+  border-color: #ffdc27; }
+
+.putin-border1-color-12 .input-label:before {
+  background-color: #FFC75F;
+  border-color: #FFC75F; }
+.putin-border1-color-12 .input-label:after {
+  border-color: #FFC75F; }
+
+.putin-border1-color-13 .input-label:before {
+  background-color: #F9F871;
+  border-color: #F9F871; }
+.putin-border1-color-13 .input-label:after {
+  border-color: #F9F871; }
+
+.putin-border1-color-14 .input-label:before {
+  background-color: #49beb7;
+  border-color: #49beb7; }
+.putin-border1-color-14 .input-label:after {
+  border-color: #49beb7; }
+
+.putin-border1-color-15 .input-label:before {
+  background-color: #bfcd7e;
+  border-color: #bfcd7e; }
+.putin-border1-color-15 .input-label:after {
+  border-color: #bfcd7e; }
+
+.putin-border1-color-16 .input-label:before {
+  background-color: #15cda8;
+  border-color: #15cda8; }
+.putin-border1-color-16 .input-label:after {
+  border-color: #15cda8; }
+
+.putin-border1-color-17 .input-label:before {
+  background-color: #ff5959;
+  border-color: #ff5959; }
+.putin-border1-color-17 .input-label:after {
+  border-color: #ff5959; }
+
+.putin-border1-color-18 .input-label:before {
+  background-color: #f34573;
+  border-color: #f34573; }
+.putin-border1-color-18 .input-label:after {
+  border-color: #f34573; }
+
+.putin-border1-color-19 .input-label:before {
+  background-color: #fd5f00;
+  border-color: #fd5f00; }
+.putin-border1-color-19 .input-label:after {
+  border-color: #fd5f00; }
+
+.putin-border1-color-20 .input-label:before {
+  background-color: #4592af;
+  border-color: #4592af; }
+.putin-border1-color-20 .input-label:after {
+  border-color: #4592af; }
+
+.putin-border1-color-21 .input-label:before {
+  background-color: #6c5ce7;
+  border-color: #6c5ce7; }
+.putin-border1-color-21 .input-label:after {
+  border-color: #6c5ce7; }
+
+.putin-border1-color-22 .input-label:before {
+  background-color: #00D2FC;
+  border-color: #00D2FC; }
+.putin-border1-color-22 .input-label:after {
+  border-color: #00D2FC; }
+
+/*This is default*/
+.putin-border1-color-23 .input-label:before {
+  background-color: #eeeeee;
+  border-color: #eeeeee; }
+.putin-border1-color-23 .input-label:after {
+  border-color: #eeeeee; }
+
+.putin-border1-color-24 .input-label:before {
+  background-color: #f2eee0;
+  border-color: #f2eee0; }
+.putin-border1-color-24 .input-label:after {
+  border-color: #f2eee0; }
+
+.putin-border1-color-25 .input-label:before {
+  background-color: #323232;
+  border-color: #323232; }
+.putin-border1-color-25 .input-label:after {
+  border-color: #323232; }
+
+.putin-border1-color-26 .input-label:before {
+  background-color: #4e4e4e;
+  border-color: #4e4e4e; }
+.putin-border1-color-26 .input-label:after {
+  border-color: #4e4e4e; }
+
+.putin-border1-color-27 .input-label:before {
+  background-color: #fff;
+  border-color: #fff; }
+.putin-border1-color-27 .input-label:after {
+  border-color: #fff; }
+
+/*--------------------------------------------------------------
+11.0 Border  Color2
+Input border2 color (The secondary border that appears on top or when the input is focused)
+--------------------------------------------------------------*/
+.putin-border2-color-1 .input-label:after {
+  background-color: #595F6E;
+  border-color: #595F6E; }
+.putin-border2-color-1 .input-label:before {
+  border-color: #595F6E; }
+
+/*This is default*/
+.putin-border2-color-2 .input-label:after {
+  background-color: #845EC2;
+  border-color: #845EC2; }
+.putin-border2-color-2 .input-label:before {
+  border-color: #845EC2; }
+
+.putin-border2-color-3 .input-label:after {
+  background-color: #1C1259;
+  border-color: #1C1259; }
+.putin-border2-color-3 .input-label:before {
+  border-color: #1C1259; }
+
+.putin-border2-color-4 .input-label:after {
+  background-color: #D65DB1;
+  border-color: #D65DB1; }
+.putin-border2-color-4 .input-label:before {
+  border-color: #D65DB1; }
+
+.putin-border2-color-5 .input-label:after {
+  background-color: #7F4782;
+  border-color: #7F4782; }
+.putin-border2-color-5 .input-label:before {
+  border-color: #7F4782; }
+
+.putin-border2-color-6 .input-label:after {
+  background-color: #FF6F91;
+  border-color: #FF6F91; }
+.putin-border2-color-6 .input-label:before {
+  border-color: #FF6F91; }
+
+.putin-border2-color-7 .input-label:after {
+  background-color: #e2598b;
+  border-color: #e2598b; }
+.putin-border2-color-7 .input-label:before {
+  border-color: #e2598b; }
+
+.putin-border2-color-8 .input-label:after {
+  background-color: #ee7777;
+  border-color: #ee7777; }
+.putin-border2-color-8 .input-label:before {
+  border-color: #ee7777; }
+
+.putin-border2-color-9 .input-label:after {
+  background-color: #FF9671;
+  border-color: #FF9671; }
+.putin-border2-color-9 .input-label:before {
+  border-color: #FF9671; }
+
+.putin-border2-color-10 .input-label:after {
+  background-color: #ff8246;
+  border-color: #ff8246; }
+.putin-border2-color-10 .input-label:before {
+  border-color: #ff8246; }
+
+.putin-border2-color-11 .input-label:after {
+  background-color: #ffdc27;
+  border-color: #ffdc27; }
+.putin-border2-color-11 .input-label:before {
+  border-color: #ffdc27; }
+
+.putin-border2-color-12 .input-label:after {
+  background-color: #FFC75F;
+  border-color: #FFC75F; }
+.putin-border2-color-12 .input-label:before {
+  border-color: #FFC75F; }
+
+.putin-border2-color-13 .input-label:after {
+  background-color: #F9F871;
+  border-color: #F9F871; }
+.putin-border2-color-13 .input-label:before {
+  border-color: #F9F871; }
+
+.putin-border2-color-14 .input-label:after {
+  background-color: #49beb7;
+  border-color: #49beb7; }
+.putin-border2-color-14 .input-label:before {
+  border-color: #49beb7; }
+
+.putin-border2-color-15 .input-label:after {
+  background-color: #bfcd7e;
+  border-color: #bfcd7e; }
+.putin-border2-color-15 .input-label:before {
+  border-color: #bfcd7e; }
+
+.putin-border2-color-16 .input-label:after {
+  background-color: #15cda8;
+  border-color: #15cda8; }
+.putin-border2-color-16 .input-label:before {
+  border-color: #15cda8; }
+
+.putin-border2-color-17 .input-label:after {
+  background-color: #ff5959;
+  border-color: #ff5959; }
+.putin-border2-color-17 .input-label:before {
+  border-color: #ff5959; }
+
+.putin-border2-color-18 .input-label:after {
+  background-color: #f34573;
+  border-color: #f34573; }
+.putin-border2-color-18 .input-label:before {
+  border-color: #f34573; }
+
+.putin-border2-color-19 .input-label:after {
+  background-color: #fd5f00;
+  border-color: #fd5f00; }
+.putin-border2-color-19 .input-label:before {
+  border-color: #fd5f00; }
+
+.putin-border2-color-20 .input-label:after {
+  background-color: #4592af;
+  border-color: #4592af; }
+.putin-border2-color-20 .input-label:before {
+  border-color: #4592af; }
+
+.putin-border2-color-21 .input-label:after {
+  background-color: #6c5ce7;
+  border-color: #6c5ce7; }
+.putin-border2-color-21 .input-label:before {
+  border-color: #6c5ce7; }
+
+.putin-border2-color-22 .input-label:after {
+  background-color: #00D2FC;
+  border-color: #00D2FC; }
+.putin-border2-color-22 .input-label:before {
+  border-color: #00D2FC; }
+
+.putin-border2-color-23 .input-label:after {
+  background-color: #eeeeee;
+  border-color: #eeeeee; }
+.putin-border2-color-23 .input-label:before {
+  border-color: #eeeeee; }
+
+.putin-border2-color-24 .input-label:after {
+  background-color: #f2eee0;
+  border-color: #f2eee0; }
+.putin-border2-color-24 .input-label:before {
+  border-color: #f2eee0; }
+
+.putin-border2-color-25 .input-label:after {
+  background-color: #323232;
+  border-color: #323232; }
+.putin-border2-color-25 .input-label:before {
+  border-color: #323232; }
+
+.putin-border2-color-26 .input-label:after {
+  background-color: #4e4e4e;
+  border-color: #4e4e4e; }
+.putin-border2-color-26 .input-label:before {
+  border-color: #4e4e4e; }
+
+.putin-border2-color-27 .input-label:after {
+  background-color: #fff;
+  border-color: #fff; }
+.putin-border2-color-27 .input-label:before {
+  border-color: #fff; }
+
+/*--------------------------------------------------------------
+12.0 Label Shrink
+When input is focused the label will shrink (beside moving).
+--------------------------------------------------------------*/
+.putin-label-shrink:not(.effect-19) .input-label .label-text {
+  -webkit-transform-origin: top left;
+          transform-origin: top left; }
+.putin-label-shrink:not(.effect-19).active .input-label .label-text {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8); }
+
+.putin-right.putin-label-shrink .input-label .label-text {
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.putin-center.putin-label-shrink:not(.effect-19) .input-label .label-text {
+  -webkit-transform-origin: top center;
+          transform-origin: top center; }
+.putin-center.putin-label-shrink:not(.effect-19).active .input-label .label-text {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8); }
+
+.putin-down.putin-label-shrink:not(.effect-19) .input-label .label-text {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom; }
+.putin-down.putin-label-shrink:not(.effect-19).active .input-label .label-text {
+  -webkit-transform: translateY(50%) scale(0.8);
+          transform: translateY(50%) scale(0.8); }
+
+.putin-down.putin-label-shrink.putin-right .input-label .label-text {
+  -webkit-transform-origin: bottom right !important;
+          transform-origin: bottom right !important; }
+
+.putin-down.putin-label-shrink:not(.effect-19) .input-label .label-text {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left; }
+
+.putin-center.putin-label-shrink.putin-down:not(.effect-19) .input-label .label-text {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center; }
+.putin-center.putin-label-shrink.putin-down:not(.effect-19).active .input-label .label-text {
+  -webkit-transform: translate(-50%, 50%) scale(0.8);
+          transform: translate(-50%, 50%) scale(0.8); }
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/*1 Jun 2019*/
+
+/*# sourceMappingURL=putin.css.map */
