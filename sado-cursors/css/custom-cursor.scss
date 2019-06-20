@@ -1,0 +1,2262 @@
+/*!
+ * Sado Custom Cursor Pack
+ * Version: 1.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Open your hands if you want to be held." -Rumi
+ *
+ */
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1.0 Variables > Line 23
+	2.0 General Styles > Line 66
+	3.0 Cursor Effects > Line 91
+	4.0 Cursor Colors > Line 572
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+Variables used inside the library. Update per your needs.
+--------------------------------------------------------------*/
+/*CSS Variable*/
+:root {
+    --top: 0;
+    --left: 0;
+}
+
+$transition: all 200ms ease-out;
+
+$color_1: #595F6E; 
+$color_2: #845EC2; 
+$color_3: #1C1259;
+$color_4: #D65DB1;
+$color_5: #7F4782;
+$color_6: #FF6F91;
+$color_7: #e2598b;
+$color_8: #ee7777;
+$color_9: #FF9671;
+$color_10: #ff8246;
+$color_11: #ffdc27;
+$color_12: #FFC75F;
+$color_13: #F9F871;
+$color_14: #49beb7;
+$color_15: #bfcd7e;
+$color_16: #15cda8;
+$color_17: #ff5959;
+$color_18: #f34573;
+$color_19: #fd5f00;
+$color_20: #4592af;
+$color_21: #6c5ce7;
+$color_22: #00D2FC;
+$color_23: #eeeeee; 
+$color_24: #f2eee0;
+$color_25: #323232; /*Default cursor color*/
+$color_26: #4e4e4e;
+$color_27: #fff;
+
+
+
+/*--------------------------------------------------------------
+2.0 General Styles
+Styles applied to all effects.
+--------------------------------------------------------------*/
+.custom-cursor {
+	cursor: none;
+	.cursor {
+		opacity: 0;
+		position: fixed;
+	    transition: $transition;
+	    pointer-events: none;
+		div {
+			position: fixed;
+		}
+	}
+	a {
+		cursor: none;
+	}
+	&.active {
+		.cursor {
+			opacity: 1;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+3.0 Cursor Effects
+Effects for Cursors.
+--------------------------------------------------------------*/
+
+/*Effect 1*/
+.cursor-1 {
+	.cursor {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 15px);
+		left: calc(var(--left) - 15px);
+		div {
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $color_25;
+			top: calc(var(--top) - 3px);
+			left: calc(var(--left) - 3px);
+		}
+		&.onlink {
+			width: 20px;
+			height: 20px;
+			top: calc(var(--top) - 10px);
+			left: calc(var(--left) - 10px);
+			div {
+				width: 10px;
+				height: 10px;
+				top: calc(var(--top) - 5px);
+				left: calc(var(--left) - 5px);
+			}
+		}
+	}
+}
+
+/*Effect 2*/
+.cursor-2 {
+	.cursor {
+		width: 30px;
+		height: 3px;
+		background-color: $color_25;
+		top: calc(var(--top) - 1.5px);
+		left: calc(var(--left) - 30px);
+		div {
+			width: 15px;
+			height: 15px;
+			border-top: 3px solid $color_25;
+			border-right: 3px solid $color_25;
+			transform: rotate(45deg);
+			top: calc(var(--top) - 7.5px);
+			left: calc(var(--left) - 15px);
+			transition: $transition;
+		}
+		&.onlink {
+			width: 0px;
+			div {
+				transform: rotate(135deg);
+			}
+		}
+	}
+}
+
+/*Effect 3*/
+.cursor-3 {
+	.cursor {
+		width: 30px;
+		height: 3px;
+		background-color: $color_25;
+		top: calc(var(--top) - 1.5px);
+		left: calc(var(--left) - 0px);
+		div {
+			width: 15px;
+			height: 15px;
+			border-top: 3px solid $color_25;
+			border-left: 3px solid $color_25;
+			transform: rotate(-45deg);
+			top: calc(var(--top) - 7.5px);
+			left: calc(var(--left) - 0px);
+			transition: $transition;
+		}
+		&.onlink {
+			width: 0px;
+			div {
+				transform: rotate(-135deg);
+			}
+		}
+	}
+}
+
+/*Effect 4*/
+.cursor-4 {
+	.cursor {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 15px);
+		left: calc(var(--left) - 15px);
+		div {
+			width: 15px;
+			height: 2px;
+			background-color: $color_25;
+			top: calc(var(--top) - 1.5px);
+			left: calc(var(--left) - 7.5px);
+			&:before {
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $color_25;
+				transform: rotate(90deg);
+			}
+		}
+		&.onlink {
+			width: 40px;
+			height: 40px;
+			top: calc(var(--top) - 20px);
+			left: calc(var(--left) - 20px);
+			div {
+				width: 20px;
+				height: 2px;
+				top: calc(var(--top) - 1px);
+				left: calc(var(--left) - 10px);
+			}
+		}
+	}
+}
+
+/*Effect 5*/
+.cursor-5 {
+	.cursor {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 15px);
+		left: calc(var(--left) - 15px);
+	    transition-duration: 100ms;
+		div {
+			width: 0px;
+			height: 0px;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 8px solid $color_25;
+			top: calc(var(--top) - 6px);
+			left: calc(var(--left) - 3px);
+			transition: all 100ms ease-out;
+		}
+		&.onlink {
+			width: 50px;
+			height: 50px;
+			top: calc(var(--top) - 25px);
+			left: calc(var(--left) - 25px);
+			div {
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+				border-left: 13px solid $color_25;
+				top: calc(var(--top) - 9px);
+				left: calc(var(--left) - 5px);
+			}
+		}
+	}
+}
+
+/*Effect 6*/
+.cursor-6 {
+	.cursor {
+		width: 0px;
+		height: 0px;
+		opacity: 0;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 0px);
+		left: calc(var(--left) - 0px);
+		div {
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $color_25;
+			top: calc(var(--top) - 3px);
+			left: calc(var(--left) - 3px);
+		}
+		&.onlink {
+			width: 20px;
+			height: 20px;
+			top: calc(var(--top) - 10px);
+			left: calc(var(--left) - 10px);
+			opacity: 1;
+		}
+	}
+}
+
+/*Effect 7*/
+.cursor-7 {
+	.cursor {
+		div {
+			width: 15px;
+			height: 15px;
+			border-top: 3px solid $color_25;
+			border-right: 3px solid $color_25;
+			transform: rotate(45deg);
+			top: calc(var(--top) - 7.5px);
+			left: calc(var(--left) - 15px);
+			transition: $transition;
+		}
+		&.onlink {
+			div {
+				transform: rotate(135deg);
+			}
+		}
+	}
+}
+
+/*Effect 8*/
+.cursor-8 {
+	.cursor {
+		div {
+			width: 15px;
+			height: 15px;
+			border-top: 3px solid $color_25;
+			border-left: 3px solid $color_25;
+			transform: rotate(-45deg);
+			top: calc(var(--top) - 7.5px);
+			left: calc(var(--left) - 0px);
+			transition: $transition;
+		}
+		&.onlink {
+			div {
+				transform: rotate(-135deg);
+			}
+		}
+	}
+}
+
+/*Effect 9*/
+.cursor-9 {
+	.cursor {
+		div {
+			width: 15px;
+			height: 2px;
+			background-color: $color_25;
+			top: calc(var(--top) - 1.5px);
+			left: calc(var(--left) - 7.5px);
+			transition: width 300ms, height 300ms ease-out;
+			&:before {
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $color_25;
+				transform: rotate(90deg);
+			}
+		}
+		&.onlink {
+			div {
+				width: 26px;
+				height: 2px;
+				top: calc(var(--top) - 1px);
+				left: calc(var(--left) - 13px);
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+/*Effect 10*/
+.cursor-10 {
+	.cursor {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 15px);
+		left: calc(var(--left) - 15px);
+		div {
+			width: 8px;
+			height: 8px;
+			background-color: $color_25;
+			top: calc(var(--top) - 4px);
+			left: calc(var(--left) - 4px);
+		}
+		&.onlink {
+			width: 40px;
+			height: 40px;
+			top: calc(var(--top) - 20px);
+			left: calc(var(--left) - 20px);
+			div {
+				transform: rotate(45deg);
+				transition: all 200ms ease-out;
+				width: 10px;
+				height: 10px;
+				top: calc(var(--top) - 5px);
+				left: calc(var(--left) - 5px);
+			}
+		}
+	}
+}
+
+/*Effect 11*/
+.cursor-11 {
+	.cursor {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 15px);
+		left: calc(var(--left) - 15px);
+		div {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: $color_25;
+			top: calc(var(--top) - 10px);
+			left: calc(var(--left) - 10px);
+		}
+		&.onlink {
+			width: 40px;
+			height: 40px;
+			top: calc(var(--top) - 20px);
+			left: calc(var(--left) - 20px);
+			div {
+				transform: rotate(45deg);
+				transition: all 200ms ease-out;
+				width: 10px;
+				height: 10px;
+				top: calc(var(--top) - 5px);
+				left: calc(var(--left) - 5px);
+			}
+		}
+	}
+}
+
+/*Effect 12*/
+.cursor-12 {
+	.cursor {
+		&:before {
+			content:'';
+			position: fixed;
+			width: 5px;
+			height: 5px;
+			background-color: $color_25;
+			top: calc(var(--top) - 2.5px);
+			left: calc(var(--left) - 15px);
+			transform: rotate(45deg);
+			transition: $transition;
+		}
+		div {
+			width: 10px;
+			height: 10px;
+			transform: rotate(45deg);
+			background-color: $color_25;
+			top: calc(var(--top) - 5px);
+			left: calc(var(--left) - 5px);
+		}
+		&.onlink {
+			&:before {
+				width: 10px;
+				height: 10px;
+				top: calc(var(--top) - 5px);
+				left: calc(var(--left) - 25px);
+			}
+			div {
+				width: 15px;
+				height: 15px;
+				top: calc(var(--top) - 7.5px);
+				left: calc(var(--left) - 7.5px);
+			}
+		}
+	}
+}
+
+/*Effect 13*/
+.cursor-13 {
+	.cursor {
+		width: 20px;
+		height: 20px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		top: calc(var(--top) - 10px);
+		left: calc(var(--left) - 10px);
+		&.onlink {
+			width: 30px;
+			height: 30px;
+			top: calc(var(--top) - 15px);
+			left: calc(var(--left) - 15px);
+		}
+	}
+}
+
+/*Effect 14*/
+.cursor-14 {
+	.cursor {
+		width: 20px;
+		height: 20px;
+		border: 1px solid $color_25;
+		border-radius: 50%;
+		border-color: transparent;
+		top: calc(var(--top) - 10px);
+		left: calc(var(--left) - 10px);
+		div {
+			width: 25px;
+			height: 2px;
+			background-color: $color_25;
+			top: calc(var(--top) - 1.5px);
+			left: calc(var(--left) - 12.5px);
+			transition: width 300ms, height 300ms ease-out;
+			transform: rotate(45deg);
+			&:before {
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $color_25;
+				transform: rotate(90deg);
+			}
+		}
+		&.onlink {
+			border-color: $color_25;
+			width: 40px;
+			height: 40px;
+			top: calc(var(--top) - 20px);
+			left: calc(var(--left) - 20px);
+			div {
+				width: 15px;
+				left: calc(var(--left) - 7.5px);
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+/*Effect 15*/
+.cursor-15 {
+	.cursor {
+		width: 20px;
+		height: 20px;
+		top: calc(var(--top) - 10px);
+		left: calc(var(--left) - 10px);
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border: 1px solid $color_25;
+			transform: rotate(45deg);
+		}
+		div {
+			width: 6px;
+			height: 6px;
+			background-color: $color_25;
+			top: calc(var(--top) - 3px);
+			left: calc(var(--left) - 3px);
+			transform: rotate(45deg);
+		}
+		&.onlink {
+			width: 25px;
+			height: 25px;
+			top: calc(var(--top) - 12.5px);
+			left: calc(var(--left) - 12.5px);
+			div {
+				width: 14px;
+				height: 14px;
+				top: calc(var(--top) - 7px);
+				left: calc(var(--left) - 7px);
+			}
+		}
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+4.0 Colors
+Cursor colors
+--------------------------------------------------------------*/
+.color-1 {
+	.cursor {
+		border-color: $color_1;
+		div {
+			background-color: $color_1;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_1;
+			div {
+				background-color: transparent;
+				border-color: $color_1;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_1;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_1;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_1;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_1;
+				}
+			}
+			&.onlink {
+				border-color: $color_1;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_1;
+			}
+		}
+	}
+}
+
+.color-2 {
+	.cursor {
+		border-color: $color_2;
+		div {
+			background-color: $color_2;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_2;
+			div {
+				background-color: transparent;
+				border-color: $color_2;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_2;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_2;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_2;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_2;
+				}
+			}
+			&.onlink {
+				border-color: $color_2;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_2;
+			}
+		}
+	}
+}
+
+.color-3 {
+	.cursor {
+		border-color: $color_3;
+		div {
+			background-color: $color_3;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_3;
+			div {
+				background-color: transparent;
+				border-color: $color_3;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_3;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_3;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_3;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_3;
+				}
+			}
+			&.onlink {
+				border-color: $color_3;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_3;
+			}
+		}
+	}
+}
+
+.color-4 {
+	.cursor {
+		border-color: $color_4;
+		div {
+			background-color: $color_4;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_4;
+			div {
+				background-color: transparent;
+				border-color: $color_4;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_4;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_4;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_4;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_4;
+				}
+			}
+			&.onlink {
+				border-color: $color_4;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_4;
+			}
+		}
+	}
+}
+
+.color-5 {
+	.cursor {
+		border-color: $color_5;
+		div {
+			background-color: $color_5;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_5;
+			div {
+				background-color: transparent;
+				border-color: $color_5;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_5;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_5;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_5;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_5;
+				}
+			}
+			&.onlink {
+				border-color: $color_5;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_5;
+			}
+		}
+	}
+}
+
+.color-6 {
+	.cursor {
+		border-color: $color_6;
+		div {
+			background-color: $color_6;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_6;
+			div {
+				background-color: transparent;
+				border-color: $color_6;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_6;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_6;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_6;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_6;
+				}
+			}
+			&.onlink {
+				border-color: $color_6;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_6;
+			}
+		}
+	}
+}
+
+.color-7 {
+	.cursor {
+		border-color: $color_7;
+		div {
+			background-color: $color_7;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_7;
+			div {
+				background-color: transparent;
+				border-color: $color_7;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_7;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_7;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_7;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_7;
+				}
+			}
+			&.onlink {
+				border-color: $color_7;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_7;
+			}
+		}
+	}
+}
+
+.color-8 {
+	.cursor {
+		border-color: $color_8;
+		div {
+			background-color: $color_8;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_8;
+			div {
+				background-color: transparent;
+				border-color: $color_8;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_8;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_8;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_8;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_8;
+				}
+			}
+			&.onlink {
+				border-color: $color_8;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_8;
+			}
+		}
+	}
+}
+
+.color-9 {
+	.cursor {
+		border-color: $color_9;
+		div {
+			background-color: $color_9;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_9;
+			div {
+				background-color: transparent;
+				border-color: $color_9;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_9;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_9;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_9;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_9;
+				}
+			}
+			&.onlink {
+				border-color: $color_9;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_9;
+			}
+		}
+	}
+}
+
+.color-10 {
+	.cursor {
+		border-color: $color_10;
+		div {
+			background-color: $color_10;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_10;
+			div {
+				background-color: transparent;
+				border-color: $color_10;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_10;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_10;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_10;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_10;
+				}
+			}
+			&.onlink {
+				border-color: $color_10;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_10;
+			}
+		}
+	}
+}
+
+.color-11 {
+	.cursor {
+		border-color: $color_11;
+		div {
+			background-color: $color_11;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_11;
+			div {
+				background-color: transparent;
+				border-color: $color_11;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_11;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_11;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_11;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_11;
+				}
+			}
+			&.onlink {
+				border-color: $color_11;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_11;
+			}
+		}
+	}
+}
+
+.color-12 {
+	.cursor {
+		border-color: $color_12;
+		div {
+			background-color: $color_12;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_12;
+			div {
+				background-color: transparent;
+				border-color: $color_12;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_12;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_12;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_12;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_12;
+				}
+			}
+			&.onlink {
+				border-color: $color_12;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_12;
+			}
+		}
+	}
+}
+
+.color-13 {
+	.cursor {
+		border-color: $color_13;
+		div {
+			background-color: $color_13;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_13;
+			div {
+				background-color: transparent;
+				border-color: $color_13;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_13;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_13;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_13;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_13;
+				}
+			}
+			&.onlink {
+				border-color: $color_13;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_13;
+			}
+		}
+	}
+}
+
+.color-14 {
+	.cursor {
+		border-color: $color_14;
+		div {
+			background-color: $color_14;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_14;
+			div {
+				background-color: transparent;
+				border-color: $color_14;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_14;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_14;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_14;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_14;
+				}
+			}
+			&.onlink {
+				border-color: $color_14;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_14;
+			}
+		}
+	}
+}
+
+.color-15 {
+	.cursor {
+		border-color: $color_15;
+		div {
+			background-color: $color_15;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_15;
+			div {
+				background-color: transparent;
+				border-color: $color_15;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_15;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_15;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_15;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_15;
+				}
+			}
+			&.onlink {
+				border-color: $color_15;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_15;
+			}
+		}
+	}
+}
+
+.color-16 {
+	.cursor {
+		border-color: $color_16;
+		div {
+			background-color: $color_16;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_16;
+			div {
+				background-color: transparent;
+				border-color: $color_16;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_16;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_16;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_16;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_16;
+				}
+			}
+			&.onlink {
+				border-color: $color_16;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_16;
+			}
+		}
+	}
+}
+
+.color-17 {
+	.cursor {
+		border-color: $color_17;
+		div {
+			background-color: $color_17;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_17;
+			div {
+				background-color: transparent;
+				border-color: $color_17;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_17;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_17;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_17;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_17;
+				}
+			}
+			&.onlink {
+				border-color: $color_17;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_17;
+			}
+		}
+	}
+}
+
+.color-18 {
+	.cursor {
+		border-color: $color_18;
+		div {
+			background-color: $color_18;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_18;
+			div {
+				background-color: transparent;
+				border-color: $color_18;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_18;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_18;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_18;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_18;
+				}
+			}
+			&.onlink {
+				border-color: $color_18;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_18;
+			}
+		}
+	}
+}
+
+.color-19 {
+	.cursor {
+		border-color: $color_19;
+		div {
+			background-color: $color_19;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_19;
+			div {
+				background-color: transparent;
+				border-color: $color_19;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_19;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_19;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_19;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_19;
+				}
+			}
+			&.onlink {
+				border-color: $color_19;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_19;
+			}
+		}
+	}
+}
+
+.color-20 {
+	.cursor {
+		border-color: $color_20;
+		div {
+			background-color: $color_20;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_20;
+			div {
+				background-color: transparent;
+				border-color: $color_20;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_20;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_20;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_20;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_20;
+				}
+			}
+			&.onlink {
+				border-color: $color_20;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_20;
+			}
+		}
+	}
+}
+
+.color-21 {
+	.cursor {
+		border-color: $color_21;
+		div {
+			background-color: $color_21;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_21;
+			div {
+				background-color: transparent;
+				border-color: $color_21;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_21;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_21;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_21;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_21;
+				}
+			}
+			&.onlink {
+				border-color: $color_21;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_21;
+			}
+		}
+	}
+}
+
+.color-22 {
+	.cursor {
+		border-color: $color_22;
+		div {
+			background-color: $color_22;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_22;
+			div {
+				background-color: transparent;
+				border-color: $color_22;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_22;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_22;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_22;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_22;
+				}
+			}
+			&.onlink {
+				border-color: $color_22;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_22;
+			}
+		}
+	}
+}
+
+.color-23 {
+	.cursor {
+		border-color: $color_23;
+		div {
+			background-color: $color_23;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_23;
+			div {
+				background-color: transparent;
+				border-color: $color_23;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_23;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_23;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_23;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_23;
+				}
+			}
+			&.onlink {
+				border-color: $color_23;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_23;
+			}
+		}
+	}
+}
+
+.color-24 {
+	.cursor {
+		border-color: $color_24;
+		div {
+			background-color: $color_24;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_24;
+			div {
+				background-color: transparent;
+				border-color: $color_24;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_24;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_24;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_24;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_24;
+				}
+			}
+			&.onlink {
+				border-color: $color_24;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_24;
+			}
+		}
+	}
+}
+
+.color-25 {
+	.cursor {
+		border-color: $color_25;
+		div {
+			background-color: $color_25;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_25;
+			div {
+				background-color: transparent;
+				border-color: $color_25;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_25;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_25;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_25;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_25;
+				}
+			}
+			&.onlink {
+				border-color: $color_25;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_25;
+			}
+		}
+	}
+}
+
+.color-26 {
+	.cursor {
+		border-color: $color_26;
+		div {
+			background-color: $color_26;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_26;
+			div {
+				background-color: transparent;
+				border-color: $color_26;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_26;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_26;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_26;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_26;
+				}
+			}
+			&.onlink {
+				border-color: $color_26;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_26;
+			}
+		}
+	}
+}
+
+.color-27 {
+	.cursor {
+		border-color: $color_27;
+		div {
+			background-color: $color_27;
+		}
+	}
+	&.cursor-2, &.cursor-3, &.cursor-7, &.cursor-8 {
+		.cursor {
+			background-color: $color_27;
+			div {
+				background-color: transparent;
+				border-color: $color_27;
+			}
+		}
+	}
+	&.cursor-4, &.cursor-9 {
+		.cursor {
+			div {
+				&:before {
+					background-color: $color_27;
+				}
+			}
+		}
+	}
+	&.cursor-5 {
+		.cursor {
+			div {
+				background-color: transparent;
+				border-left-color: $color_27;
+			}
+		}
+	}
+	&.cursor-12 {
+		.cursor {
+			&:before {
+				background-color: $color_27;
+			}
+		}
+	}
+	&.cursor-14 {
+		.cursor {
+			border-color: transparent;
+			div {
+				&:before {
+					background-color: $color_27;
+				}
+			}
+			&.onlink {
+				border-color: $color_27;
+			}
+		}
+	}
+	&.cursor-15 {
+		.cursor {
+			&:before {
+				border-color: $color_27;
+			}
+		}
+	}
+}
+    
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/*19 Jun 2019*/
+
+
