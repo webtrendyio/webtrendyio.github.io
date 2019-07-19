@@ -1,0 +1,1020 @@
+/*!
+ * Sado Modal/Popup Window Pack
+ * Version: 1.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Love is the bridge between you and everything." -Rumi
+ *
+ */
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1.0 Variables > Line 25
+	2.0 General Styles > Line 35
+	3.0 Modal Effects > Line 156
+	4.0 Animations > Line 588
+	5.0 Colors > Line 825
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+Variables used inside the library. Update per your needs.
+--------------------------------------------------------------*/
+
+$transition: all 200ms ease-out;
+
+$color_1: #595F6E; 
+$color_2: #845EC2; 
+$color_3: #1C1259;
+$color_4: #D65DB1;
+$color_5: #7F4782;
+$color_6: #FF6F91;
+$color_7: #e2598b;
+$color_8: #ee7777;
+$color_9: #FF9671;
+$color_10: #ff8246;
+$color_11: #ffdc27;
+$color_12: #FFC75F;
+$color_13: #F9F871;
+$color_14: #49beb7;
+$color_15: #bfcd7e;
+$color_16: #15cda8;
+$color_17: #ff5959;
+$color_18: #f34573;
+$color_19: #fd5f00;
+$color_20: #4592af;
+$color_21: #6c5ce7;
+$color_22: #00D2FC;
+$color_23: #eeeeee; 
+$color_24: #f2eee0;
+$color_25: #323232; 
+$color_26: #4e4e4e;
+$color_27: #fff;
+
+
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.content-wrapper {
+	min-height: 100vh;
+	transition: $transition;
+	background-color: #fff5ce;
+}
+
+.body-push {
+	.content-wrapper {
+		transform: scale(.8);
+	}
+}
+.body-blur {
+	.content-wrapper {
+		filter: blur(3px);
+	}
+}
+.body-rotate {
+	perspective: 1500px;
+	.content-wrapper {
+		transform: rotateX(25deg);
+	}
+}
+.body-solid {
+	.overlay.active {
+		opacity: 1;
+	}
+}
+.body-dark {
+	.overlay.active {
+		background-color: rgba(0,0,0,1);
+	}
+}
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	max-width: 90vw;
+	max-height: 90vh;
+	width: 60%;
+	transform: translate(-50% , -50%);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	transition: $transition;
+	.modal-content {
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+		padding: 50px;
+		background-color: white;
+		transition: $transition;
+		.modal-header {
+			padding-bottom: 10px;
+			h2 {
+				margin: 0;
+			}
+		}
+		.modal-body {
+			max-height: calc(90vh - 200px);
+			overflow: scroll;
+		}
+		.modal-footer {
+			padding-top: 10px;
+		}
+	}
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+	.close {
+		display: inline-block;
+		cursor: pointer;
+	    position: absolute;
+	    right: 10px;
+	    top: 10px;
+	    width: 20px;
+	    height: 20px;
+	    &:before {
+	    	content:'';
+	    	width: 100%;
+	    	height: 2px;
+	    	position: absolute;
+	    	display: inline-block;
+	    	transform: rotate(-45deg);
+	    	top: calc(50% - 1px);
+	    	left: 0;
+	    	background-color: rgba(0,0,0,.2);
+	    	transition: $transition;
+	    }
+	    &:after {
+	    	content:'';
+	    	width: 100%;
+	    	height: 2px;
+	    	position: absolute;
+	    	display: inline-block;
+	    	transform: rotate(45deg);
+	    	top: calc(50% - 1px);
+	    	left: 0;
+	    	background-color: rgba(0,0,0,.2);
+	    	transition: $transition;
+	    }
+	    &:hover {
+	    	&:before, &:after {
+	    		background-color: rgba(0,0,0,.8);
+	    	}
+	    }
+	}
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,1);
+	z-index: 999;
+	visibility: hidden;
+	opacity: 0;
+	transition: $transition;
+	&.active {
+		visibility: visible;
+		opacity: .7;
+		&:before {
+			transform: translateY(0px);
+		}
+	}
+	&:before {
+		content: "ESC";
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		border: 1px solid black;
+		border-radius: 4px;
+		display: inline-block;
+		font-size: 12px;
+		line-height: 12px;
+		padding: 2px 5px;
+		transition: $transition;
+		transform: translateY(-50px);
+		transition-delay: 200ms;
+	}
+}
+
+/*--------------------------------------------------------------
+2.0 Modal Effects
+--------------------------------------------------------------*/
+
+/*Effect 1*/
+.modal-1 {
+	.modal-content {
+		transform: scale(.8);
+	}
+	&.active {
+		.modal-content {
+			transform: scale(1);
+		}
+	}
+}
+
+/*Effect 2*/
+.modal-2 {
+	.modal-content {
+		transform: scale(1.2);
+	}
+	&.active {
+		.modal-content {
+			transform: scale(1);
+		}
+	}
+}
+
+/*Effect 3*/
+.modal-3 {
+	.modal-content {
+		transform: translateX(20%);
+	}
+	&.active {
+		.modal-content {
+			transform: translateX(0);
+		}
+	}
+}
+
+/*Effect 4*/
+.modal-4 {
+	.modal-content {
+		transform: translateX(-20%);
+	}
+	&.active {
+		.modal-content {
+			transform: translateX(0);
+		}
+	}
+}
+
+/*Effect 5*/
+.modal-5 {
+	.modal-content {
+		transform: translateY(20%);
+	}
+	&.active {
+		.modal-content {
+			transform: translateX(0);
+		}
+	}
+}
+
+/*Effect 6*/
+.modal-6 {
+	.modal-content {
+		transform: translateY(-20%);
+	}
+	&.active {
+		.modal-content {
+			transform: translateX(0);
+		}
+	}
+}
+
+/*Effect 7*/
+.modal-7 {
+	perspective: 1500px;
+	.modal-content {
+		transform: translate(30%) translateZ(600px) rotate(10deg);
+	}
+	&.active {
+		.modal-content {
+			transform: translate(0%) translateZ(0) rotate(0deg);
+		}
+	}
+}
+
+/*Effect 8*/
+.modal-8 {
+	perspective: 1500px;
+	.modal-content {
+		transform: rotateX(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+/*Effect 9*/
+.modal-9 {
+	perspective: 1500px;
+	.modal-content {
+		transform: rotateY(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateY(0deg);
+		}
+	}
+}
+
+/*Effect 10*/
+.modal-10 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: top;
+		transform: rotateX(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+/*Effect 11*/
+.modal-11 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: top;
+		transform: rotateX(-90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+/*Effect 12*/
+.modal-12 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: bottom;
+		transform: rotateX(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+/*Effect 13*/
+.modal-13 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: bottom;
+		transform: rotateX(-90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+/*Effect 14*/
+.modal-14 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: right;
+		transform: rotateY(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateY(0deg);
+		}
+	}
+}
+
+/*Effect 15*/
+.modal-15 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: right;
+		transform: rotateY(-90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateY(0deg);
+		}
+	}
+}
+
+/*Effect 16*/
+.modal-16 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: left;
+		transform: rotateY(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateY(0deg);
+		}
+	}
+}
+
+/*Effect 17*/
+.modal-17 {
+	perspective: 1500px;
+	.modal-content {
+		transform-origin: left;
+		transform: rotateY(-90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotateY(0deg);
+		}
+	}
+}
+
+/*Effect 18*/
+.modal-18 {
+	perspective: 1500px;
+	.modal-content {
+		transform: rotate(720deg) scale(0);
+		transition-duration: 500ms;
+	}
+	&.active {
+		.modal-content {
+			transform: rotate(0deg) scale(1);
+		}
+	}
+}
+
+
+/*Effect 19*/
+.modal-19 {
+	.modal-content {
+		transform: translate(100% , 200%) rotate(-5deg);
+		transition-duration: 300ms;
+	}
+	&.active {
+		.modal-content {
+			transform: translate(0% , 0%) rotate(0deg);
+		}
+	}
+}
+
+/*Effect 20*/
+.modal-20 {
+
+	.modal-content {
+		transform: scale(.2);
+		transition-delay: 200ms;
+		transition-duration: 500ms;
+		transition-timing-function: cubic-bezier(0.25, 0.1, 0.32, 1.51);
+	}
+	&.active {
+		transition-duration: 0s;
+		.modal-content {
+			transform: scale(1);
+		}
+	}
+}
+
+/*Effect 21*/
+.modal-21 {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100vw;
+	max-height: 100vh;
+	.modal-content {
+		transform: scale(1.5);
+		height: 100vh;
+		.modal-body {
+			max-height: calc(100vh - 150px);
+		}
+	}
+	&.active {
+		.modal-content {
+			transform: scale(1);
+		}
+	}
+}
+
+/*Effect 22*/
+.modal-22 {
+	.modal-content {
+		transform: rotate(90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotate(0);
+		}
+	}
+}
+
+/*Effect 23*/
+.modal-23 {
+	.modal-content {
+		transform: rotate(-90deg);
+	}
+	&.active {
+		.modal-content {
+			transform: rotate(0);
+		}
+	}
+}
+
+/*Effect 24*/
+.modal-24 {
+	.modal-content {
+		transform: scale(.6) rotate(5deg);
+		transform-origin: top;
+	}
+	&.active {
+		.modal-content {
+			transform: scale(1) rotate(0deg);
+		}
+	}
+}
+
+/*Effect 25*/
+.modal-25 {
+	&.active {
+		.modal-content {
+			animation: anim-1 1s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+/*Effect 26*/
+.modal-26 {
+	&.active {
+		.modal-content {
+			animation: anim-2 1s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+/*Effect 27*/
+.modal-27 {
+	&.active {
+		.modal-content {
+			animation: anim-3 1s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+/*Effect 28*/
+.modal-28 {
+	&.active {
+		.modal-content {
+			animation: anim-4 1s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+/*Effect 29*/
+.modal-29 {
+	&.active {
+		.modal-content {
+			animation: anim-5 1s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+/*Effect 30*/
+.modal-30 {
+	.modal-content {
+		transform: translateX(-20%);
+	}
+	&.active {
+		.modal-content {
+			transform: translateX(0);
+			animation: anim-6 0.3s linear infinite both;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+/*Effect 31*/
+.modal-31 {
+	top: auto;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100vw;
+	.modal-content {
+		transform: scale(.2);
+		transform-origin: bottom;
+	}
+	&.active {
+		.modal-content {
+			transform: scale(1);
+		}
+	}
+}
+
+/*Effect 32*/
+.modal-32 {
+	bottom: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100vw;
+	.modal-content {
+		transform: scale(.2);
+		transform-origin: top;
+	}
+	&.active {
+		.modal-content {
+			transform: scale(1);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+3.0 Animations
+--------------------------------------------------------------*/
+
+
+@keyframes anim-1 { 
+  0% { transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.4% { transform: matrix3d(0.316, 0, 0, 0, 0, 0.407, 0, 0, 0, 0, 1, 0, 0 0 0, 1); }
+  4.3% { transform: matrix3d(0.408, 0, 0, 0, 0, 0.54, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.7% { transform: matrix3d(0.45, 0, 0, 0, 0, 0.599, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.81% { transform: matrix3d(0.659, 0, 0, 0, 0, 0.893, 0, 0, 0, 0, 1, 0, 0 0, 0, 1); }
+  8.61% { transform: matrix3d(0.82, 0, 0, 0, 0, 1.097, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  9.41% { transform: matrix3d(0.883, 0, 0, 0, 0, 1.168, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.21% { transform: matrix3d(0.942, 0, 0, 0, 0, 1.226, 0, 0, 0, 0, 1, 0, 0, 0 0, 1); }
+  12.91% { transform: matrix3d(1.094, 0, 0, 0, 0, 1.328, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.61% { transform: matrix3d(1.123, 0, 0, 0, 0, 1.332, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  14.11% { transform: matrix3d(1.141, 0, 0, 0, 0, 1.331, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.22% { transform: matrix3d(1.205, 0, 0, 0, 0, 1.252, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.52% { transform: matrix3d(1.208, 0, 0, 0, 0, 1.239, 0, 0, 0, 0, 1, 0, 0, 0 0, 1); }
+  18.72% { transform: matrix3d(1.212, 0, 0, 0, 0, 1.187, 0, 0, 0, 0, 1, 0, 0, 0 0, 1); }
+  21.32% { transform: matrix3d(1.196, 0, 0, 0, 0, 1.069, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  24.32% { transform: matrix3d(1.151, 0, 0, 0, 0, 0.96, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  25.23% { transform: matrix3d(1.134, 0, 0, 0, 0, 0.938, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  28.33% { transform: matrix3d(1.075, 0, 0, 0, 0, 0.898, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.03% { transform: matrix3d(1.063, 0, 0, 0, 0, 0.897, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.93% { transform: matrix3d(1.048, 0, 0, 0, 0, 0.899, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  35.54% { transform: matrix3d(0.979, 0, 0, 0, 0, 0.962, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.74% { transform: matrix3d(0.972, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  39.44% { transform: matrix3d(0.962, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  41.04% { transform: matrix3d(0.961, 0, 0, 0, 0, 1.022, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  44.44% { transform: matrix3d(0.966, 0, 0, 0, 0, 1.032, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  52.15% { transform: matrix3d(0.991, 0, 0, 0, 0, 1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  59.86% { transform: matrix3d(1.006, 0, 0, 0, 0, 0.99, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  61.66% { transform: matrix3d(1.007, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.26% { transform: matrix3d(1.007, 0, 0, 0, 0, 0.992, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  75.28% { transform: matrix3d(1.001, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.98% { transform: matrix3d(0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  85.49% { transform: matrix3d(0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.69% { transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+
+@keyframes anim-2 {
+  0% {
+    transform: translate(1000px, -1000px) skew(-80deg, -10deg);
+    transform-origin: 0% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes anim-3 {
+  0% {
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% -1400px;
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes anim-4 {
+  0% {
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+@keyframes anim-5 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes anim-6 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+/*--------------------------------------------------------------
+5.0 Colors
+--------------------------------------------------------------*/
+
+.overlay-color-1 {
+	.overlay.active {
+		background-color: $color_1;
+	}
+}
+
+.overlay-color-2 {
+	.overlay.active {
+		background-color: $color_2;
+	}
+}
+
+.overlay-color-3 {
+	.overlay.active {
+		background-color: $color_3;
+	}
+}
+
+.overlay-color-4 {
+	.overlay.active {
+		background-color: $color_4;
+	}
+}
+
+.overlay-color-5 {
+	.overlay.active {
+		background-color: $color_5;
+	}
+}
+
+.overlay-color-6 {
+	.overlay.active {
+		background-color: $color_6;
+	}
+}
+
+.overlay-color-7 {
+	.overlay.active {
+		background-color: $color_7;
+	}
+}
+
+.overlay-color-8 {
+	.overlay.active {
+		background-color: $color_8;
+	}
+}
+
+.overlay-color-9 {
+	.overlay.active {
+		background-color: $color_9;
+	}
+}
+
+.overlay-color-10 {
+	.overlay.active {
+		background-color: $color_10;
+	}
+}
+
+.overlay-color-11 {
+	.overlay.active {
+		background-color: $color_11;
+	}
+}
+
+.overlay-color-12 {
+	.overlay.active {
+		background-color: $color_12;
+	}
+}
+
+.overlay-color-13 {
+	.overlay.active {
+		background-color: $color_13;
+	}
+}
+
+.overlay-color-14 {
+	.overlay.active {
+		background-color: $color_14;
+	}
+}
+
+.overlay-color-15 {
+	.overlay.active {
+		background-color: $color_15;
+	}
+}
+
+.overlay-color-16 {
+	.overlay.active {
+		background-color: $color_16;
+	}
+}
+
+.overlay-color-17 {
+	.overlay.active {
+		background-color: $color_17;
+	}
+}
+
+.overlay-color-18 {
+	.overlay.active {
+		background-color: $color_18;
+	}
+}
+
+.overlay-color-19 {
+	.overlay.active {
+		background-color: $color_19;
+	}
+}
+
+.overlay-color-20 {
+	.overlay.active {
+		background-color: $color_20;
+	}
+}
+
+.overlay-color-21 {
+	.overlay.active {
+		background-color: $color_21;
+	}
+}
+
+.overlay-color-22 {
+	.overlay.active {
+		background-color: $color_22;
+	}
+}
+
+.overlay-color-23 {
+	.overlay.active {
+		background-color: $color_23;
+	}
+}
+
+.overlay-color-24 {
+	.overlay.active {
+		background-color: $color_24;
+	}
+}
+
+.overlay-color-25 {
+	.overlay.active {
+		background-color: $color_25;
+	}
+}
+
+.overlay-color-26 {
+	.overlay.active {
+		background-color: $color_26;
+	}
+}
+
+.overlay-color-27 {
+	.overlay.active {
+		background-color: $color_27;
+	}
+}
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/*2 Jul 2019*/
+
+
