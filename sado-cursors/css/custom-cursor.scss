@@ -26,10 +26,10 @@
 Variables used inside the library. Update per your needs.
 --------------------------------------------------------------*/
 /*CSS Variable*/
-:root {
+/*:root {
     --top: 0;
     --left: 0;
-}
+}*/
 
 $transition: all 200ms ease-out;
 
@@ -69,10 +69,11 @@ Styles applied to all effects.
 --------------------------------------------------------------*/
 .custom-cursor {
 	cursor: none;
+	--top: 0;
+    --left: 0;
 	.cursor {
 		opacity: 0;
 		position: fixed;
-	    transition: $transition;
 	    pointer-events: none;
 		div {
 			position: fixed;
@@ -102,6 +103,7 @@ Effects for Cursors.
 		border-radius: 50%;
 		top: calc(var(--top) - 15px);
 		left: calc(var(--left) - 15px);
+		transition: $transition;
 		div {
 			width: 6px;
 			height: 6px;
@@ -141,7 +143,7 @@ Effects for Cursors.
 			transform: rotate(45deg);
 			top: calc(var(--top) - 7.5px);
 			left: calc(var(--left) - 15px);
-			transition: $transition;
+			transition: transform 200ms ease-out;
 		}
 		&.onlink {
 			width: 0px;
@@ -168,7 +170,7 @@ Effects for Cursors.
 			transform: rotate(-45deg);
 			top: calc(var(--top) - 7.5px);
 			left: calc(var(--left) - 0px);
-			transition: $transition;
+			transition: transform 200ms ease-out;
 		}
 		&.onlink {
 			width: 0px;
@@ -194,6 +196,7 @@ Effects for Cursors.
 			background-color: $color_25;
 			top: calc(var(--top) - 1.5px);
 			left: calc(var(--left) - 7.5px);
+			transition: all 100ms ease-out;
 			&:before {
 				content:'';
 				position: absolute;
@@ -229,7 +232,6 @@ Effects for Cursors.
 		border-radius: 50%;
 		top: calc(var(--top) - 15px);
 		left: calc(var(--left) - 15px);
-	    transition-duration: 100ms;
 		div {
 			width: 0px;
 			height: 0px;
@@ -295,7 +297,7 @@ Effects for Cursors.
 			transform: rotate(45deg);
 			top: calc(var(--top) - 7.5px);
 			left: calc(var(--left) - 15px);
-			transition: $transition;
+			transition: transform 200ms ease-out;
 		}
 		&.onlink {
 			div {
@@ -316,7 +318,7 @@ Effects for Cursors.
 			transform: rotate(-45deg);
 			top: calc(var(--top) - 7.5px);
 			left: calc(var(--left) - 0px);
-			transition: $transition;
+			transition: transform 200ms ease-out;
 		}
 		&.onlink {
 			div {
@@ -335,7 +337,7 @@ Effects for Cursors.
 			background-color: $color_25;
 			top: calc(var(--top) - 1.5px);
 			left: calc(var(--left) - 7.5px);
-			transition: width 300ms, height 300ms ease-out;
+			transition: width 300ms, height 300ms, transform 300ms ease-out;
 			&:before {
 				content:'';
 				position: absolute;
@@ -374,6 +376,7 @@ Effects for Cursors.
 			background-color: $color_25;
 			top: calc(var(--top) - 4px);
 			left: calc(var(--left) - 4px);
+			transition: all 100ms ease-out;
 		}
 		&.onlink {
 			width: 40px;
@@ -401,6 +404,7 @@ Effects for Cursors.
 		border-radius: 50%;
 		top: calc(var(--top) - 15px);
 		left: calc(var(--left) - 15px);
+		transition: all 100ms ease-out;
 		div {
 			width: 20px;
 			height: 20px;
@@ -534,6 +538,7 @@ Effects for Cursors.
 		height: 20px;
 		top: calc(var(--top) - 10px);
 		left: calc(var(--left) - 10px);
+		transition: all 100ms ease-out;
 		&:before {
 			content: '';
 			position: absolute;

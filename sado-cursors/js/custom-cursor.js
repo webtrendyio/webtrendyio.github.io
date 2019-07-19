@@ -25,9 +25,9 @@
 		});
 		
 		let dot = cursor.children[0];
-		e.addEventListener('mousemove', function(e){
-			root.style.setProperty('--top', e.clientY + "px");
-            root.style.setProperty('--left', e.clientX + "px");
+		e.addEventListener('mousemove', function(ev){
+			e.style.setProperty('--top', ev.clientY + "px");
+            e.style.setProperty('--left', ev.clientX + "px");
 		});
 		e.addEventListener('mouseenter', function(){
 			e.classList.add('active');
@@ -35,6 +35,7 @@
 		e.addEventListener('mouseleave', function(){
 			e.classList.remove('active');
 		});
+
 	});
 })();
 
