@@ -80,7 +80,7 @@ Variables used inside the library. Update per your needs.
         margin: 0; }
     .modal .modal-content .modal-body {
       max-height: calc(90vh - 200px);
-      overflow: scroll; }
+      overflow: auto; }
     .modal .modal-content .modal-footer {
       padding-top: 10px; }
   .modal.active {
