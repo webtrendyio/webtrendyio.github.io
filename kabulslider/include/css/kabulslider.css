@@ -31,12 +31,9 @@ Styles applied to all effects.
     left: 0;
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
     #kabul-slider .slide.in .left-container h2 {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
       opacity: 1;
       z-index: 99;
       position: relative; }
@@ -45,13 +42,11 @@ Styles applied to all effects.
       z-index: 99;
       position: relative; }
     #kabul-slider .slide.in .right-container .image img {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      transform: translateX(0);
       z-index: 99;
       position: relative; }
     #kabul-slider .slide.in .right-container .caption h3 {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
       opacity: 1;
       z-index: 99;
       position: relative; }
@@ -66,8 +61,7 @@ Styles applied to all effects.
       z-index: 99;
       position: relative; }
     #kabul-slider .slide.out .left-container h2 {
-      -webkit-transform: translateY(20%);
-              transform: translateY(20%);
+      transform: translateY(20%);
       opacity: 0;
       z-index: 99;
       position: relative; }
@@ -75,46 +69,30 @@ Styles applied to all effects.
       z-index: 99;
       position: relative; }
     #kabul-slider .slide.out .right-container .image img {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%); }
+      transform: translateX(-100%); }
     #kabul-slider .slide.out .right-container .caption h3 {
       z-index: 99;
       position: relative;
-      -webkit-transform: translateY(-100%);
-              transform: translateY(-100%);
+      transform: translateY(-100%);
       opacity: 0; }
     #kabul-slider .slide.out .right-container .caption span {
       z-index: 99;
       position: relative; }
     #kabul-slider .slide .left-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
       background-color: #fcfaf2; }
       #kabul-slider .slide .left-container h2 {
         margin: 0;
-        -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
-        -webkit-transform: translateY(-20%);
-                transform: translateY(-20%);
+        transform: translateY(-20%);
         opacity: 0;
         color: #29216b; }
       #kabul-slider .slide .left-container .desc {
-        -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
         opacity: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         width: 100%; }
         #kabul-slider .slide .left-container .desc [class^="col"] {
@@ -126,7 +104,6 @@ Styles applied to all effects.
         #kabul-slider .slide .left-container .desc strong {
           color: #aaa9a7; }
       #kabul-slider .slide .left-container small {
-        -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
         opacity: 0;
         color: #ffc411; }
@@ -135,22 +112,13 @@ Styles applied to all effects.
       #kabul-slider .slide .right-container .image img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -webkit-transition: -webkit-transform 300ms ease-in-out;
-        transition: -webkit-transform 300ms ease-in-out;
+        object-fit: cover;
         transition: transform 300ms ease-in-out;
-        transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
+        transform: translateX(100%); }
     #kabul-slider .slide .right-container .caption {
       padding: 0px 4em;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      align-items: center;
       position: relative; }
       #kabul-slider .slide .right-container .caption:before {
         content: '';
@@ -159,13 +127,10 @@ Styles applied to all effects.
         left: 0;
         width: 0%;
         height: 100%;
-        -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out; }
       #kabul-slider .slide .right-container .caption h3 {
-        -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
-        -webkit-transform: translateY(100%);
-                transform: translateY(100%);
+        transform: translateY(100%);
         opacity: 0;
         font-size: 1.3em;
         line-height: 1.5; }
@@ -185,7 +150,6 @@ Styles applied to all effects.
           right: -10px;
           top: calc(50% - 5px); }
       #kabul-slider .slide .right-container .caption span {
-        -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
         opacity: 0;
         font-size: 85%; }
@@ -195,7 +159,6 @@ Styles applied to all effects.
         position: relative;
         min-width: 20px;
         cursor: pointer;
-        -webkit-transition: all 200ms ease-out;
         transition: all 200ms ease-out;
         opacity: 0;
         z-index: -10; }
@@ -207,9 +170,7 @@ Styles applied to all effects.
           position: absolute;
           top: calc(50% - 1px);
           left: -1px;
-          -webkit-transform-origin: center left;
-                  transform-origin: center left;
-          -webkit-transition: all 200ms ease-out;
+          transform-origin: center left;
           transition: all 200ms ease-out; }
         #kabul-slider .slide .right-container .caption .prev:after {
           content: '';
@@ -221,13 +182,10 @@ Styles applied to all effects.
           position: absolute;
           top: 0;
           left: 0;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
-          -webkit-transition: all 200ms ease-out;
+          transform: rotate(-45deg);
           transition: all 200ms ease-out; }
         #kabul-slider .slide .right-container .caption .prev:hover {
-          -webkit-transform: translateX(-5px);
-                  transform: translateX(-5px); }
+          transform: translateX(-5px); }
           #kabul-slider .slide .right-container .caption .prev:hover:before {
             width: 20px; }
       #kabul-slider .slide .right-container .caption .next {
@@ -235,10 +193,8 @@ Styles applied to all effects.
         display: inline-block;
         position: relative;
         min-width: 20px;
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
+        transform: rotate(180deg);
         cursor: pointer;
-        -webkit-transition: all 200ms ease-out;
         transition: all 200ms ease-out;
         opacity: 0;
         z-index: -10; }
@@ -250,9 +206,7 @@ Styles applied to all effects.
           position: absolute;
           top: calc(50% - 1px);
           left: -1px;
-          -webkit-transform-origin: center left;
-                  transform-origin: center left;
-          -webkit-transition: all 200ms ease-out;
+          transform-origin: center left;
           transition: all 200ms ease-out; }
         #kabul-slider .slide .right-container .caption .next:after {
           content: '';
@@ -264,13 +218,10 @@ Styles applied to all effects.
           position: absolute;
           top: 0;
           left: 0;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
-          -webkit-transition: all 200ms ease-out;
+          transform: rotate(-45deg);
           transition: all 200ms ease-out; }
         #kabul-slider .slide .right-container .caption .next:hover {
-          -webkit-transform: rotate(180deg) translateX(-5px);
-                  transform: rotate(180deg) translateX(-5px); }
+          transform: rotate(180deg) translateX(-5px); }
           #kabul-slider .slide .right-container .caption .next:hover:before {
             width: 20px; }
 
@@ -297,10 +248,7 @@ Styles applied to different layouts.
 
 /*Layout 2*/
 #kabul-slider.layout2 .slide {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+  flex-direction: row-reverse; }
   #kabul-slider.layout2 .slide .left-container {
     width: 65%;
     padding: 5em 10em 5em 5em; }
@@ -319,10 +267,7 @@ Styles applied to different layouts.
 
 /*Layout 3*/
 #kabul-slider.layout3 .slide {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  flex-direction: column; }
   #kabul-slider.layout3 .slide .left-container {
     width: 100%;
     height: 40%;
@@ -336,8 +281,6 @@ Styles applied to different layouts.
   #kabul-slider.layout3 .slide .right-container {
     width: 100%;
     height: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
     #kabul-slider.layout3 .slide .right-container .image {
       height: auto;
@@ -348,10 +291,7 @@ Styles applied to different layouts.
 
 /*Layout 4*/
 #kabul-slider.layout4 .slide {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+  flex-direction: column-reverse; }
   #kabul-slider.layout4 .slide .left-container {
     width: 100%;
     height: 40%;
@@ -365,8 +305,6 @@ Styles applied to different layouts.
   #kabul-slider.layout4 .slide .right-container {
     width: 100%;
     height: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
     #kabul-slider.layout4 .slide .right-container .image {
       height: auto;
@@ -382,24 +320,20 @@ Styles applied to small devices.
 /*Phone*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #kabul-slider.layout1 .slide, #kabul-slider.layout3 .slide {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
     #kabul-slider.layout1 .slide .left-container, #kabul-slider.layout3 .slide .left-container {
       padding: 1em;
       width: 100%;
       height: 70%;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
+      justify-content: flex-end; }
       #kabul-slider.layout1 .slide .left-container small, #kabul-slider.layout3 .slide .left-container small {
         margin-bottom: 1em;
         background-color: rgba(0, 0, 0, 0.8);
         padding: 5px; }
       #kabul-slider.layout1 .slide .left-container h2, #kabul-slider.layout3 .slide .left-container h2 {
         font-size: 2.5em;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 5px; }
       #kabul-slider.layout1 .slide .left-container .desc, #kabul-slider.layout3 .slide .left-container .desc {
         margin-top: 2em;
         display: none; }
@@ -419,7 +353,6 @@ Styles applied to small devices.
           position: absolute;
           top: 0;
           left: 0;
-          background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), to(transparent));
           background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent);
           z-index: 2; }
       #kabul-slider.layout1 .slide .right-container .caption, #kabul-slider.layout3 .slide .right-container .caption {
@@ -432,24 +365,20 @@ Styles applied to small devices.
       z-index: 1; }
 
   #kabul-slider.layout2 .slide, #kabul-slider.layout4 .slide {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse; }
+    flex-direction: column-reverse; }
     #kabul-slider.layout2 .slide .left-container, #kabul-slider.layout4 .slide .left-container {
       padding: 1em;
       width: 100%;
       height: 70%;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
+      justify-content: flex-end; }
       #kabul-slider.layout2 .slide .left-container small, #kabul-slider.layout4 .slide .left-container small {
         margin-bottom: 1em;
         background-color: rgba(0, 0, 0, 0.8);
         padding: 5px; }
       #kabul-slider.layout2 .slide .left-container h2, #kabul-slider.layout4 .slide .left-container h2 {
         font-size: 2.5em;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 5px; }
       #kabul-slider.layout2 .slide .left-container .desc, #kabul-slider.layout4 .slide .left-container .desc {
         margin-top: 2em;
         display: none; }
@@ -469,7 +398,6 @@ Styles applied to small devices.
           position: absolute;
           top: 0;
           left: 0;
-          background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), to(transparent));
           background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent);
           z-index: 2; }
       #kabul-slider.layout2 .slide .right-container .caption, #kabul-slider.layout4 .slide .right-container .caption {
