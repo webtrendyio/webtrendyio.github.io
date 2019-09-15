@@ -1,0 +1,1789 @@
+@charset "UTF-8";
+/*!
+ * Rex Mini Menu
+ * Version: 1.0.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We carry inside us the wonders we seek outside us." -Rumi
+ *
+ */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1.0 Variables > Line 24
+	2.0 General Styles > Line 35
+	3.0 Effects Styles > Line 115
+	4.0 Sizes > Line 1531
+	5.0 Colors > Line 1789
+	6.0 Animations > Line 1911
+	7.0 Media Queries > Line 1945
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+Variables used inside the styles.
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 General Styles
+Styles applied to all effects.
+--------------------------------------------------------------*/
+.rexminimenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  --menu-width: 0;
+  display: inline-block;
+  margin: 40px; }
+  .rexminimenu.open nav {
+    background-color: #111;
+    width: var(--menu-width) !important;
+    pointer-events: auto;
+    /*animation-name: jello-horizontal;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;*/ }
+    .rexminimenu.open nav ul li {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms; }
+    .rexminimenu.open nav ul a:hover {
+      background-color: white;
+      color: black; }
+  .rexminimenu nav {
+    background-color: #64c4ed;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-transition: width 300ms ease;
+    transition: width 300ms ease; }
+    .rexminimenu nav ul {
+      margin: 0;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      list-style-type: none; }
+      .rexminimenu nav ul li {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transform: scale(0.95);
+                transform: scale(0.95); }
+      .rexminimenu nav ul a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        margin: 10px;
+        display: inline-block; }
+  .rexminimenu .toggler {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    z-index: 99;
+    display: inline-block;
+    cursor: pointer; }
+
+/*--------------------------------------------------------------
+3.0 Effects Styles
+Styles applied to different effects.
+--------------------------------------------------------------*/
+.rexminimenu.rex-effect1.open .toggler {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  top: -20px; }
+  .rexminimenu.rex-effect1.open .toggler:before {
+    content: 'close'; }
+.rexminimenu.rex-effect1 .toggler {
+  left: 8px; }
+  .rexminimenu.rex-effect1 .toggler:before {
+    content: 'menu';
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: 500; }
+
+.rexminimenu.rex-effect2.open .toggler {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  top: calc(100%); }
+  .rexminimenu.rex-effect2.open .toggler:before {
+    content: 'close'; }
+.rexminimenu.rex-effect2 .toggler {
+  left: 8px; }
+  .rexminimenu.rex-effect2 .toggler:before {
+    content: 'menu';
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: 500; }
+
+.rexminimenu.rex-effect3.open .toggler:before {
+  content: 'close'; }
+.rexminimenu.rex-effect3.open nav {
+  margin-left: 50px; }
+.rexminimenu.rex-effect3 .toggler {
+  left: 0px;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  padding-top: 15px;
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect3 .toggler:before {
+    content: 'menu';
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: 500; }
+
+.rexminimenu.rex-effect4 nav {
+  border-radius: 50%;
+  -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+  transition: width 300ms ease, border-radius 300ms ease 300ms; }
+.rexminimenu.rex-effect4 .toggler {
+  left: 0px;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  padding-top: 15px; }
+  .rexminimenu.rex-effect4 .toggler:before {
+    content: 'menu';
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: 500; }
+.rexminimenu.rex-effect4.open {
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect4.open nav {
+    -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+    transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+    margin-left: 50px;
+    border-radius: 0; }
+  .rexminimenu.rex-effect4.open .toggler:before {
+    content: 'close'; }
+
+.rexminimenu.rex-effect5 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 17px;
+  height: 17px;
+  left: 16px; }
+  .rexminimenu.rex-effect5 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect5 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: left top;
+              transform-origin: left top; }
+    .rexminimenu.rex-effect5 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: left bottom;
+              transform-origin: left bottom; }
+.rexminimenu.rex-effect5.open .toggler {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px); }
+  .rexminimenu.rex-effect5.open .toggler span:first-child {
+    -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+  .rexminimenu.rex-effect5.open .toggler span:last-child {
+    -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect6 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 17px;
+  height: 17px;
+  left: 16px; }
+  .rexminimenu.rex-effect6 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect6 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: left top;
+              transform-origin: left top; }
+    .rexminimenu.rex-effect6 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: left bottom;
+              transform-origin: left bottom; }
+.rexminimenu.rex-effect6.open .toggler {
+  -webkit-transform: translateY(35px);
+          transform: translateY(35px); }
+  .rexminimenu.rex-effect6.open .toggler span:first-child {
+    -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+  .rexminimenu.rex-effect6.open .toggler span:last-child {
+    -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect7 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  left: 16px;
+  height: 100%;
+  width: 17px;
+  text-align: center;
+  padding-top: 15px;
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect7 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect7 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: left top;
+              transform-origin: left top; }
+    .rexminimenu.rex-effect7 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: left bottom;
+              transform-origin: left bottom; }
+.rexminimenu.rex-effect7.open {
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect7.open nav {
+    margin-left: 50px; }
+  .rexminimenu.rex-effect7.open .toggler span:first-child {
+    -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+  .rexminimenu.rex-effect7.open .toggler span:last-child {
+    -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect8 nav {
+  border-radius: 50%;
+  -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+  transition: width 300ms ease, border-radius 300ms ease 300ms; }
+.rexminimenu.rex-effect8 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  left: 16px;
+  height: 100%;
+  width: 17px;
+  text-align: center;
+  padding-top: 15px; }
+  .rexminimenu.rex-effect8 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect8 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: left top;
+              transform-origin: left top; }
+    .rexminimenu.rex-effect8 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: left bottom;
+              transform-origin: left bottom; }
+.rexminimenu.rex-effect8.open {
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect8.open nav {
+    -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+    transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+    margin-left: 50px;
+    border-radius: 0; }
+  .rexminimenu.rex-effect8.open .toggler span:first-child {
+    -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+  .rexminimenu.rex-effect8.open .toggler span:last-child {
+    -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+            transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect9 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 17px;
+  height: 17px;
+  left: 16px; }
+  .rexminimenu.rex-effect9 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect9 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-1;
+              animation-name: rotate-base-1; }
+    .rexminimenu.rex-effect9 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-2;
+              animation-name: rotate-base-2; }
+.rexminimenu.rex-effect9.open .toggler {
+  -webkit-transform: translateY(-50px) rotate(90deg);
+          transform: translateY(-50px) rotate(90deg); }
+  .rexminimenu.rex-effect9.open .toggler span:nth-child(2) {
+    -webkit-transition-delay: 300ms;
+            transition-delay: 300ms;
+    opacity: 0; }
+  .rexminimenu.rex-effect9.open .toggler span:first-child {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-name: rotate-active-1;
+            animation-name: rotate-active-1; }
+  .rexminimenu.rex-effect9.open .toggler span:last-child {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-name: rotate-active-2;
+            animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect10 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 17px;
+  height: 17px;
+  left: 16px; }
+  .rexminimenu.rex-effect10 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect10 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-1;
+              animation-name: rotate-base-1; }
+    .rexminimenu.rex-effect10 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-2;
+              animation-name: rotate-base-2; }
+.rexminimenu.rex-effect10.open .toggler {
+  -webkit-transform: translateY(30px) rotate(90deg);
+          transform: translateY(30px) rotate(90deg); }
+  .rexminimenu.rex-effect10.open .toggler span:nth-child(2) {
+    -webkit-transition-delay: 300ms;
+            transition-delay: 300ms;
+    opacity: 0; }
+  .rexminimenu.rex-effect10.open .toggler span:first-child {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-name: rotate-active-1;
+            animation-name: rotate-active-1; }
+  .rexminimenu.rex-effect10.open .toggler span:last-child {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-name: rotate-active-2;
+            animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect11 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 17px;
+  height: 17px;
+  left: 16px;
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect11 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect11 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-1;
+              animation-name: rotate-base-1; }
+    .rexminimenu.rex-effect11 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-2;
+              animation-name: rotate-base-2; }
+.rexminimenu.rex-effect11.open {
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect11.open nav {
+    margin-left: 50px; }
+  .rexminimenu.rex-effect11.open .toggler {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg); }
+    .rexminimenu.rex-effect11.open .toggler span:nth-child(2) {
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms;
+      opacity: 0; }
+    .rexminimenu.rex-effect11.open .toggler span:first-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-1;
+              animation-name: rotate-active-1; }
+    .rexminimenu.rex-effect11.open .toggler span:last-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-2;
+              animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect12 nav {
+  border-radius: 50%;
+  -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+  transition: width 300ms ease, border-radius 300ms ease 300ms; }
+.rexminimenu.rex-effect12 .toggler {
+  display: inline-block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 17px;
+  height: 17px;
+  left: 16px;
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect12 .toggler span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 0;
+    top: calc(50% - 3px/2); }
+    .rexminimenu.rex-effect12 .toggler span:first-child {
+      -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-1;
+              animation-name: rotate-base-1; }
+    .rexminimenu.rex-effect12 .toggler span:last-child {
+      -webkit-transform: translateY(300%);
+              transform: translateY(300%);
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation-duration: 600ms;
+              animation-duration: 600ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-name: rotate-base-2;
+              animation-name: rotate-base-2; }
+.rexminimenu.rex-effect12.open {
+  background-color: #64c4ed; }
+  .rexminimenu.rex-effect12.open nav {
+    -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+    transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+    margin-left: 50px;
+    border-radius: 0; }
+  .rexminimenu.rex-effect12.open .toggler {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg); }
+    .rexminimenu.rex-effect12.open .toggler span:nth-child(2) {
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms;
+      opacity: 0; }
+    .rexminimenu.rex-effect12.open .toggler span:first-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-1;
+              animation-name: rotate-active-1; }
+    .rexminimenu.rex-effect12.open .toggler span:last-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-2;
+              animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect13 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect13.open .toggler {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: -20px; }
+    .rexminimenu.rex-effect13.open .toggler:before {
+      content: 'close'; }
+  .rexminimenu.rex-effect13 .toggler {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .rexminimenu.rex-effect13 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+
+.rexminimenu.rex-effect14 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect14.open .toggler {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: 100%; }
+    .rexminimenu.rex-effect14.open .toggler:before {
+      content: 'close'; }
+  .rexminimenu.rex-effect14 .toggler {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .rexminimenu.rex-effect14 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+
+.rexminimenu.rex-effect15 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect15 nav {
+    border-radius: 50%;
+    -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+    transition: width 300ms ease, border-radius 300ms ease 300ms; }
+  .rexminimenu.rex-effect15 .toggler {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    padding-top: 15px; }
+    .rexminimenu.rex-effect15 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+  .rexminimenu.rex-effect15.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect15.open nav {
+      -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      border-radius: 0; }
+    .rexminimenu.rex-effect15.open .toggler {
+      -webkit-transform: translate(-50%, -80%);
+              transform: translate(-50%, -80%);
+      top: 0; }
+      .rexminimenu.rex-effect15.open .toggler:before {
+        content: 'close'; }
+
+.rexminimenu.rex-effect16 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect16 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .rexminimenu.rex-effect16 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect16 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect16 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect16.open .toggler {
+    -webkit-transform: translate(-50%, -50px);
+            transform: translate(-50%, -50px); }
+    .rexminimenu.rex-effect16.open .toggler span:first-child {
+      -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+    .rexminimenu.rex-effect16.open .toggler span:last-child {
+      -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect17 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect17 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .rexminimenu.rex-effect17 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect17 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect17 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect17.open .toggler {
+    -webkit-transform: translate(-50%, 40px);
+            transform: translate(-50%, 40px); }
+    .rexminimenu.rex-effect17.open .toggler span:first-child {
+      -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+    .rexminimenu.rex-effect17.open .toggler span:last-child {
+      -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect18 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect18 nav {
+    border-radius: 50%;
+    -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+    transition: width 300ms ease, border-radius 300ms ease 300ms; }
+  .rexminimenu.rex-effect18 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 100%;
+    width: 17px;
+    text-align: center;
+    padding-top: 15px; }
+    .rexminimenu.rex-effect18 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect18 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect18 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect18.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect18.open nav {
+      -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      border-radius: 0; }
+    .rexminimenu.rex-effect18.open .toggler {
+      -webkit-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%);
+      top: 0; }
+      .rexminimenu.rex-effect18.open .toggler span:first-child {
+        -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+                transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+      .rexminimenu.rex-effect18.open .toggler span:last-child {
+        -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+                transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect19 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect19 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .rexminimenu.rex-effect19 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect19 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-1;
+                animation-name: rotate-base-1; }
+      .rexminimenu.rex-effect19 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-2;
+                animation-name: rotate-base-2; }
+  .rexminimenu.rex-effect19.open .toggler {
+    -webkit-transform: translate(-50%, -50px) rotate(90deg);
+            transform: translate(-50%, -50px) rotate(90deg); }
+    .rexminimenu.rex-effect19.open .toggler span:nth-child(2) {
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms;
+      opacity: 0; }
+    .rexminimenu.rex-effect19.open .toggler span:first-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-1;
+              animation-name: rotate-active-1; }
+    .rexminimenu.rex-effect19.open .toggler span:last-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-2;
+              animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect20 {
+  left: 50%;
+  width: var(--menu-width);
+  margin-left: calc(var(--menu-width) / -2);
+  text-align: center; }
+  .rexminimenu.rex-effect20 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .rexminimenu.rex-effect20 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect20 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-1;
+                animation-name: rotate-base-1; }
+      .rexminimenu.rex-effect20 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-2;
+                animation-name: rotate-base-2; }
+  .rexminimenu.rex-effect20.open .toggler {
+    -webkit-transform: translate(-50%, 40px) rotate(90deg);
+            transform: translate(-50%, 40px) rotate(90deg); }
+    .rexminimenu.rex-effect20.open .toggler span:nth-child(2) {
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms;
+      opacity: 0; }
+    .rexminimenu.rex-effect20.open .toggler span:first-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-1;
+              animation-name: rotate-active-1; }
+    .rexminimenu.rex-effect20.open .toggler span:last-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-2;
+              animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect21 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect21.open .toggler {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: -20px; }
+    .rexminimenu.rex-effect21.open .toggler:before {
+      content: 'close'; }
+  .rexminimenu.rex-effect21 .toggler {
+    right: 8px; }
+    .rexminimenu.rex-effect21 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+
+.rexminimenu.rex-effect22 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect22.open .toggler {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: calc(100%); }
+    .rexminimenu.rex-effect22.open .toggler:before {
+      content: 'close'; }
+  .rexminimenu.rex-effect22 .toggler {
+    right: 8px; }
+    .rexminimenu.rex-effect22 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+
+.rexminimenu.rex-effect23 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect23.open .toggler:before {
+    content: 'close'; }
+  .rexminimenu.rex-effect23.open nav {
+    margin-right: 50px; }
+  .rexminimenu.rex-effect23 .toggler {
+    right: 0px;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect23 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+
+.rexminimenu.rex-effect24 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect24 nav {
+    border-radius: 50%;
+    -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+    transition: width 300ms ease, border-radius 300ms ease 300ms; }
+  .rexminimenu.rex-effect24 .toggler {
+    right: 0px;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    padding-top: 15px; }
+    .rexminimenu.rex-effect24 .toggler:before {
+      content: 'menu';
+      text-transform: uppercase;
+      font-size: 75%;
+      font-weight: 500; }
+  .rexminimenu.rex-effect24.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect24.open nav {
+      -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      margin-right: 50px;
+      border-radius: 0; }
+    .rexminimenu.rex-effect24.open .toggler:before {
+      content: 'close'; }
+
+.rexminimenu.rex-effect25 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect25 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    right: 16px; }
+    .rexminimenu.rex-effect25 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect25 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect25 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect25.open .toggler {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px); }
+    .rexminimenu.rex-effect25.open .toggler span:first-child {
+      -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+    .rexminimenu.rex-effect25.open .toggler span:last-child {
+      -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect26 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect26 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    right: 16px; }
+    .rexminimenu.rex-effect26 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect26 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect26 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect26.open .toggler {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px); }
+    .rexminimenu.rex-effect26.open .toggler span:first-child {
+      -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+    .rexminimenu.rex-effect26.open .toggler span:last-child {
+      -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect27 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect27 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    right: 16px;
+    height: 100%;
+    width: 17px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect27 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect27 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect27 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect27.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect27.open nav {
+      margin-right: 50px; }
+    .rexminimenu.rex-effect27.open .toggler span:first-child {
+      -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+    .rexminimenu.rex-effect27.open .toggler span:last-child {
+      -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect28 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect28 nav {
+    border-radius: 50%;
+    -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+    transition: width 300ms ease, border-radius 300ms ease 300ms; }
+  .rexminimenu.rex-effect28 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    right: 16px;
+    height: 100%;
+    width: 17px;
+    text-align: center;
+    padding-top: 15px; }
+    .rexminimenu.rex-effect28 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect28 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
+      .rexminimenu.rex-effect28 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom; }
+  .rexminimenu.rex-effect28.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect28.open nav {
+      -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      margin-right: 50px;
+      border-radius: 0; }
+    .rexminimenu.rex-effect28.open .toggler span:first-child {
+      -webkit-transform: rotate(-45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(-45deg) scaleX(0.5) translateX(-3px); }
+    .rexminimenu.rex-effect28.open .toggler span:last-child {
+      -webkit-transform: rotate(45deg) scaleX(0.5) translateX(-3px);
+              transform: rotate(45deg) scaleX(0.5) translateX(-3px); }
+
+.rexminimenu.rex-effect29 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect29 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    right: 16px; }
+    .rexminimenu.rex-effect29 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect29 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-1;
+                animation-name: rotate-base-1; }
+      .rexminimenu.rex-effect29 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-2;
+                animation-name: rotate-base-2; }
+  .rexminimenu.rex-effect29.open .toggler {
+    -webkit-transform: translateY(-50px) rotate(90deg);
+            transform: translateY(-50px) rotate(90deg); }
+    .rexminimenu.rex-effect29.open .toggler span:nth-child(2) {
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms;
+      opacity: 0; }
+    .rexminimenu.rex-effect29.open .toggler span:first-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-1;
+              animation-name: rotate-active-1; }
+    .rexminimenu.rex-effect29.open .toggler span:last-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-2;
+              animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect30 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect30 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    right: 16px; }
+    .rexminimenu.rex-effect30 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect30 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-1;
+                animation-name: rotate-base-1; }
+      .rexminimenu.rex-effect30 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-2;
+                animation-name: rotate-base-2; }
+  .rexminimenu.rex-effect30.open .toggler {
+    -webkit-transform: translateY(30px) rotate(90deg);
+            transform: translateY(30px) rotate(90deg); }
+    .rexminimenu.rex-effect30.open .toggler span:nth-child(2) {
+      -webkit-transition-delay: 300ms;
+              transition-delay: 300ms;
+      opacity: 0; }
+    .rexminimenu.rex-effect30.open .toggler span:first-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-1;
+              animation-name: rotate-active-1; }
+    .rexminimenu.rex-effect30.open .toggler span:last-child {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-name: rotate-active-2;
+              animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect31 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect31 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    right: 16px;
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect31 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect31 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-1;
+                animation-name: rotate-base-1; }
+      .rexminimenu.rex-effect31 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-2;
+                animation-name: rotate-base-2; }
+  .rexminimenu.rex-effect31.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect31.open nav {
+      margin-right: 50px; }
+    .rexminimenu.rex-effect31.open .toggler {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(90deg); }
+      .rexminimenu.rex-effect31.open .toggler span:nth-child(2) {
+        -webkit-transition-delay: 300ms;
+                transition-delay: 300ms;
+        opacity: 0; }
+      .rexminimenu.rex-effect31.open .toggler span:first-child {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: rotate-active-1;
+                animation-name: rotate-active-1; }
+      .rexminimenu.rex-effect31.open .toggler span:last-child {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: rotate-active-2;
+                animation-name: rotate-active-2; }
+
+.rexminimenu.rex-effect32 {
+  left: auto;
+  right: 0; }
+  .rexminimenu.rex-effect32 nav {
+    border-radius: 50%;
+    -webkit-transition: width 300ms ease, border-radius 300ms ease 300ms;
+    transition: width 300ms ease, border-radius 300ms ease 300ms; }
+  .rexminimenu.rex-effect32 .toggler {
+    display: inline-block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 17px;
+    height: 17px;
+    right: 16px;
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect32 .toggler span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      left: 0;
+      top: calc(50% - 3px/2); }
+      .rexminimenu.rex-effect32 .toggler span:first-child {
+        -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-1;
+                animation-name: rotate-base-1; }
+      .rexminimenu.rex-effect32 .toggler span:last-child {
+        -webkit-transform: translateY(300%);
+                transform: translateY(300%);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: rotate-base-2;
+                animation-name: rotate-base-2; }
+  .rexminimenu.rex-effect32.open {
+    background-color: #64c4ed; }
+    .rexminimenu.rex-effect32.open nav {
+      -webkit-transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      transition: width 300ms ease 300ms, border-radius 300ms ease, margin-left 300ms ease;
+      margin-right: 50px;
+      border-radius: 0; }
+    .rexminimenu.rex-effect32.open .toggler {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(90deg); }
+      .rexminimenu.rex-effect32.open .toggler span:nth-child(2) {
+        -webkit-transition-delay: 300ms;
+                transition-delay: 300ms;
+        opacity: 0; }
+      .rexminimenu.rex-effect32.open .toggler span:first-child {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: rotate-active-1;
+                animation-name: rotate-active-1; }
+      .rexminimenu.rex-effect32.open .toggler span:last-child {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-name: rotate-active-2;
+                animation-name: rotate-active-2; }
+
+/*--------------------------------------------------------------
+4.0 Sizes
+Large Menu Styles.
+--------------------------------------------------------------*/
+.rexminimenu.rex-large nav {
+  width: 80px;
+  height: 80px; }
+
+.rexminimenu.rex-effect1.rex-large .toggler, .rexminimenu.rex-effect2.rex-large .toggler {
+  left: 24px; }
+
+.rexminimenu.rex-effect3.rex-large .toggler, .rexminimenu.rex-effect4.rex-large .toggler {
+  width: 80px;
+  padding-top: 32px; }
+.rexminimenu.rex-effect3.rex-large.open nav, .rexminimenu.rex-effect4.rex-large.open nav {
+  margin-left: 80px; }
+
+.rexminimenu.rex-effect5.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  left: 25px; }
+.rexminimenu.rex-effect5.rex-large.open .toggler {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px); }
+
+.rexminimenu.rex-effect6.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  left: 25px; }
+.rexminimenu.rex-effect6.rex-large.open .toggler {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px); }
+
+.rexminimenu.rex-effect7.rex-large .toggler, .rexminimenu.rex-effect8.rex-large .toggler, .rexminimenu.rex-effect11.rex-large .toggler, .rexminimenu.rex-effect12.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  left: 25px; }
+.rexminimenu.rex-effect7.rex-large.open nav, .rexminimenu.rex-effect8.rex-large.open nav, .rexminimenu.rex-effect11.rex-large.open nav, .rexminimenu.rex-effect12.rex-large.open nav {
+  margin-left: 80px; }
+
+.rexminimenu.rex-effect9.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  left: 25px; }
+.rexminimenu.rex-effect9.rex-large.open .toggler {
+  -webkit-transform: translateY(-80px) rotate(90deg);
+          transform: translateY(-80px) rotate(90deg); }
+
+.rexminimenu.rex-effect10.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  left: 25px; }
+.rexminimenu.rex-effect10.rex-large.open .toggler {
+  -webkit-transform: translateY(50px) rotate(90deg);
+          transform: translateY(50px) rotate(90deg); }
+
+.rexminimenu.rex-effect15.rex-large .toggler {
+  padding-top: 30px; }
+
+.rexminimenu.rex-effect16.rex-large .toggler {
+  width: 30px;
+  height: 30px; }
+.rexminimenu.rex-effect16.rex-large.open .toggler {
+  -webkit-transform: translate(-50%, -80px);
+          transform: translate(-50%, -80px); }
+
+.rexminimenu.rex-effect17.rex-large .toggler {
+  width: 30px;
+  height: 30px; }
+.rexminimenu.rex-effect17.rex-large.open .toggler {
+  -webkit-transform: translate(-50%, 50px);
+          transform: translate(-50%, 50px); }
+
+.rexminimenu.rex-effect18.rex-large .toggler {
+  width: 30px;
+  height: 30px; }
+.rexminimenu.rex-effect18.rex-large.open .toggler {
+  -webkit-transform: translate(-50%, -120%);
+          transform: translate(-50%, -120%); }
+
+.rexminimenu.rex-effect19.rex-large .toggler {
+  width: 30px;
+  height: 30px; }
+.rexminimenu.rex-effect19.rex-large.open .toggler {
+  -webkit-transform: translate(-50%, -80px) rotate(90deg);
+          transform: translate(-50%, -80px) rotate(90deg); }
+
+.rexminimenu.rex-effect20.rex-large .toggler {
+  width: 30px;
+  height: 30px; }
+.rexminimenu.rex-effect20.rex-large.open .toggler {
+  -webkit-transform: translate(-50%, 50px) rotate(90deg);
+          transform: translate(-50%, 50px) rotate(90deg); }
+
+.rexminimenu.rex-effect21.rex-large .toggler, .rexminimenu.rex-effect22.rex-large .toggler {
+  right: 24px; }
+
+.rexminimenu.rex-effect23.rex-large .toggler, .rexminimenu.rex-effect24.rex-large .toggler {
+  width: 80px;
+  padding-top: 30px; }
+.rexminimenu.rex-effect23.rex-large.open nav, .rexminimenu.rex-effect24.rex-large.open nav {
+  margin-right: 80px; }
+
+.rexminimenu.rex-effect25.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  right: 25px; }
+.rexminimenu.rex-effect25.rex-large.open .toggler {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px); }
+
+.rexminimenu.rex-effect26.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  right: 25px; }
+.rexminimenu.rex-effect26.rex-large.open .toggler {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px); }
+
+.rexminimenu.rex-effect27.rex-large .toggler, .rexminimenu.rex-effect28.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  right: 25px; }
+.rexminimenu.rex-effect27.rex-large.open nav, .rexminimenu.rex-effect28.rex-large.open nav {
+  margin-right: 80px; }
+
+.rexminimenu.rex-effect29.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  right: 25px; }
+.rexminimenu.rex-effect29.rex-large.open .toggler {
+  -webkit-transform: translateY(-80px) rotate(90deg);
+          transform: translateY(-80px) rotate(90deg); }
+
+.rexminimenu.rex-effect30.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  right: 25px; }
+.rexminimenu.rex-effect30.rex-large.open .toggler {
+  -webkit-transform: translateY(50px) rotate(90deg);
+          transform: translateY(50px) rotate(90deg); }
+
+.rexminimenu.rex-effect31.rex-large .toggler, .rexminimenu.rex-effect32.rex-large .toggler {
+  width: 30px;
+  height: 30px;
+  right: 25px; }
+.rexminimenu.rex-effect31.rex-large.open nav, .rexminimenu.rex-effect32.rex-large.open nav {
+  margin-right: 80px; }
+
+/*--------------------------------------------------------------
+5.0 Colors
+Button Colors.
+--------------------------------------------------------------*/
+/*White Button*/
+.rexminimenu.rex-white:not(.open) nav {
+  background-color: white; }
+
+.rexminimenu.rex-white.rex-effect3:not(.open) .toggler, .rexminimenu.rex-white.rex-effect3:not(.open) nav {
+  background-color: white; }
+.rexminimenu.rex-white.rex-effect3 .toggler {
+  background-color: white; }
+
+.rexminimenu.rex-white.rex-effect4.open, .rexminimenu.rex-white.rex-effect8.open {
+  background-color: white; }
+  .rexminimenu.rex-white.rex-effect4.open .toggler, .rexminimenu.rex-white.rex-effect8.open .toggler {
+    background-color: white; }
+
+.rexminimenu.rex-white.rex-effect7.open, .rexminimenu.rex-white.rex-effect11.open, .rexminimenu.rex-white.rex-effect12.open, .rexminimenu.rex-white.rex-effect23.open, .rexminimenu.rex-white.rex-effect27.open, .rexminimenu.rex-white.rex-effect31.open, .rexminimenu.rex-white.rex-effect32.open {
+  background-color: white; }
+.rexminimenu.rex-white.rex-effect7 .toggler, .rexminimenu.rex-white.rex-effect11 .toggler, .rexminimenu.rex-white.rex-effect12 .toggler, .rexminimenu.rex-white.rex-effect23 .toggler, .rexminimenu.rex-white.rex-effect27 .toggler, .rexminimenu.rex-white.rex-effect31 .toggler, .rexminimenu.rex-white.rex-effect32 .toggler {
+  background-color: white; }
+
+.rexminimenu.rex-white.rex-effect15.open, .rexminimenu.rex-white.rex-effect18.open, .rexminimenu.rex-white.rex-effect24.open, .rexminimenu.rex-white.rex-effect28.open {
+  background-color: white; }
+
+/*Black Button*/
+.rexminimenu.rex-black:not(.open) nav {
+  background-color: black; }
+.rexminimenu.rex-black:not(.open) .toggler {
+  color: white; }
+
+.rexminimenu.rex-black.rex-effect3:not(.open) .toggler, .rexminimenu.rex-black.rex-effect3:not(.open) nav {
+  background-color: black; }
+.rexminimenu.rex-black.rex-effect3.open .toggler {
+  color: white; }
+.rexminimenu.rex-black.rex-effect3 .toggler {
+  background-color: black; }
+
+.rexminimenu.rex-black.rex-effect4.open .toggler, .rexminimenu.rex-black.rex-effect23.open .toggler, .rexminimenu.rex-black.rex-effect24.open .toggler {
+  color: white; }
+
+.rexminimenu.rex-black.rex-effect5:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect6:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect9:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect10:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect16:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect17:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect18:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect19:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect20:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect25:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect26:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect29:not(.open) .toggler span, .rexminimenu.rex-black.rex-effect30:not(.open) .toggler span {
+  background-color: white; }
+
+.rexminimenu.rex-black.rex-effect7 .toggler span, .rexminimenu.rex-black.rex-effect8 .toggler span, .rexminimenu.rex-black.rex-effect11 .toggler span, .rexminimenu.rex-black.rex-effect12 .toggler span, .rexminimenu.rex-black.rex-effect27 .toggler span, .rexminimenu.rex-black.rex-effect28 .toggler span, .rexminimenu.rex-black.rex-effect31 .toggler span, .rexminimenu.rex-black.rex-effect32 .toggler span {
+  background-color: white; }
+
+.rexminimenu.rex-black.rex-effect4.open, .rexminimenu.rex-black.rex-effect8.open {
+  background-color: black; }
+  .rexminimenu.rex-black.rex-effect4.open .toggler, .rexminimenu.rex-black.rex-effect8.open .toggler {
+    background-color: black; }
+
+.rexminimenu.rex-black.rex-effect7.open, .rexminimenu.rex-black.rex-effect11.open, .rexminimenu.rex-black.rex-effect12.open, .rexminimenu.rex-black.rex-effect23.open, .rexminimenu.rex-black.rex-effect27.open, .rexminimenu.rex-black.rex-effect31.open, .rexminimenu.rex-black.rex-effect32.open {
+  background-color: black; }
+.rexminimenu.rex-black.rex-effect7 .toggler, .rexminimenu.rex-black.rex-effect11 .toggler, .rexminimenu.rex-black.rex-effect12 .toggler, .rexminimenu.rex-black.rex-effect23 .toggler, .rexminimenu.rex-black.rex-effect27 .toggler, .rexminimenu.rex-black.rex-effect31 .toggler, .rexminimenu.rex-black.rex-effect32 .toggler {
+  background-color: black; }
+
+.rexminimenu.rex-black.rex-effect15.open, .rexminimenu.rex-black.rex-effect18.open, .rexminimenu.rex-black.rex-effect24.open, .rexminimenu.rex-black.rex-effect28.open {
+  background-color: black; }
+
+/*--------------------------------------------------------------
+6.0 Animations
+CSS animations used.
+--------------------------------------------------------------*/
+@-webkit-keyframes rotate-active-1 {
+  0% {
+    -webkit-transform: translateY(-300%);
+            transform: translateY(-300%); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+@keyframes rotate-active-1 {
+  0% {
+    -webkit-transform: translateY(-300%);
+            transform: translateY(-300%); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+@-webkit-keyframes rotate-active-2 {
+  0% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+@keyframes rotate-active-2 {
+  0% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+/*--------------------------------------------------------------
+7.0 Media Queries
+Styles applied to small devices.
+--------------------------------------------------------------*/
+/*Phone*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .rexminimenu {
+    display: inline-block;
+    margin: 0px;
+    width: 100vw !important;
+    height: 50px;
+    background-color: white;
+    left: 0 !important;
+    margin-left: 0 !important; }
+    .rexminimenu.open {
+      background-color: white !important; }
+      .rexminimenu.open nav {
+        width: 100vw !important;
+        height: auto;
+        margin-left: 0 !important; }
+      .rexminimenu.open .toggler {
+        top: 5px !important;
+        -webkit-transform: translateY(0) !important;
+                transform: translateY(0) !important; }
+    .rexminimenu nav {
+      width: 100vw;
+      height: 0;
+      display: block;
+      z-index: 99999;
+      position: absolute;
+      padding: 0;
+      margin-top: 50px; }
+      .rexminimenu nav ul {
+        display: block; }
+        .rexminimenu nav ul li {
+          display: block; }
+        .rexminimenu nav ul a {
+          display: inline-block; }
+    .rexminimenu .toggler {
+      top: 5px;
+      left: 8px !important;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      z-index: 999999;
+      width: auto !important;
+      height: auto !important;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      padding: 10px !important;
+      background-color: white !important; }
+
+  .rexminimenu.rex-effect5 .toggler, .rexminimenu.rex-effect6 .toggler, .rexminimenu.rex-effect7 .toggler, .rexminimenu.rex-effect8 .toggler, .rexminimenu.rex-effect9 .toggler, .rexminimenu.rex-effect10 .toggler, .rexminimenu.rex-effect11 .toggler, .rexminimenu.rex-effect12 .toggler, .rexminimenu.rex-effect16 .toggler, .rexminimenu.rex-effect17 .toggler, .rexminimenu.rex-effect18 .toggler, .rexminimenu.rex-effect19 .toggler, .rexminimenu.rex-effect20 .toggler, .rexminimenu.rex-effect25 .toggler, .rexminimenu.rex-effect26 .toggler, .rexminimenu.rex-effect27 .toggler, .rexminimenu.rex-effect28 .toggler, .rexminimenu.rex-effect29 .toggler, .rexminimenu.rex-effect30 .toggler, .rexminimenu.rex-effect31 .toggler, .rexminimenu.rex-effect32 .toggler {
+    width: 53px !important;
+    padding: 16px !important; }
+    .rexminimenu.rex-effect5 .toggler span, .rexminimenu.rex-effect6 .toggler span, .rexminimenu.rex-effect7 .toggler span, .rexminimenu.rex-effect8 .toggler span, .rexminimenu.rex-effect9 .toggler span, .rexminimenu.rex-effect10 .toggler span, .rexminimenu.rex-effect11 .toggler span, .rexminimenu.rex-effect12 .toggler span, .rexminimenu.rex-effect16 .toggler span, .rexminimenu.rex-effect17 .toggler span, .rexminimenu.rex-effect18 .toggler span, .rexminimenu.rex-effect19 .toggler span, .rexminimenu.rex-effect20 .toggler span, .rexminimenu.rex-effect25 .toggler span, .rexminimenu.rex-effect26 .toggler span, .rexminimenu.rex-effect27 .toggler span, .rexminimenu.rex-effect28 .toggler span, .rexminimenu.rex-effect29 .toggler span, .rexminimenu.rex-effect30 .toggler span, .rexminimenu.rex-effect31 .toggler span, .rexminimenu.rex-effect32 .toggler span {
+      width: 60% !important;
+      margin: 0px 10px; }
+
+  .rexminimenu.rex-effect13 .toggler, .rexminimenu.rex-effect14 .toggler, .rexminimenu.rex-effect15 .toggler, .rexminimenu.rex-effect16 .toggler, .rexminimenu.rex-effect17 .toggler, .rexminimenu.rex-effect18 .toggler, .rexminimenu.rex-effect19 .toggler, .rexminimenu.rex-effect20 .toggler {
+    -webkit-transform: none;
+            transform: none; }
+
+  .rexminimenu.rex-effect21 .toggler, .rexminimenu.rex-effect22 .toggler, .rexminimenu.rex-effect23 .toggler, .rexminimenu.rex-effect24 .toggler {
+    width: 54px !important; }
+
+  .rexminimenu.rex-large:not(.open) nav {
+    background-color: white;
+    width: 0;
+    height: 0; }
+
+  .rexminimenu.rex-black:not(.open) .toggler {
+    background-color: black !important; } }
+/*Tablet & iPad*/
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/* 14 Sep 2019*/
+
+/*# sourceMappingURL=rexminimenu.css.map */
