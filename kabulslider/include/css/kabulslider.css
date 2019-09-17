@@ -380,7 +380,7 @@ Styles applied to different layouts.
 Styles applied to small devices.
 --------------------------------------------------------------*/
 /*Phone*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   #kabul-slider.layout1 .slide, #kabul-slider.layout3 .slide {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -485,7 +485,7 @@ Styles applied to small devices.
     #kabul-slider.layout2 .slide.in .right-container .image, #kabul-slider.layout4 .slide.in .right-container .image {
       z-index: 1; } }
 /*Tablet & iPad*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #kabul-slider.layout1 .slide .left-container, #kabul-slider.layout2 .slide .left-container {
     padding: 2em; }
     #kabul-slider.layout1 .slide .left-container small, #kabul-slider.layout2 .slide .left-container small {
@@ -510,7 +510,7 @@ Styles applied to small devices.
       padding: 0em 2em; }
       #kabul-slider.layout3 .slide .right-container .caption h3, #kabul-slider.layout4 .slide .right-container .caption h3 {
         font-size: 1.1em; } }
-@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   #kabul-slider.layout1 .slide .left-container, #kabul-slider.layout2 .slide .left-container, #kabul-slider.layout3 .slide .left-container, #kabul-slider.layout4 .slide .left-container {
     padding: 2em; }
     #kabul-slider.layout1 .slide .left-container small, #kabul-slider.layout2 .slide .left-container small, #kabul-slider.layout3 .slide .left-container small, #kabul-slider.layout4 .slide .left-container small {
@@ -521,7 +521,7 @@ Styles applied to small devices.
     padding: 0em 2em; }
     #kabul-slider.layout1 .slide .right-container .caption h3, #kabul-slider.layout2 .slide .right-container .caption h3, #kabul-slider.layout3 .slide .right-container .caption h3, #kabul-slider.layout4 .slide .right-container .caption h3 {
       font-size: 1.1em; } }
-@media only screen and (min-device-width: 481px) and (max-device-width: 581px) {
+@media only screen and (min-width: 481px) and (max-width: 581px) {
   #kabul-slider.layout1 .slide .left-container .desc, #kabul-slider.layout2 .slide .left-container .desc, #kabul-slider.layout3 .slide .left-container .desc, #kabul-slider.layout4 .slide .left-container .desc {
     display: none; }
   #kabul-slider.layout1 .slide .right-container .caption, #kabul-slider.layout2 .slide .right-container .caption, #kabul-slider.layout3 .slide .right-container .caption, #kabul-slider.layout4 .slide .right-container .caption {
@@ -531,7 +531,7 @@ Styles applied to small devices.
   #kabul-slider.layout1 .slide .right-container .prev, #kabul-slider.layout1 .slide .right-container .next, #kabul-slider.layout2 .slide .right-container .prev, #kabul-slider.layout2 .slide .right-container .next, #kabul-slider.layout3 .slide .right-container .prev, #kabul-slider.layout3 .slide .right-container .next, #kabul-slider.layout4 .slide .right-container .prev, #kabul-slider.layout4 .slide .right-container .next {
     display: none; } }
 /* Landscape */
-@media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
   #kabul-slider.layout1 .slide .right-container .nav-no, #kabul-slider.layout1 .slide .right-container .nav-total, #kabul-slider.layout1 .slide .right-container .nav-subtitle, #kabul-slider.layout1 .slide .right-container .prev, #kabul-slider.layout1 .slide .right-container .next, #kabul-slider.layout2 .slide .right-container .nav-no, #kabul-slider.layout2 .slide .right-container .nav-total, #kabul-slider.layout2 .slide .right-container .nav-subtitle, #kabul-slider.layout2 .slide .right-container .prev, #kabul-slider.layout2 .slide .right-container .next, #kabul-slider.layout3 .slide .right-container .nav-no, #kabul-slider.layout3 .slide .right-container .nav-total, #kabul-slider.layout3 .slide .right-container .nav-subtitle, #kabul-slider.layout3 .slide .right-container .prev, #kabul-slider.layout3 .slide .right-container .next, #kabul-slider.layout4 .slide .right-container .nav-no, #kabul-slider.layout4 .slide .right-container .nav-total, #kabul-slider.layout4 .slide .right-container .nav-subtitle, #kabul-slider.layout4 .slide .right-container .prev, #kabul-slider.layout4 .slide .right-container .next {
     display: none; } }
 /* :) Let's meke internet BEAUTIFUL*/
