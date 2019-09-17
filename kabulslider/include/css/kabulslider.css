@@ -547,7 +547,10 @@ Styles applied to small devices.
     #kabul-slider.layout3 .slide .left-container .desc, #kabul-slider.layout4 .slide .left-container .desc {
       display: none; }
   #kabul-slider.layout3 .slide .right-container, #kabul-slider.layout4 .slide .right-container {
-    height: 50%; } }
+    height: 50%; }
+
+  #kabul-slider.layout1 .slide .left-container .desc, #kabul-slider.layout2 .slide .left-container .desc {
+    display: none; } }
 /* :) Let's meke internet BEAUTIFUL*/
 /*
  _       __     __       ______                    __
