@@ -1774,7 +1774,73 @@ Styles applied to small devices.
 
   .rexminimenu.rex-black:not(.open) .toggler {
     background-color: black !important; } }
-/*Tablet & iPad*/
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  .rexminimenu {
+    display: inline-block;
+    margin: 0px;
+    width: 100vw !important;
+    height: 50px;
+    background-color: white;
+    left: 0 !important;
+    margin-left: 0 !important; }
+    .rexminimenu.open {
+      background-color: white !important; }
+      .rexminimenu.open nav {
+        width: 100vw !important;
+        height: auto;
+        margin-left: 0 !important; }
+      .rexminimenu.open .toggler {
+        top: 5px !important;
+        -webkit-transform: translateY(0) !important;
+                transform: translateY(0) !important; }
+    .rexminimenu nav {
+      width: 100vw;
+      height: 0;
+      display: block;
+      z-index: 99999;
+      position: absolute;
+      padding: 0;
+      margin-top: 50px; }
+      .rexminimenu nav ul {
+        display: block; }
+        .rexminimenu nav ul li {
+          display: block; }
+        .rexminimenu nav ul a {
+          display: inline-block; }
+    .rexminimenu .toggler {
+      top: 5px;
+      left: 8px !important;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      z-index: 999999;
+      width: auto !important;
+      height: auto !important;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      padding: 10px !important;
+      background-color: white !important; }
+
+  .rexminimenu.rex-effect5 .toggler, .rexminimenu.rex-effect6 .toggler, .rexminimenu.rex-effect7 .toggler, .rexminimenu.rex-effect8 .toggler, .rexminimenu.rex-effect9 .toggler, .rexminimenu.rex-effect10 .toggler, .rexminimenu.rex-effect11 .toggler, .rexminimenu.rex-effect12 .toggler, .rexminimenu.rex-effect16 .toggler, .rexminimenu.rex-effect17 .toggler, .rexminimenu.rex-effect18 .toggler, .rexminimenu.rex-effect19 .toggler, .rexminimenu.rex-effect20 .toggler, .rexminimenu.rex-effect25 .toggler, .rexminimenu.rex-effect26 .toggler, .rexminimenu.rex-effect27 .toggler, .rexminimenu.rex-effect28 .toggler, .rexminimenu.rex-effect29 .toggler, .rexminimenu.rex-effect30 .toggler, .rexminimenu.rex-effect31 .toggler, .rexminimenu.rex-effect32 .toggler {
+    width: 53px !important;
+    padding: 16px !important; }
+    .rexminimenu.rex-effect5 .toggler span, .rexminimenu.rex-effect6 .toggler span, .rexminimenu.rex-effect7 .toggler span, .rexminimenu.rex-effect8 .toggler span, .rexminimenu.rex-effect9 .toggler span, .rexminimenu.rex-effect10 .toggler span, .rexminimenu.rex-effect11 .toggler span, .rexminimenu.rex-effect12 .toggler span, .rexminimenu.rex-effect16 .toggler span, .rexminimenu.rex-effect17 .toggler span, .rexminimenu.rex-effect18 .toggler span, .rexminimenu.rex-effect19 .toggler span, .rexminimenu.rex-effect20 .toggler span, .rexminimenu.rex-effect25 .toggler span, .rexminimenu.rex-effect26 .toggler span, .rexminimenu.rex-effect27 .toggler span, .rexminimenu.rex-effect28 .toggler span, .rexminimenu.rex-effect29 .toggler span, .rexminimenu.rex-effect30 .toggler span, .rexminimenu.rex-effect31 .toggler span, .rexminimenu.rex-effect32 .toggler span {
+      width: 60% !important;
+      margin: 0px 10px; }
+
+  .rexminimenu.rex-effect13 .toggler, .rexminimenu.rex-effect14 .toggler, .rexminimenu.rex-effect15 .toggler, .rexminimenu.rex-effect16 .toggler, .rexminimenu.rex-effect17 .toggler, .rexminimenu.rex-effect18 .toggler, .rexminimenu.rex-effect19 .toggler, .rexminimenu.rex-effect20 .toggler {
+    -webkit-transform: none;
+            transform: none; }
+
+  .rexminimenu.rex-effect21 .toggler, .rexminimenu.rex-effect22 .toggler, .rexminimenu.rex-effect23 .toggler, .rexminimenu.rex-effect24 .toggler {
+    width: 54px !important; }
+
+  .rexminimenu.rex-large:not(.open) nav {
+    background-color: white;
+    width: 0;
+    height: 0; }
+
+  .rexminimenu.rex-black:not(.open) .toggler {
+    background-color: black !important; } }
 /* :) Let's meke internet BEAUTIFUL*/
 /*
  _       __     __       ______                    __
