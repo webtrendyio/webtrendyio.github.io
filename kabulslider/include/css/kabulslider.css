@@ -100,7 +100,9 @@ Styles applied to all effects.
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      background-color: #fcfaf2; }
+      background-color: #fcfaf2;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
       #kabul-slider .slide .left-container h2 {
         margin: 0;
         -webkit-transition: all 300ms ease-in-out;
@@ -130,149 +132,152 @@ Styles applied to all effects.
         transition: all 300ms ease-in-out;
         opacity: 0;
         color: #ffc411; }
-    #kabul-slider .slide .right-container .image {
-      overflow: hidden; }
-      #kabul-slider .slide .right-container .image img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -webkit-transition: -webkit-transform 300ms ease-in-out;
-        transition: -webkit-transform 300ms ease-in-out;
-        transition: transform 300ms ease-in-out;
-        transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
-    #kabul-slider .slide .right-container .caption {
-      padding: 0px 4em;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      position: relative; }
-      #kabul-slider .slide .right-container .caption:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 100%;
-        -webkit-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out; }
-      #kabul-slider .slide .right-container .caption h3 {
-        -webkit-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-        -webkit-transform: translateY(100%);
-                transform: translateY(100%);
-        opacity: 0;
-        font-size: 1.3em;
-        line-height: 1.5; }
-      #kabul-slider .slide .right-container .caption .nav-no {
-        font-weight: 700; }
-      #kabul-slider .slide .right-container .caption .nav-total {
-        font-weight: 700;
-        margin-right: 15px;
-        color: rgba(0, 0, 0, 0.5); }
-        #kabul-slider .slide .right-container .caption .nav-total:before {
+    #kabul-slider .slide .right-container {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+      #kabul-slider .slide .right-container .image {
+        overflow: hidden; }
+        #kabul-slider .slide .right-container .image img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -webkit-transition: -webkit-transform 300ms ease-in-out;
+          transition: -webkit-transform 300ms ease-in-out;
+          transition: transform 300ms ease-in-out;
+          transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+          -webkit-transform: translateX(100%);
+                  transform: translateX(100%); }
+      #kabul-slider .slide .right-container .caption {
+        padding: 0px 4em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative; }
+        #kabul-slider .slide .right-container .caption:before {
           content: '';
-          border-top: 5px solid transparent;
-          border-left: 5px solid rgba(0, 0, 0, 0.5);
-          border-bottom: 5px solid transparent;
-          display: inline-block;
-          position: absolute;
-          right: -10px;
-          top: calc(50% - 5px); }
-      #kabul-slider .slide .right-container .caption span {
-        -webkit-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-        opacity: 0;
-        font-size: 85%; }
-      #kabul-slider .slide .right-container .caption .prev {
-        height: 10px;
-        display: inline-block;
-        position: relative;
-        min-width: 20px;
-        cursor: pointer;
-        -webkit-transition: all 200ms ease-out;
-        transition: all 200ms ease-out;
-        opacity: 0;
-        z-index: -10; }
-        #kabul-slider .slide .right-container .caption .prev:before {
-          content: '';
-          width: 0px;
-          height: 2px;
-          background-color: black;
-          position: absolute;
-          top: calc(50% - 1px);
-          left: -1px;
-          -webkit-transform-origin: center left;
-                  transform-origin: center left;
-          -webkit-transition: all 200ms ease-out;
-          transition: all 200ms ease-out; }
-        #kabul-slider .slide .right-container .caption .prev:after {
-          content: '';
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid black;
-          border-left: 2px solid black;
-          display: inline-block;
           position: absolute;
           top: 0;
           left: 0;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
-          -webkit-transition: all 200ms ease-out;
-          transition: all 200ms ease-out; }
-        #kabul-slider .slide .right-container .caption .prev:hover {
-          -webkit-transform: translateX(-5px);
-                  transform: translateX(-5px); }
-          #kabul-slider .slide .right-container .caption .prev:hover:before {
-            width: 20px; }
-      #kabul-slider .slide .right-container .caption .next {
-        height: 10px;
-        display: inline-block;
-        position: relative;
-        min-width: 20px;
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
-        cursor: pointer;
-        -webkit-transition: all 200ms ease-out;
-        transition: all 200ms ease-out;
-        opacity: 0;
-        z-index: -10; }
-        #kabul-slider .slide .right-container .caption .next:before {
-          content: '';
-          width: 0px;
-          height: 2px;
-          background-color: black;
-          position: absolute;
-          top: calc(50% - 1px);
-          left: -1px;
-          -webkit-transform-origin: center left;
-                  transform-origin: center left;
-          -webkit-transition: all 200ms ease-out;
-          transition: all 200ms ease-out; }
-        #kabul-slider .slide .right-container .caption .next:after {
-          content: '';
-          width: 10px;
+          width: 0%;
+          height: 100%;
+          -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out; }
+        #kabul-slider .slide .right-container .caption h3 {
+          -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+          -webkit-transform: translateY(100%);
+                  transform: translateY(100%);
+          opacity: 0;
+          font-size: 1.3em;
+          line-height: 1.5; }
+        #kabul-slider .slide .right-container .caption .nav-no {
+          font-weight: 700; }
+        #kabul-slider .slide .right-container .caption .nav-total {
+          font-weight: 700;
+          margin-right: 15px;
+          color: rgba(0, 0, 0, 0.5); }
+          #kabul-slider .slide .right-container .caption .nav-total:before {
+            content: '';
+            border-top: 5px solid transparent;
+            border-left: 5px solid rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid transparent;
+            display: inline-block;
+            position: absolute;
+            right: -10px;
+            top: calc(50% - 5px); }
+        #kabul-slider .slide .right-container .caption span {
+          -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+          opacity: 0;
+          font-size: 85%; }
+        #kabul-slider .slide .right-container .caption .prev {
           height: 10px;
-          border-top: 2px solid black;
-          border-left: 2px solid black;
           display: inline-block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
+          position: relative;
+          min-width: 20px;
+          cursor: pointer;
           -webkit-transition: all 200ms ease-out;
-          transition: all 200ms ease-out; }
-        #kabul-slider .slide .right-container .caption .next:hover {
-          -webkit-transform: rotate(180deg) translateX(-5px);
-                  transform: rotate(180deg) translateX(-5px); }
-          #kabul-slider .slide .right-container .caption .next:hover:before {
-            width: 20px; }
+          transition: all 200ms ease-out;
+          opacity: 0;
+          z-index: -10; }
+          #kabul-slider .slide .right-container .caption .prev:before {
+            content: '';
+            width: 0px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: calc(50% - 1px);
+            left: -1px;
+            -webkit-transform-origin: center left;
+                    transform-origin: center left;
+            -webkit-transition: all 200ms ease-out;
+            transition: all 200ms ease-out; }
+          #kabul-slider .slide .right-container .caption .prev:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            -webkit-transition: all 200ms ease-out;
+            transition: all 200ms ease-out; }
+          #kabul-slider .slide .right-container .caption .prev:hover {
+            -webkit-transform: translateX(-5px);
+                    transform: translateX(-5px); }
+            #kabul-slider .slide .right-container .caption .prev:hover:before {
+              width: 20px; }
+        #kabul-slider .slide .right-container .caption .next {
+          height: 10px;
+          display: inline-block;
+          position: relative;
+          min-width: 20px;
+          -webkit-transform: rotate(180deg);
+                  transform: rotate(180deg);
+          cursor: pointer;
+          -webkit-transition: all 200ms ease-out;
+          transition: all 200ms ease-out;
+          opacity: 0;
+          z-index: -10; }
+          #kabul-slider .slide .right-container .caption .next:before {
+            content: '';
+            width: 0px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: calc(50% - 1px);
+            left: -1px;
+            -webkit-transform-origin: center left;
+                    transform-origin: center left;
+            -webkit-transition: all 200ms ease-out;
+            transition: all 200ms ease-out; }
+          #kabul-slider .slide .right-container .caption .next:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            -webkit-transition: all 200ms ease-out;
+            transition: all 200ms ease-out; }
+          #kabul-slider .slide .right-container .caption .next:hover {
+            -webkit-transform: rotate(180deg) translateX(-5px);
+                    transform: rotate(180deg) translateX(-5px); }
+            #kabul-slider .slide .right-container .caption .next:hover:before {
+              width: 20px; }
 
 /*--------------------------------------------------------------
 2.0 Layout Styles
@@ -534,6 +539,15 @@ Styles applied to small devices.
 @media screen and (min-width: 320px) and (max-width: 1023px) and (orientation: landscape) {
   #kabul-slider.layout1 .slide .right-container .nav-no, #kabul-slider.layout1 .slide .right-container .nav-total, #kabul-slider.layout1 .slide .right-container .nav-subtitle, #kabul-slider.layout1 .slide .right-container .prev, #kabul-slider.layout1 .slide .right-container .next, #kabul-slider.layout2 .slide .right-container .nav-no, #kabul-slider.layout2 .slide .right-container .nav-total, #kabul-slider.layout2 .slide .right-container .nav-subtitle, #kabul-slider.layout2 .slide .right-container .prev, #kabul-slider.layout2 .slide .right-container .next, #kabul-slider.layout3 .slide .right-container .nav-no, #kabul-slider.layout3 .slide .right-container .nav-total, #kabul-slider.layout3 .slide .right-container .nav-subtitle, #kabul-slider.layout3 .slide .right-container .prev, #kabul-slider.layout3 .slide .right-container .next, #kabul-slider.layout4 .slide .right-container .nav-no, #kabul-slider.layout4 .slide .right-container .nav-total, #kabul-slider.layout4 .slide .right-container .nav-subtitle, #kabul-slider.layout4 .slide .right-container .prev, #kabul-slider.layout4 .slide .right-container .next {
     display: none; } }
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  #kabul-slider.layout3 .slide .left-container, #kabul-slider.layout4 .slide .left-container {
+    height: 50%; }
+    #kabul-slider.layout3 .slide .left-container h2, #kabul-slider.layout4 .slide .left-container h2 {
+      font-size: 2em; }
+    #kabul-slider.layout3 .slide .left-container .desc, #kabul-slider.layout4 .slide .left-container .desc {
+      display: none; }
+  #kabul-slider.layout3 .slide .right-container, #kabul-slider.layout4 .slide .right-container {
+    height: 50%; } }
 /* :) Let's meke internet BEAUTIFUL*/
 /*
  _       __     __       ______                    __
