@@ -1707,7 +1707,7 @@ CSS animations used.
 Styles applied to small devices.
 --------------------------------------------------------------*/
 /*Phone*/
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .rexminimenu {
     display: inline-block;
     margin: 0px;
@@ -1774,7 +1774,7 @@ Styles applied to small devices.
 
   .rexminimenu.rex-black:not(.open) .toggler {
     background-color: black !important; } }
-@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
   .rexminimenu {
     display: inline-block;
     margin: 0px;

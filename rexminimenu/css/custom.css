@@ -651,7 +651,7 @@ template {
   and (min-device-width : 320px) 
   and (max-device-width : 480px) {
     section {
-      min-height: 400px;
+      min-height: 800px;
     }
   }
 
