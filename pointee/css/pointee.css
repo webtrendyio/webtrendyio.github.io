@@ -1,0 +1,462 @@
+@charset "UTF-8";
+/*!
+ * Pointee Animated Touch and Gesture Icons
+ * Version: 1.0.0
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Only from the heart can you touch the sky." -Rumi
+ *
+ */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1.0 Variables > Line 23
+	2.0 General Styles > Line 32
+	3.0 Gesture Styles > Line 53
+	4.0 Animations > Line 366
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+Variables used inside the styles.
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 General Styles
+Styles applied to all cases.
+--------------------------------------------------------------*/
+[class*=cls-1], [class*=cls-2] {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px; }
+
+[class*=cls-1] {
+  stroke: #1a1a1a; }
+
+[class*=cls-2] {
+  stroke: #f12323; }
+
+/*--------------------------------------------------------------
+3.0 Gesture Styles
+Styles applied to each gesture.
+--------------------------------------------------------------*/
+/*Tap*/
+.tap_cls-2 {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*Tap 2*/
+.tap2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*Double Tap*/
+.double_tap_cls-2.botter {
+  animation: p_fadeOutTop2 1s ease-out 0s infinite; }
+.double_tap_cls-2.topper {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*Double Tap 2*/
+.double_tap2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*Page Move*/
+.page_move_cls-1 {
+  animation: p_move 3s ease-out 0s infinite; }
+
+/*1 Finger Vertical Scroll*/
+.one_f_v_s_cls-1 {
+  animation: p_verticalScroll 1.5s linear 0s infinite; }
+
+/*1 Finger Horizontal Scroll*/
+.one_f_h_s_cls-1 {
+  animation: p_horizontalScroll 1.5s linear 0s infinite; }
+
+/*Flick Left*/
+.anim-group {
+  animation: p_flickLeft1 1s linear 0s infinite;
+  transform-origin: 40px; }
+
+/*Flick Right*/
+.anim-group-rev {
+  animation: p_flickRight1 1s linear 0s infinite;
+  transform-origin: 40px; }
+
+/*2 Finger Tap*/
+.two_f_cls-2 {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*2 Finger Tap 2*/
+.two_f2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*2 Finger Double Tap*/
+.two_f_dt_cls-2.botter {
+  animation: p_fadeOutTop2 1s ease-out 0s infinite; }
+.two_f_dt_cls-2.topper {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*2 Finger Double Tap 2*/
+.two_f_dt2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*2 Finger Horizontal Scroll*/
+.two_f_hs_cls-1 {
+  animation: p_horizontalScroll 1.5s linear 0s infinite; }
+
+/*2 Finger Vertical Scroll*/
+.two_f_vs_cls-1 {
+  animation: p_verticalScroll 1.5s linear 0s infinite; }
+
+/*2 Finger Move*/
+.two_f_m_cls-1 {
+  animation: p_move 3s ease-out 0s infinite; }
+
+/*2 Finger Scroll Up*/
+.two_f_s_u_cls-1 {
+  animation: p_scrollUp 2.5s ease-out 0s infinite; }
+
+/*2 Finger Scroll Down*/
+.two_f_s_d_cls-1 {
+  animation: p_scrollDown 2.5s ease-out 0s infinite; }
+
+/*Touch & Hold*/
+.t_n_h_clock {
+  animation: p_blink 2s ease-out 0s infinite; }
+
+/*Zoom Out*/
+.zoom_out_cls-2.up {
+  animation: p_arrowUp 1s ease-out 0s infinite; }
+.zoom_out_cls-2.down {
+  animation: p_arrowDown 1s ease-out 0s infinite; }
+
+/*Zoom In*/
+.zoomin_up {
+  animation: p_zoomArrowUp 1s ease-out 0s infinite; }
+
+.zoomin_down {
+  animation: p_zoomArrowDown 1s ease-out 0s infinite; }
+
+/*3 Finger Drag Up*/
+.t_f_du_cls-1 {
+  animation: p_scrollUp 2.5s ease-out 0s infinite; }
+
+/*3 Finger Drag Down*/
+.t_f_dd_cls-1 {
+  animation: p_scrollDown 2.5s ease-out 0s infinite; }
+
+/*3 Finger Move*/
+.t_f_m_cls-1 {
+  animation: p_move 3s ease-out 0s infinite; }
+
+/*3 Finger Tap*/
+.t_f_tap_cls-2 {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*3 Finger Tap 2*/
+.t_f_tap2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*3 Finger Double Tap*/
+.t_f_dt_cls-2.botter {
+  animation: p_fadeOutTop2 1s ease-out 0s infinite; }
+.t_f_dt_cls-2.topper {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*3 Finger Double Tap 2*/
+.t_f_dt2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*3 Finger Touch & Hold*/
+.t_f_tnh_clock {
+  animation: p_blink 2s ease-out 0s infinite; }
+
+/*3 Finger Horizontal Scroll*/
+.t_f_hs-cls-1 {
+  animation: p_horizontalScroll 1.5s linear 0s infinite; }
+
+/*3 Finger Pinch*/
+.zoomin_right {
+  animation: p_zoomInArrowRight 1s ease-out 0s infinite; }
+
+.zoomin_left {
+  animation: p_zoomInArrowLeft 1s ease-out 0s infinite; }
+
+/*4 Finger Tap*/
+.f_f_t_cls-2 {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*4 Finger Tap 2*/
+.f_f_t2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*4 Finger Double Tap*/
+.f_f_dt_cls-2.botter {
+  animation: p_fadeOutTop2 1s ease-out 0s infinite; }
+.f_f_dt_cls-2.topper {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*4 Finger Double Tap 2*/
+.f_f_dt2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*4 Finger Drag Up*/
+.f_f_du_cls-1 {
+  animation: p_scrollUp 2.5s ease-out 0s infinite; }
+
+/*4 Finger Drag Down*/
+.f_f_dd_cls-1 {
+  animation: p_scrollDown 2.5s ease-out 0s infinite; }
+
+/*4 Finger Horizontal Scroll*/
+.f_f_hs_cls-1 {
+  animation: p_horizontalScroll 1.5s linear 0s infinite; }
+
+/*4 Finger Pinch*/
+.ffp_zoomin_right {
+  animation: p_zoomInArrowRight 1s ease-out 0s infinite; }
+
+.ffp_zoomin_left {
+  animation: p_zoomInArrowLeft 1s ease-out 0s infinite; }
+
+/*4 Finger Move*/
+.f_f_m_cls-1 {
+  animation: p_move 3s ease-out 0s infinite; }
+
+/*5 Finger Horizontal Scroll*/
+.five_hs_cls-1 {
+  animation: p_horizontalScroll 1.5s linear 0s infinite; }
+
+/*5 Finger Vertical Scroll*/
+.five_f_vs_cls-1 {
+  animation: p_verticalScroll 1.5s linear 0s infinite; }
+
+/*5 Finger Move*/
+.five_f_m_cls-1 {
+  animation: p_move 3s ease-out 0s infinite; }
+
+/*5 Finger Tap*/
+.f_f_tap_cls-2 {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*5 Finger Tap 2*/
+.f_f_tap2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*5 Finger Double Tap*/
+.five_f_dt_cls-2.botter {
+  animation: p_fadeOutTop2 1s ease-out 0s infinite; }
+.five_f_dt_cls-2.topper {
+  animation: p_fadeOutTop 1s ease-out 0s infinite; }
+
+/*5 Finger Double Tap 2*/
+.five_f_dt2_cls-1 {
+  animation: p_tap2 1s ease-out 0s infinite; }
+
+/*2 Hand Zoom Out*/
+.hand-right {
+  animation: p_twoHandRight 1s linear 0s infinite;
+  transform-origin: 70px; }
+
+.hand-left {
+  animation: p_twoHandLeft 1s linear 0s infinite;
+  transform-origin: 50px; }
+
+.th-ar-right {
+  animation: p_twoHandArrowRight 1s ease-out 0s infinite; }
+
+.th-ar-left {
+  animation: p_twoHandArrowLeft 1s ease-out 0s infinite; }
+
+/*2 Hand Zoom In*/
+.thzi_hand-right {
+  animation: p_twoHandZoomRight 1s linear 0s infinite;
+  transform-origin: 50px; }
+
+.thzi_hand-left {
+  animation: p_twoHandZoomLeft 1s linear 0s infinite;
+  transform-origin: 70px; }
+
+.thzi-ar-right {
+  animation: p_twoHandZoomInArrowRight 1s ease-out 0s infinite; }
+
+.thzi-ar-left {
+  animation: p_twoHandZoomInArrowLeft 1s ease-out 0s infinite; }
+
+/*--------------------------------------------------------------
+4.0 Animations
+CSS animations used.
+--------------------------------------------------------------*/
+@keyframes p_fadeOutTop {
+  0% {
+    opacity: 0;
+    transform: translateY(0); }
+  10%, 70% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%); } }
+@keyframes p_fadeOutTop2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0); }
+  10%, 40% {
+    opacity: 1;
+    transform: translateY(0); }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%); } }
+@keyframes p_move {
+  0%, 5% {
+    transform: translate(0%, 20%); }
+  20%, 25%, 30% {
+    transform: translate(20%, 0%); }
+  45%, 50%, 55% {
+    transform: translate(-20%, -20%); }
+  70%, 75%, 80% {
+    transform: translate(20%, 20%); }
+  95%, 100% {
+    transform: translate(0%, 20%); } }
+@keyframes p_verticalScroll {
+  0%, 30%, 100% {
+    transform: translateY(10%); }
+  80% {
+    transform: translateY(-10%); } }
+@keyframes p_horizontalScroll {
+  0%, 30%, 100% {
+    transform: translate(10%, 5%); }
+  80% {
+    transform: translate(-10%, 5%); } }
+@keyframes p_flickLeft1 {
+  0%, 30%, 100% {
+    transform: translateY(10%) rotate(50deg); }
+  80% {
+    transform: translateY(10%) rotate(-10deg); } }
+@keyframes p_flickRight1 {
+  0%, 30%, 100% {
+    transform: translateY(10%) rotate(20deg); }
+  80% {
+    transform: translateY(10%) rotate(80deg); } }
+@keyframes p_scrollUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10%); }
+  30% {
+    transform: translateY(10%); }
+  10%, 90% {
+    opacity: 1; }
+  80%, 100% {
+    transform: translateY(-10%); }
+  100% {
+    opacity: 0; } }
+@keyframes p_scrollDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%); }
+  30% {
+    transform: translateY(-10%); }
+  10%, 90% {
+    opacity: 1; }
+  80%, 100% {
+    transform: translateY(10%); }
+  100% {
+    opacity: 0; } }
+@keyframes p_blink {
+  10%, 30%, 50%, 70%, 90% {
+    opacity: 0; }
+  0%, 20%, 40%, 60%, 80%, 100% {
+    opacity: 1; } }
+@keyframes p_arrowUp {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-10%); } }
+@keyframes p_arrowDown {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(10%); } }
+@keyframes p_zoomArrowUp {
+  0% {
+    transform: translateY(10%); }
+  100% {
+    transform: translateY(0); } }
+@keyframes p_zoomArrowDown {
+  0% {
+    transform: translateY(-10%); }
+  100% {
+    transform: translateY(0); } }
+@keyframes p_zoomInArrowLeft {
+  0% {
+    transform: translateX(10%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes p_zoomInArrowRight {
+  0% {
+    transform: translateX(-10%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes p_twoHandLeft {
+  0%, 30%, 100% {
+    transform: translateY(5%) rotate(10deg); }
+  80% {
+    transform: translateY(5%) rotate(-15deg); } }
+@keyframes p_twoHandRight {
+  0%, 30%, 100% {
+    transform: translateY(5%) rotate(-10deg); }
+  80% {
+    transform: translateY(5%) rotate(15deg); } }
+@keyframes p_twoHandArrowLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-10%); } }
+@keyframes p_twoHandArrowRight {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(10%); } }
+@keyframes p_twoHandZoomLeft {
+  0%, 30%, 100% {
+    transform: translateY(5%) rotate(0deg); }
+  80% {
+    transform: translateY(5%) rotate(-20deg); } }
+@keyframes p_twoHandZoomRight {
+  0%, 30%, 100% {
+    transform: translateY(5%) rotate(0deg); }
+  80% {
+    transform: translateY(5%) rotate(20deg); } }
+@keyframes p_twoHandZoomInArrowLeft {
+  0% {
+    transform: translateX(-10%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes p_twoHandZoomInArrowRight {
+  0% {
+    transform: translateX(10%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes p_tap2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(0); }
+  30% {
+    /*transform: translateY(0);	*/ }
+  10%, 90% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-20%); } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+/* 18 Sep 2019*/
+
+/*# sourceMappingURL=pointee.css.map */
