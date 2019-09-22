@@ -1,7 +1,14 @@
-/*
- * Sadaf Khan Portfolio | Summer 2019
+/*!
+ * iPort Personal Portfolio
  * Version: 1.0
- * "Always do what you are afraid to do!"
+ * Created: 20 Sep 2019
+ * Last Update: 20 Sep 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Your heart knows the way. Run in that direction." -Rumi
+ *
  */
 
 
@@ -141,14 +148,13 @@
 })();
 
 
-/*
- _______          __        ___   ___ ___ __
-|   _   .---.-.--|  .---.-.'  _| |   Y   |  |--.---.-.-----.
-|   1___|  _  |  _  |  _  |   _| |.  1  /|     |  _  |     |
-|____   |___._|_____|___._|__|   |.  _  \|__|__|___._|__|__|
-|:  1   |                        |:  |   \
-|::.. . |                        |::.| .  )
-`-------'                        `--- ---'
 
-Thursday 18 July - 17:59 (* **** ***)
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
 */
