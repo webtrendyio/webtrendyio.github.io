@@ -14,6 +14,35 @@
 
 (function() {
 
+	// Custom Cursor
+	let body = document.body;
+	let cursor = document.querySelector('.cursor');
+
+	const get_mouse_pos = (e) => {
+        let posx = 0;
+        let posy = 0;
+        if (!e) e = window.event;
+        if (e.clientX || e.clientY) 	{
+            posx = e.clientX;
+            posy = e.clientY;
+        }
+        return { x : posx, y : posy }
+    }
+
+	body.addEventListener('mouseenter', function(e){
+		this.classList.add('active');
+	});
+	body.addEventListener('mouseleave', function(e){
+		this.classList.remove('active');
+	});
+	body.addEventListener('mousemove', function(e){
+		if (e.target.nodeName == "A" || e.target.parentNode.nodeName == "A") {this.classList.remove('active');}
+		else {this.classList.add('active');}
+		this.style.setProperty('--top', get_mouse_pos(e).y + "px");
+        this.style.setProperty('--left', get_mouse_pos(e).x + "px");
+	});
+
+
 			
 	var ie = (function(){
 		var undef,rv = -1; 
@@ -87,7 +116,6 @@
 		
 		if( noscroll && !ie ) {
 			if( scrollVal < 0 ) return false;
-			// keep it that way
 			window.scrollTo( 0, 0 );
 		}
 
@@ -120,7 +148,6 @@
 			container.classList.remove('active');
 		}
 
-		// simulating the end of the transition:
 		setTimeout( function() {
 			isRevealed = !isRevealed;
 			isAnimating = false;
@@ -131,7 +158,7 @@
 		}, 600 );
 	}
 
-	// refreshing the page...
+	
 	var pageScroll = scrollY();
 	noscroll = pageScroll === 0;
 	

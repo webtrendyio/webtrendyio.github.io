@@ -7,8 +7,6 @@
 		<meta name="description" content="Hello, my name is iPort and I am a Personal Portfolio!">
 		<meta name="viewport" content="width=device-width">
 		
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:300,400,700&display=swap" rel="stylesheet">
 		
 		<!-- Remix Icons -->
 		<link rel="stylesheet" type="text/css" href="fonts/remixicon.css">
@@ -23,7 +21,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 		
 	</head>
-	<body class="custom-cursor cursor-1">
+	<body>
 		
 		<main>
 			
@@ -58,12 +56,12 @@
 						</div>
 						<div class="col-sm-6 text-right">
 							<strong class="d-block"><q>Always do what you are afraid to do!</q></strong>
-							<img src="img/signature.png" class="signature">
+							<img src="img/signature.png" alt="My Signature" title="Signature" class="signature">
 						</div>
-						<div class="col-sm-6 offset-sm-6 over-slide">
+						<div class="col-sm-12 col-md-6 offset-md-6 over-slide">
 							<span class="sub">Find out more</span>
 							<h2 class="title">About Me</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sed repudiandae odit deserunt, quas quibusdam necessitatibus nesciunt eligendi esse sit non reprehenderit quisquam!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sed repudiandae odit deserunt, quas quibusdam necessitatibus nesciunt eligendi esse sit non reprehenderit quisquam asperiores maxime blanditiis culpa vitae velit. Numquam!</p>
 							<strong class="secondary-title">Education:</strong>
 							<div class="education">
 								<div class="year">2016</div>
@@ -106,7 +104,7 @@
 							<h2 class="title">My Specialties</h2>
 						</div>
 						<div class="col-sm-12">
-							<article class="d-flex justify-center text-center">
+							<div class="d-flex justify-center text-center">
 								<div class="w-30">
 									<div class="shape">
 										<i class="remixicon-database-2-line"></i>
@@ -128,7 +126,7 @@
 									<div class="line"></div>
 									<div>Computer Engineering</div>
 								</div>
-							</article>
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -401,7 +399,7 @@
 						</div>
 						<div class="col-sm-12 text-center cp">
 							<strong class="d-block">© Copyright 2019 | iPort Portfolio | All Rights Reserved</strong>
-							<img src="img/signature.png" class="signature">
+							<img src="img/signature.png" alt="My Signature" title="Signature" class="signature">
 						</div>
 					</div>
 				</div>
@@ -417,39 +415,6 @@
 		<!-- End Cursor Element -->
 
 		<!-- Main JavaScript -->
-		<script type="text/javascript" src="js/script.js"></script>
-
-		<script type="text/javascript">
-			// Custom Cursor
-			(function(){
-				document.querySelectorAll('.custom-cursor').forEach(function(e){
-					let root = document.documentElement;
-					let cursor = e.querySelector('.cursor');
-					let link = e.querySelectorAll('a');
-					
-					link.forEach(function(e){
-						e.addEventListener('mouseenter', function(){
-							cursor.classList.add("onlink");
-						});
-						e.addEventListener('mouseleave', function(){
-							cursor.classList.remove("onlink");
-						});
-					});
-					
-					let dot = cursor.children[0];
-					e.addEventListener('mousemove', function(e){
-						root.style.setProperty('--top', e.clientY + "px");
-			            root.style.setProperty('--left', e.clientX + "px");
-					});
-					e.addEventListener('mouseenter', function(){
-						e.classList.add('active');
-					});
-					e.addEventListener('mouseleave', function(){
-						e.classList.remove('active');
-					});
-				});
-			})();
-			// End Custom Cursor
-		</script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
