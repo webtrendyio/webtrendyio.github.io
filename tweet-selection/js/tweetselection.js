@@ -40,6 +40,7 @@
 
 		this.link = document.createElement('a');
 		this.link.innerText = this.config.title;
+		this.link.setAttribute('target', '_blank');
 
 		this.link.appendChild(this.icon);
 		this.tooltip.appendChild(this.link);
@@ -72,8 +73,8 @@
 	    	}
 		});
 
-		document.addEventListener("mousedown", () => {
-			if (this.tooltip.getAttribute('aria-active')) {
+		document.addEventListener("mousedown", (e) => {
+			if (e.target != this.link && this.tooltip.getAttribute('aria-active')) {
 				this.tooltip.setAttribute('aria-active', false);
 			}
 		});
