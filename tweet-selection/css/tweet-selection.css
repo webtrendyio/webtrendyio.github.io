@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/*!
+ * Tweet Selection Twitter Highlighter
+ * Version: 1.0.0
+ * Created: 30 Sep 2019
+ * Last Update: 30 Sep 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "These pains you feel are messengers. Listen to them." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .tweet-selection-wrapper
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+body {
+  --top: 0;
+  --left: 0;
+  --bgColor: #333;
+  --txtColor: white; }
+
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.tweet-selection-wrapper {
+  background-color: var(--bgColor);
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  transform: translate(-50%, -105%); }
+  .tweet-selection-wrapper a {
+    color: var(--txtColor);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none; }
+  .tweet-selection-wrapper .tweet-selection-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    display: inline-block;
+    background-image: url(./tweet_partial/twitter.svg);
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .tweet-selection-wrapper[aria-active=true] {
+    display: inline-block; }
+  .tweet-selection-wrapper.normal {
+    padding: 12px; }
+    .tweet-selection-wrapper.normal a {
+      font-size: 85%; }
+  .tweet-selection-wrapper.large {
+    padding: 15px 20px; }
+    .tweet-selection-wrapper.large a {
+      font-size: 110%; }
+    .tweet-selection-wrapper.large .tweet-selection-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px; }
+  .tweet-selection-wrapper.small {
+    padding: 5px 8px; }
+    .tweet-selection-wrapper.small a {
+      font-size: 75%; }
+    .tweet-selection-wrapper.small .tweet-selection-icon {
+      width: 10px;
+      height: 10px; }
+  .tweet-selection-wrapper:after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--bgColor); }
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=tweet-selection.css.map */
