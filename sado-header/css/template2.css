@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/*!
+ * Sado Hero Header Effects 
+ * Version: 3.0
+ * Created: 24 May 2019
+ * Last Update: 3 Oct 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We are born of LOVE, lover is our mother." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .sado-header
+3.0 Template Styles
+4.0 Animations
+5.0 Media Queries
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+::root {
+  --header-height: 100vh; }
+
+/*Yellow*/
+/*Dark Gray*/
+/*Orange*/
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.sado-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header .sado-header-img {
+    width: 100%;
+    margin-left: 0;
+    min-height: 100vh;
+    object-fit: cover;
+    filter: contrast(1) brightness(0.8);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header .sado-header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em;
+    box-sizing: border-box;
+    color: white;
+    will-change: transform;
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+    .sado-header .sado-header-content .header-title {
+      font-size: 4em;
+      margin: 10px 0px;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+    .sado-header .sado-header-content .header-subtitle {
+      font-size: 2em;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+      display: inline-block; }
+      .sado-header .sado-header-content .header-subtitle:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ff9800;
+        z-index: -1;
+        transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+    .sado-header .sado-header-content .header-scroll {
+      display: inline-block;
+      position: absolute;
+      bottom: 30px;
+      cursor: pointer;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+      .sado-header .sado-header-content .header-scroll img {
+        max-height: 100%;
+        animation: 5s ease 0s infinite normal both running sado-jello-horizontal; }
+  .sado-header.active + .sado-body {
+    opacity: 1;
+    transition-delay: 300ms; }
+  .sado-header + .sado-body {
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    opacity: 0; }
+
+/*--------------------------------------------------------------
+3.0 Template Styles
+--------------------------------------------------------------*/
+/*Template 2*/
+.sado-header.sado-header-2 .profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px; }
+.sado-header.sado-header-2 .blog-icon {
+  width: 20px;
+  opacity: 0.5;
+  margin-right: 5px; }
+.sado-header.sado-header-2 .blog-author {
+  padding-top: 10px; }
+.sado-header.sado-header-2 .blog-author-wrapper {
+  display: flex;
+  margin-top: 30px; }
+.sado-header.sado-header-2 .header-blog {
+  line-height: 1.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  padding: 20px;
+  background-color: white;
+  color: #333333;
+  transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+  transform: translateX(-100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box; }
+  .sado-header.sado-header-2 .header-blog h2 {
+    margin-bottom: 20px;
+    color: #666666; }
+.sado-header.sado-header-2 .blog-footer > div:first-of-type {
+  margin-bottom: 10px;
+  font-size: 75%; }
+.sado-header.sado-header-2 .blog-footer > div:nth-of-type(2) {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  font-size: 75%;
+  display: flex;
+  align-items: center; }
+.sado-header.sado-header-2 .blog-footer > div:last-child {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  font-size: 75%;
+  display: flex;
+  align-items: center; }
+.sado-header.sado-header-2 .sado-header-content .header-subtitle {
+  position: relative;
+  display: inline-block;
+  padding: 0px 10px; }
+.sado-header.sado-header-2 .sado-header-content .header-scroll {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 80%; }
+  .sado-header.sado-header-2 .sado-header-content .header-scroll img {
+    margin-right: 5px;
+    filter: invert(1); }
+.sado-header.sado-header-2.active .sado-header-img {
+  width: 70%;
+  margin-left: 30%;
+  filter: contrast(1.5) brightness(0.6); }
+.sado-header.sado-header-2.active .header-blog {
+  transform: translateX(0); }
+.sado-header.sado-header-2.active .sado-header-content {
+  left: 30%;
+  width: 70%; }
+  .sado-header.sado-header-2.active .sado-header-content .header-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+    color: #333333; }
+    .sado-header.sado-header-2.active .sado-header-content .header-subtitle:before {
+      width: 100%; }
+.sado-header.sado-header-2.active .header-scroll {
+  opacity: 0; }
+.sado-header.sado-header-2.active + .sado-body {
+  transform: translateY(calc(100vh)); }
+.sado-header.sado-header-2 + .sado-body {
+  transform: translateY(var(--header-height)); }
+
+/*--------------------------------------------------------------
+4.0 Animations
+--------------------------------------------------------------*/
+@keyframes sado-jello-horizontal {
+  0% {
+    transform: scale(0.8) translateY(-150%);
+    opacity: 0; }
+  20%, 80% {
+    transform: scale(1) translateY(0px);
+    opacity: 1; }
+  100% {
+    transform: scale(0.8) translateY(150%);
+    opacity: 0; } }
+/*--------------------------------------------------------------
+5.0 Media Queries
+--------------------------------------------------------------*/
+/*Phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .sado-header.sado-header-2 .sado-header-content {
+    padding: 2em; }
+    .sado-header.sado-header-2 .sado-header-content .header-title {
+      font-size: 1.8em; }
+    .sado-header.sado-header-2 .sado-header-content .header-subtitle {
+      font-size: 1em; }
+  .sado-header.sado-header-2 .sado-header-img {
+    height: 100vh;
+    object-fit: cover; }
+  .sado-header.sado-header-2 .header-blog {
+    width: 100%;
+    transform: scale(0.5);
+    opacity: 0; }
+  .sado-header.sado-header-2.active .sado-header-content {
+    left: 0%;
+    width: 100%; }
+    .sado-header.sado-header-2.active .sado-header-content .header-subtitle:before {
+      width: 0; }
+  .sado-header.sado-header-2.active .sado-header-img {
+    width: 100%;
+    margin-left: 0%;
+    filter: contrast(1) brightness(0.8); }
+  .sado-header.sado-header-2.active .header-blog {
+    transform: scale(1);
+    opacity: 1; } }
+/* Landscape */
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .sado-header.sado-header-2 .sado-header-content {
+    padding: 2em; }
+    .sado-header.sado-header-2 .sado-header-content .header-title {
+      font-size: 2em; }
+    .sado-header.sado-header-2 .sado-header-content .header-subtitle {
+      font-size: 1.3em; }
+  .sado-header.sado-header-2 .sado-header-img {
+    height: 100vh;
+    object-fit: cover; }
+  .sado-header.sado-header-2 .header-blog {
+    width: 100%;
+    transform: scale(0.5);
+    opacity: 0;
+    margin-top: 0; }
+  .sado-header.sado-header-2.active .sado-header-content {
+    left: 0%;
+    width: 100%; }
+    .sado-header.sado-header-2.active .sado-header-content .header-subtitle:before {
+      width: 0; }
+  .sado-header.sado-header-2.active .sado-header-img {
+    width: 100%;
+    margin-left: 0%;
+    filter: contrast(1) brightness(0.8); }
+  .sado-header.sado-header-2.active .header-blog {
+    transform: scale(1);
+    opacity: 1; }
+  .sado-header.sado-header-2.active .sado-header-content {
+    transform: translateY(calc(var(--header-height) - 70vh)); } }
+@media (min-width: 576px) {
+  .sado-header .sado-header-content {
+    max-width: 540px; } }
+@media (min-width: 768px) {
+  .sado-header .sado-header-content {
+    max-width: 720px; } }
+@media (min-width: 992px) {
+  .sado-header .sado-header-content {
+    max-width: 960px; } }
+@media (min-width: 1200px) {
+  .sado-header .sado-header-content {
+    max-width: 1140px; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=template2.css.map */

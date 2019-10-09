@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/*!
+ * Sado Hero Header Effects 
+ * Version: 3.0
+ * Created: 24 May 2019
+ * Last Update: 3 Oct 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We are born of LOVE, lover is our mother." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .sado-header
+3.0 Template Styles
+4.0 Animations
+5.0 Media Queries
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+::root {
+  --header-height: 100vh; }
+
+/*Yellow*/
+/*Dark Gray*/
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.sado-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header .sado-header-img {
+    width: 100%;
+    min-height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-filter: brightness(0.8);
+            filter: brightness(0.8);
+    -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header .sado-header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 4em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: white;
+    will-change: transform;
+    -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 999; }
+    .sado-header .sado-header-content .header-title {
+      font-size: 4em;
+      margin: 10px 0px;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+    .sado-header .sado-header-content .header-subtitle {
+      font-size: 1.5em; }
+    .sado-header .sado-header-content .header-scroll {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      cursor: pointer;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      overflow: hidden;
+      -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+      .sado-header .sado-header-content .header-scroll img {
+        max-height: 100%;
+        -webkit-animation: 5s ease 0s infinite normal both running sado-jello-horizontal;
+                animation: 5s ease 0s infinite normal both running sado-jello-horizontal; }
+  .sado-header.active + .sado-body {
+    opacity: 1;
+    -webkit-transition-delay: 300ms;
+            transition-delay: 300ms; }
+  .sado-header + .sado-body {
+    -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    opacity: 0; }
+
+/*--------------------------------------------------------------
+3.0 Template Styles
+--------------------------------------------------------------*/
+/*Template 12*/
+.sado-header.sado-header-12 {
+  background-color: white; }
+  .sado-header.sado-header-12:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    opacity: 0;
+    -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header.sado-header-12 .sado-header-content .header-subtitle {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+    -webkit-transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    color: #333333; }
+  .sado-header.sado-header-12 .sado-header-content .header-scroll {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 80%; }
+    .sado-header.sado-header-12 .sado-header-content .header-scroll img {
+      margin-right: 5px;
+      -webkit-filter: invert(1);
+              filter: invert(1); }
+  .sado-header.sado-header-12.active {
+    -webkit-transform: translateY(calc(-100% + 50vh));
+            transform: translateY(calc(-100% + 50vh)); }
+    .sado-header.sado-header-12.active:after {
+      opacity: 1; }
+    .sado-header.sado-header-12.active .sado-header-img {
+      opacity: 0.5; }
+    .sado-header.sado-header-12.active .sado-header-content {
+      -webkit-transform: translateY(calc(var(--header-height) - 70vh));
+              transform: translateY(calc(var(--header-height) - 70vh)); }
+      .sado-header.sado-header-12.active .sado-header-content .header-title {
+        text-shadow: none;
+        color: #333333; }
+      .sado-header.sado-header-12.active .sado-header-content .header-subtitle {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        color: #333333; }
+    .sado-header.sado-header-12.active .header-scroll {
+      opacity: 0; }
+    .sado-header.sado-header-12.active + .sado-body {
+      -webkit-transform: translateY(calc(50vh));
+              transform: translateY(calc(50vh)); }
+  .sado-header.sado-header-12 + .sado-body {
+    -webkit-transform: translateY(var(--header-height));
+            transform: translateY(var(--header-height)); }
+
+/*--------------------------------------------------------------
+4.0 Animations
+--------------------------------------------------------------*/
+@-webkit-keyframes sado-jello-horizontal {
+  0% {
+    -webkit-transform: scale(0.8) translateY(-150%);
+            transform: scale(0.8) translateY(-150%);
+    opacity: 0; }
+  20%, 80% {
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.8) translateY(150%);
+            transform: scale(0.8) translateY(150%);
+    opacity: 0; } }
+@keyframes sado-jello-horizontal {
+  0% {
+    -webkit-transform: scale(0.8) translateY(-150%);
+            transform: scale(0.8) translateY(-150%);
+    opacity: 0; }
+  20%, 80% {
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.8) translateY(150%);
+            transform: scale(0.8) translateY(150%);
+    opacity: 0; } }
+/*--------------------------------------------------------------
+5.0 Media Queries
+--------------------------------------------------------------*/
+/*Phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .sado-header .sado-header-content {
+    padding: 2em; }
+    .sado-header .sado-header-content .header-title {
+      font-size: 1.8em; }
+    .sado-header .sado-header-content .header-subtitle {
+      font-size: 1em; }
+  .sado-header .sado-header-img {
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover; } }
+/* Landscape */
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .sado-header .sado-header-content {
+    padding: 2em; }
+    .sado-header .sado-header-content .header-title {
+      font-size: 2em; }
+    .sado-header .sado-header-content .header-subtitle {
+      font-size: 1.3em; }
+  .sado-header.active .sado-header-content {
+    -webkit-transform: translateY(calc(var(--header-height) - 30vh));
+            transform: translateY(calc(var(--header-height) - 30vh)); } }
+@media (min-width: 576px) {
+  .sado-header .sado-header-content {
+    max-width: 540px; } }
+@media (min-width: 768px) {
+  .sado-header .sado-header-content {
+    max-width: 720px; } }
+@media (min-width: 992px) {
+  .sado-header .sado-header-content {
+    max-width: 960px; } }
+@media (min-width: 1200px) {
+  .sado-header .sado-header-content {
+    max-width: 1140px; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=template12.css.map */

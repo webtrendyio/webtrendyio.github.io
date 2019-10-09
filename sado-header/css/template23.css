@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/*!
+ * Sado Hero Header Effects 
+ * Version: 3.0
+ * Created: 24 May 2019
+ * Last Update: 3 Oct 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We are born of LOVE, lover is our mother." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .sado-header
+3.0 Template Styles
+4.0 Animations
+5.0 Media Queries
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+::root {
+  --header-height: 100vh; }
+
+/*Yellow*/
+/*Dark Gray*/
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.sado-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header .sado-header-img {
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+  .sado-header .sado-img-wrapper {
+    width: 100%;
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    overflow: hidden;
+    height: 100%;
+    left: 0;
+    position: relative; }
+  .sado-header .sado-header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    will-change: transform;
+    width: 60%;
+    margin-right: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4em;
+    box-sizing: border-box;
+    color: white;
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 999; }
+    .sado-header .sado-header-content .header-title {
+      font-size: 4em;
+      margin: 10px 0px;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+    .sado-header .sado-header-content .header-subtitle {
+      font-size: 1.5em; }
+    .sado-header .sado-header-content .header-desc {
+      font-size: 0.9em;
+      line-height: 1.5;
+      margin-top: 20px;
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1), opacity 500ms ease;
+      transform: translateY(100px);
+      opacity: 0; }
+    .sado-header .sado-header-content .header-scroll {
+      display: inline-block;
+      position: absolute;
+      bottom: 20px;
+      cursor: pointer;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+      transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1); }
+      .sado-header .sado-header-content .header-scroll img {
+        max-height: 100%;
+        animation: 5s ease 0s infinite normal both running sado-jello-horizontal; }
+  .sado-header.active + .sado-body {
+    opacity: 1;
+    transition-delay: 300ms; }
+  .sado-header + .sado-body {
+    transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+    opacity: 0; }
+
+/*--------------------------------------------------------------
+3.0 Template Styles
+--------------------------------------------------------------*/
+/*Template 23*/
+.sado-header.sado-header-23 .sado-header-content .header-subtitle {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 1000ms cubic-bezier(0.7, 0, 0.3, 1);
+  color: #333333; }
+.sado-header.sado-header-23 .sado-header-content .header-scroll {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 80%; }
+  .sado-header.sado-header-23 .sado-header-content .header-scroll img {
+    margin-right: 5px;
+    filter: invert(1); }
+.sado-header.sado-header-23.active .sado-img-wrapper {
+  width: 40%;
+  left: 60%; }
+.sado-header.sado-header-23.active .sado-header-content {
+  transform: translateY(-10%); }
+  .sado-header.sado-header-23.active .sado-header-content .header-title {
+    text-shadow: none;
+    color: #333333;
+    transform: scale(0.8);
+    transform-origin: left; }
+  .sado-header.sado-header-23.active .sado-header-content .header-subtitle {
+    opacity: 1;
+    transform: translateX(0);
+    color: #333333;
+    transition-delay: 600ms; }
+  .sado-header.sado-header-23.active .sado-header-content .header-desc {
+    opacity: 1;
+    color: #333333;
+    transform: translateY(0);
+    transition-delay: 800ms; }
+.sado-header.sado-header-23.active .header-scroll {
+  opacity: 0; }
+.sado-header.sado-header-23.active + .sado-body {
+  transform: translateY(calc(100vh)); }
+.sado-header.sado-header-23 + .sado-body {
+  transform: translateY(var(--header-height)); }
+
+/*--------------------------------------------------------------
+4.0 Animations
+--------------------------------------------------------------*/
+@keyframes sado-jello-horizontal {
+  0% {
+    transform: scale(0.8) translateY(-150%);
+    opacity: 0; }
+  20%, 80% {
+    transform: scale(1) translateY(0px);
+    opacity: 1; }
+  100% {
+    transform: scale(0.8) translateY(150%);
+    opacity: 0; } }
+/*--------------------------------------------------------------
+5.0 Media Queries
+--------------------------------------------------------------*/
+/*Phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .sado-header.sado-header-23 .sado-header-content {
+    padding: 2em;
+    width: 100%;
+    margin-left: 0%;
+    overflow: hidden; }
+    .sado-header.sado-header-23 .sado-header-content .header-title {
+      font-size: 1.8em;
+      transform: scale(1); }
+    .sado-header.sado-header-23 .sado-header-content .header-subtitle {
+      font-size: 1em; }
+    .sado-header.sado-header-23 .sado-header-content .header-desc {
+      font-size: 1em; }
+  .sado-header.sado-header-23 .sado-img-wrapper {
+    height: 100vh; }
+  .sado-header.sado-header-23 .sado-header-img {
+    height: 100vh;
+    object-fit: cover; }
+  .sado-header.sado-header-23.active .sado-img-wrapper {
+    width: 100%;
+    height: 0;
+    left: 0; }
+  .sado-header.sado-header-23.active .sado-header-content {
+    transform: none;
+    height: 60vh; }
+    .sado-header.sado-header-23.active .sado-header-content .header-title {
+      transform: scale(1); }
+  .sado-header.sado-header-23.active + .sado-body {
+    transform: translateY(calc(60vh)); } }
+/* Landscape */
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .sado-header.sado-header-23 .sado-header-content {
+    padding: 2em;
+    width: 100%;
+    margin-left: 0%;
+    overflow: hidden;
+    justify-content: center; }
+    .sado-header.sado-header-23 .sado-header-content .header-title {
+      font-size: 2em;
+      transform: scale(1); }
+    .sado-header.sado-header-23 .sado-header-content .header-subtitle {
+      font-size: 1.3em; }
+    .sado-header.sado-header-23 .sado-header-content .header-desc {
+      font-size: 1em; }
+  .sado-header.sado-header-23 .sado-img-wrapper {
+    height: 100vh; }
+  .sado-header.sado-header-23.active .sado-img-wrapper {
+    width: 100%;
+    height: 0;
+    left: 0; }
+  .sado-header.sado-header-23.active .sado-header-content {
+    transform: none;
+    height: 100vh; }
+    .sado-header.sado-header-23.active .sado-header-content .header-title {
+      transform: scale(1); }
+  .sado-header.sado-header-23.active + .sado-body {
+    transform: translateY(calc(100vh)); } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=template23.css.map */
