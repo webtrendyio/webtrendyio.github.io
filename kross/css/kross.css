@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/*!
+ * Kross Horizontal Scroll
+ * Version: 1.0.0
+ * Created: 27 October 2019
+ * Last Update: 27 October 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Wherever you are, and whatever you do, be in love." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .horizontal-scroll
+3.0 Options 
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.horizontal-scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 0px 20px;
+  margin-bottom: 30px; }
+  .horizontal-scroll > .hs-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin: 0 10px; }
+    .horizontal-scroll > .hs-item:first-child {
+      margin-left: 0; }
+
+/*--------------------------------------------------------------
+3.0 Options
+--------------------------------------------------------------*/
+.hs-scroll-direction {
+  position: relative; }
+  .hs-scroll-direction:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    background-image: url(./hs_icons/arrow-right-s-line.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px; }
+  .hs-scroll-direction:after {
+    content: 'Scroll';
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+    text-transform: uppercase;
+    font-size: 75%;
+    color: #aaa; }
+  .hs-scroll-direction.hs-bl:before {
+    left: 0;
+    right: auto;
+    background-image: url(./hs_icons/arrow-left-s-line.svg); }
+  .hs-scroll-direction.hs-bl:after {
+    left: 20px;
+    right: auto; }
+  .hs-scroll-direction.hs-tl:before {
+    left: 0;
+    right: auto;
+    bottom: auto;
+    top: -25px;
+    background-image: url(./hs_icons/arrow-left-s-line.svg); }
+  .hs-scroll-direction.hs-tl:after {
+    left: 20px;
+    right: auto;
+    bottom: auto;
+    top: -25px; }
+  .hs-scroll-direction.hs-tr:before {
+    bottom: auto;
+    top: -25px; }
+  .hs-scroll-direction.hs-tr:after {
+    bottom: auto;
+    top: -25px; }
+
+.hs-resize-cursor {
+  cursor: e-resize; }
+
+.hs-rtl.hs-resize-cursor {
+  cursor: w-resize; }
+
+.hs-rtl {
+  direction: rtl; }
+  .hs-rtl > .hs-item {
+    direction: ltr; }
+
+.horizontal-scroll.scroll-1::-webkit-scrollbar {
+  height: 5px; }
+.horizontal-scroll.scroll-1::-webkit-scrollbar-track {
+  background-color: #ccc; }
+.horizontal-scroll.scroll-1::-webkit-scrollbar-thumb {
+  background: #777; }
+
+.horizontal-scroll.scroll-2::-webkit-scrollbar {
+  height: 10px; }
+.horizontal-scroll.scroll-2::-webkit-scrollbar-track {
+  border: 1px solid #333; }
+.horizontal-scroll.scroll-2::-webkit-scrollbar-thumb {
+  background: #333; }
+
+.horizontal-scroll.scroll-3::-webkit-scrollbar {
+  height: 30px; }
+.horizontal-scroll.scroll-3::-webkit-scrollbar-track {
+  border: 1px solid #333;
+  border-radius: 50px; }
+.horizontal-scroll.scroll-3::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 50px; }
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=kross.css.map */
