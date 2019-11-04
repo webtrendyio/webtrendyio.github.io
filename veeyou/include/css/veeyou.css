@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*!
+ * VeeYou list grid view plugin
+ * Version: 1.0.0
+ * Created: 04 Nov 2019
+ * Last Update: 04 Nov 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Wherever you are, and whatever you do, be in love." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .veeyou-contents
+3.0 Options 
+4.0 Media Queries  
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+:root {
+  --veeyou-list-img-width: 50%;
+  --veeyou-grid-items: 3; }
+
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+.veeyou-contents .veeyou-item {
+  padding: 15px; }
+.veeyou-contents .veeyou-img {
+  overflow: hidden;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+  .veeyou-contents .veeyou-img img {
+    max-width: 100%; }
+.veeyou-contents .veeyou-info {
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+  .veeyou-contents .veeyou-info .veeyou-title {
+    margin-bottom: 10px; }
+.veeyou-contents .veeyou-meta {
+  margin-bottom: 10px; }
+
+.veeyou-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+  padding: 0 15px; }
+  .veeyou-options > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 10px;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 85%; }
+    .veeyou-options > div:hover {
+      background-color: #d5d5d5; }
+  .veeyou-options img {
+    width: 15px;
+    margin-left: 5px; }
+
+/*--------------------------------------------------------------
+3.0 Options
+--------------------------------------------------------------*/
+.veeyou-contents.view-list .veeyou-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.veeyou-contents.view-list .veeyou-img {
+  width: var(--veeyou-list-img-width);
+  margin-right: 10px; }
+.veeyou-contents.view-list .veeyou-info {
+  margin-left: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc( 100% - var(--veeyou-list-img-width)); }
+
+.veeyou-contents.view-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .veeyou-contents.view-grid .veeyou-item {
+    width: calc(100% / var(--veeyou-grid-items));
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .veeyou-contents.view-grid .hide-on-grid {
+    display: none; }
+
+/*--------------------------------------------------------------
+4.0 Media Queries
+--------------------------------------------------------------*/
+/*Phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .veeyou-contents.view-list .veeyou-item {
+    display: block;
+    padding: 0;
+    margin: 10px 0; }
+    .veeyou-contents.view-list .veeyou-item .veeyou-img {
+      width: 100%; }
+    .veeyou-contents.view-list .veeyou-item .veeyou-info {
+      width: 100%;
+      margin-left: 0; }
+
+  .veeyou-contents.view-grid {
+    display: block;
+    padding: 0; }
+    .veeyou-contents.view-grid .veeyou-item {
+      width: 100%;
+      padding: 0;
+      margin: 10px 0; }
+    .veeyou-contents.view-grid .hide-on-grid {
+      display: inherit; }
+
+  .veeyou-options {
+    display: none; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=veeyou.css.map */
