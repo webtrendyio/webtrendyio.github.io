@@ -1,0 +1,119 @@
+<!doctype html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Tourit Product Tour & Guide | Demonstration</title>
+		<meta name="description" content="An enhanced product tour & guide for apps, products or systems, purely made with JavaScript.">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/tourit.css">
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	<body>
+
+		<header class="text-center">
+			<h1 data-toggle="tourit" data-step="2" data-dot-location="200, 0" data-step-location="bottom">Tourit Product Tour & Guide</h1>
+			<em>A tiny JavaScript plugin that shows reading progress indicators for articles and posts.</em>
+			<div><button data-toggle="tourit" data-step="3" data-dot-location="bottomcenter" data-step-location="right" class="start-btn">Start the Tour</button></div>
+		</header>
+		
+		<section class="container">
+			<article class="iread-article" id="ireadId">
+				<img src="img/landscape1.jpg" class="img-responsive" data-toggle="tourit" data-step="4" data-dot-location="100,100" data-step-location="right" />
+				<br/>
+				<small>Please click on "Start the Tour" button to see the plugin in action.</small>
+			</article>
+			<aside>
+				<div class="d-flex">
+					<!-- Indicator -->
+					<div class="iread-indicator" data-toggle="tourit" data-step="1" data-dot-location="bottomright" data-step-location="bottom">
+						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="72px" height="72px" viewBox="0 0 72 72">
+							<circle id="iread_indicator" fill="white" stroke="#5aabe3" stroke-width="2" cx="36" cy="36" r="32" stroke-dasharray="200 200" stroke-dashoffset="70" transform="rotate(-90 36 36)"></circle>
+						</svg>
+					</div>
+					<!-- End Indicator -->
+					<div>
+						<h3>By: Web_Trendy</h3>
+						<small>05 Nov 2019</small>
+					</div>
+				</div>
+				<div class="small">
+					<br/>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</aside>
+		</section>
+
+		<footer>
+			<div class="container">
+				<h1>Tourit Product Tour & Guide</h1>
+				<small>Copyright 2019 | Web_Trendy | All Rights Reserved</small>
+			</div>
+		</footer>
+
+		<!-- TourIt Steps -->
+		<div class="tourit-wrapper">
+			<ul>
+				<li>
+					<div class="single-step">
+						<div class="step-header">
+							Step 1 : Dot Location
+						</div>
+						<div class="step-body">
+							You can set size, color and location of dots.
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="single-step">
+						<div class="step-header">
+							Step 2 : Card 
+						</div>
+						<div class="step-body">
+							Set width, background color, font size, location etc. for cards.
+							You can set options for cards to appear on the bottom, top, right or left of dots!
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="single-step">
+						<div class="step-header">
+							Step 3 : HTML Content
+						</div>
+						<div class="step-body">
+							<img src="img/landscape2.jpg" class="img-responsive" />
+							Put any HTML content here.
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="single-step">
+						<div class="step-header">
+							Step 4 : Custom Position
+						</div>
+						<div class="step-body">
+							Set position of dots as x,y in pixels or use keywords like "topright", "topleft", "bottomcenter", etc.
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- End TourIt Steps -->
+
+	
+
+	</div>
+	<script type="text/javascript" src="js/tourit.js"></script>
+	<script type="text/javascript">
+		var teachme = new tourIt({
+			// articleId: "ireadId",
+		});
+		document.querySelector('.start-btn').addEventListener('click', function(){teachme.run();});
+	</script>
+</body>
+</html>
