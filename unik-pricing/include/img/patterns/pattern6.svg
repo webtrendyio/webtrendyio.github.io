@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="279px" height="100px" viewBox="0 0 279 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="-2.22044605e-14%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFE57C" offset="0%"></stop>
+            <stop stop-color="#F93B24" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(139.500000, 49.500000) scale(-1, 1) translate(-139.500000, -49.500000) translate(0.000000, -1.000000)" fill="url(#linearGradient-1)">
+            <path d="M278.440814,100.148531 L0,100.148531 L0,1.01735928 C69.2010394,113.712925 207.730579,-20.4231139 278.440814,100.148531 Z" id="Rectangle" style="mix-blend-mode: hard-light;"></path>
+            <path d="M278.440814,100.056688 L0,100.056688 L0,0.925516693 C17.5139653,146.65555 227.199475,47.0440909 278.440814,100.056688 Z" id="Rectangle" style="mix-blend-mode: hard-light;"></path>
+            <path d="M278.440814,100.409237 L0,100.409237 L0,1.27806563 C48.2733925,138.13221 218.111854,6.92845561 278.440814,100.409237 Z" id="Rectangle" style="mix-blend-mode: hard-light;"></path>
+        </g>
+    </g>
+</svg>

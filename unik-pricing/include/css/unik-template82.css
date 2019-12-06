@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/*!
+ * Unik Pricing List Table | CSS Pricing Table (Template 82)
+ * Version: 1.0.0
+ * Created: 05 Dec 2019
+ * Last Update: 05 Dec 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Main Styles
+3.0 Animations
+4.0 Media Queries
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Main Styles
+--------------------------------------------------------------*/
+.unik-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  margin: 10px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1.5; }
+  .unik-wrapper .mobile-hint {
+    display: none; }
+
+.unik-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 40px 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #777;
+  min-width: 200px;
+  max-width: 250px;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0px 0px 10px #c4c4c4;
+          box-shadow: 0px 0px 10px #c4c4c4;
+  background: -webkit-gradient(linear, left bottom, left top, from(#5a5a5a), to(black));
+  background: linear-gradient(0deg, #5a5a5a 0%, black 100%);
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-transition: all 300ms cubic-bezier(0, 0.85, 0.6, 1.35);
+  transition: all 300ms cubic-bezier(0, 0.85, 0.6, 1.35); }
+  .unik-list:hover .unik-amount:before, .unik-list:focus .unik-amount:before {
+    bottom: 20px !important; }
+  .unik-list li {
+    margin: 10px 0;
+    padding: 0 15px; }
+  .unik-list .unik-title {
+    color: #eaeaea;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-size: 125%;
+    font-weight: 500;
+    position: relative; }
+    .unik-list .unik-title:after {
+      content: '';
+      width: 20px;
+      height: 4px;
+      background-color: white;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      border-radius: 50px;
+      opacity: 0.7;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  .unik-list .unik-text {
+    font-size: 90%;
+    font-style: italic;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #eaeaea;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .unik-list .unik-price {
+    margin: 10px 0; }
+    .unik-list .unik-price .unik-unit {
+      font-size: 85%;
+      vertical-align: top;
+      display: inline-block;
+      color: #eaeaea; }
+    .unik-list .unik-price .unik-amount {
+      font-size: 350%;
+      font-weight: 500;
+      line-height: 1;
+      color: white;
+      position: relative;
+      z-index: 99; }
+      .unik-list .unik-price .unik-amount:before {
+        content: attr(data-price);
+        position: absolute;
+        -webkit-transition: all 300ms cubic-bezier(0, 0.85, 0.6, 1.35);
+        transition: all 300ms cubic-bezier(0, 0.85, 0.6, 1.35);
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        font-size: 250%;
+        opacity: 0.15;
+        z-index: -1; }
+  .unik-list .unik-button {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .unik-list .unik-button a {
+      display: inline-block;
+      text-decoration: none;
+      color: #515151;
+      font-size: 85%;
+      text-align: center;
+      font-weight: 500;
+      border-radius: 50px;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9); }
+      .unik-list .unik-button a:hover, .unik-list .unik-button a:focus {
+        color: white;
+        background-color: #ffca00; }
+
+/*--------------------------------------------------------------
+3.0 Animations
+--------------------------------------------------------------*/
+@-webkit-keyframes unik-arrow {
+  0% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@keyframes unik-arrow {
+  0% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+/*--------------------------------------------------------------
+4.0 Media Queries
+--------------------------------------------------------------*/
+/*Phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .unik-list {
+    min-width: 100%; }
+    .unik-list:first-child {
+      margin-left: 0; }
+
+  .unik-wrapper {
+    position: relative;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .unik-wrapper .mobile-hint {
+      display: inline-block;
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      bottom: 10px;
+      left: 100%;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%); }
+      .unik-wrapper .mobile-hint .arrow {
+        width: 15px;
+        height: 1px;
+        background-color: #444444;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        -webkit-animation: unik-arrow 2s cubic-bezier(0.35, 0.6, 0.35, 1) 0s infinite;
+                animation: unik-arrow 2s cubic-bezier(0.35, 0.6, 0.35, 1) 0s infinite; }
+        .unik-wrapper .mobile-hint .arrow:before {
+          content: '';
+          width: 5px;
+          height: 1px;
+          background-color: #444444;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          -webkit-transform-origin: right center;
+                  transform-origin: right center; }
+        .unik-wrapper .mobile-hint .arrow:after {
+          content: '';
+          width: 5px;
+          height: 1px;
+          background-color: #444444;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          -webkit-transform-origin: right center;
+                  transform-origin: right center; } }
+/*Tablet & iPad*/
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=unik-template82.css.map */

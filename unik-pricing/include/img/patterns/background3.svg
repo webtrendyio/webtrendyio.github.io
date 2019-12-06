@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="150px" height="220px" viewBox="0 0 150 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <pattern id="pattern-1" width="9.55102041" height="9.55102041" x="47.4489796" y="17.4489796" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-2" transform="scale(0.198979592,0.198979592)"></use>
+        </pattern>
+        <image id="image-2" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV9JREFUaAXt2O0NgjAQBmBrt4DoDiawEHEQB1F3MK7BHKxR+2oKQfnseXCX0B/SEr3zucZIz+R57nZ+OOfuZVmeMcWaOEyWZVdjTBHicMW3aZpekMQnOyVJcqiq6hmSUq6Ig3iIyxnf+iRH7iSc8e1SleJCWGyvZsQboBlRA7QiWgCNiB+ANkQnQBOiF6AFMQjQgBgFSEdMAkhGTAZIRcwCSETMBkhDRAEkIaIBUhAkgAQEGbA2AgCDL0Edax2KrO8e3JCcCsDn10CgK/HQ2I0IZ+w9KucXBfo4mGJNHA79JfSBQhzO+FtfKFS567rEb2LrC3VV/vse507Uf2ScSQDiil8DOJOEHeFAtAAaET8AbYhOgCZEL0ALYhCgATEKkI6YBJCMmAyQipgFkIiYDZCGiAJIQkQDpCBIAAkIMmBtBAD/OMizPe+jQBh9j+JbX+hTn+a1r1K437wrfvYd/wV+UgblD/bGFgAAAABJRU5ErkJggg=="></image>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-57.000000, -27.000000)">
+            <rect id="Rectangle" fill="#B7EE0E" x="57" y="27" width="150" height="220"></rect>
+            <circle id="Oval" fill="#CF9BFF" style="mix-blend-mode: luminosity;" cx="200.5" cy="40.5" r="40.5"></circle>
+            <circle id="Oval-3" fill="#CF9BFF" style="mix-blend-mode: luminosity;" cx="59.5" cy="214.5" r="59.5"></circle>
+            <rect id="Rectangle" fill="url(#pattern-1)" style="mix-blend-mode: overlay;" x="57" y="27" width="150" height="220"></rect>
+        </g>
+    </g>
+</svg>
