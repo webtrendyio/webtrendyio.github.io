@@ -1,0 +1,362 @@
+@charset "UTF-8";
+/*!
+ * iPort Personal Portfolio | Light Theme
+ * Version: 1.0.0
+ * Created: 18 Dec 2019
+ * Last Update: 18 Dec 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Top Section Styles (Home)
+7.0 About Section
+8.0 Specialties Section
+9.0 Experiecnes Section
+10.0 Hobbies Section
+11.0 Contacts Section
+12.0 Media Queries
+
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:300,400,700&display=swap");
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Playfair Display', serif; }
+
+/*--------------------------------------------------------------
+4.0 Custom Cursor Styles
+--------------------------------------------------------------*/
+.custom-cursor {
+  cursor: none;
+  --top: 0;
+  --left: 0;
+  --cursor-width: 30px;
+  --color: #000000;
+  --blending-mode: normal; }
+  .custom-cursor .cursor > div {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .custom-cursor .cursor div, .custom-cursor .cursor img, .custom-cursor .cursor svg {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999;
+    mix-blend-mode: var(--blending-mode); }
+
+/*Cursor 1*/
+.cursor-1 .cursor .cursor-el1 {
+  width: var(--cursor-width);
+  height: var(--cursor-width);
+  border: calc(var(--cursor-width)/25) solid var(--color);
+  border-radius: 50%;
+  top: calc(var(--cursor-width)/-2);
+  left: calc(var(--cursor-width)/-2);
+  -webkit-transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+.cursor-1 .cursor .cursor-el2 {
+  width: calc(var(--cursor-width)/5);
+  height: calc(var(--cursor-width)/5);
+  border-radius: 50%;
+  background-color: var(--color);
+  top: calc(var(--cursor-width)/-10);
+  left: calc(var(--cursor-width)/-10); }
+.cursor-1.onlink .cursor .cursor-el1 {
+  opacity: 0; }
+.cursor-1.onlink .cursor .cursor-el2 {
+  opacity: 0; }
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+body {
+  font-weight: 300; }
+
+main {
+  background-color: #efefef; }
+
+/*Navbar*/
+nav.navbar {
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  top: 0; }
+  nav.navbar a {
+    color: #cccccc; }
+    nav.navbar a:hover, nav.navbar a:focus {
+      color: white; }
+  nav.navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); }
+  nav.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+.normal-link {
+  text-decoration: none; }
+  .normal-link:hover, .normal-link:focus {
+    text-decoration: none; }
+
+.signature {
+  width: 140px; }
+
+/*--------------------------------------------------------------
+6.0 Top Section Styles (Home)
+--------------------------------------------------------------*/
+section.home {
+  color: #cccccc;
+  overflow-y: hidden; }
+  section.home .background-image {
+    width: 100%;
+    min-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: saturate(1.2) brightness(0.6);
+            filter: saturate(1.2) brightness(0.6); }
+  section.home .main-title {
+    color: #dca60b; }
+  section.home .social a {
+    color: #cccccc; }
+    section.home .social a.facebook:hover, section.home .social a.facebook:focus {
+      color: #3b5998; }
+    section.home .social a.twitter:hover, section.home .social a.twitter:focus {
+      color: #1da1f2; }
+    section.home .social a.instagram:hover, section.home .social a.instagram:focus {
+      color: #e71f4d; }
+  section.home .scroll {
+    padding-left: 20px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: .8em;
+    margin: 40px 0px 20px;
+    display: inline-block;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    z-index: 100;
+    text-decoration: none;
+    color: #cccccc; }
+    section.home .scroll:before {
+      content: '';
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: #cccccc;
+      -webkit-transition: all 200ms ease-out;
+      transition: all 200ms ease-out; }
+    section.home .scroll:hover {
+      padding-left: 40px;
+      color: #e6e6e6; }
+      section.home .scroll:hover:before {
+        width: 30px;
+        background-color: #e6e6e6; }
+
+/*--------------------------------------------------------------
+7.0 About Section
+--------------------------------------------------------------*/
+section.about .education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0px; }
+section.about .year {
+  font-size: 2em;
+  font-weight: bold;
+  color: #999999; }
+section.about .line {
+  width: 40px;
+  height: 1px;
+  background: #b3b3b3;
+  margin: 0px 20px; }
+section.about .location span {
+  display: block;
+  margin: 5px 0px; }
+  section.about .location span:last-child {
+    color: #999999; }
+
+/*--------------------------------------------------------------
+8.0 Specialties Section
+--------------------------------------------------------------*/
+section.specialty .icon-box {
+  width: 100px;
+  margin: 0px -10px; }
+section.specialty .shape i {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #999999;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+  color: #999999;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+  section.specialty .shape i:hover {
+    background-color: #999999;
+    color: white;
+    font-size: 2em; }
+section.specialty .shape:hover + .line {
+  margin-top: 0; }
+section.specialty .line {
+  margin-top: -25px;
+  height: 150px;
+  width: 1px;
+  background: #cccccc;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+  section.specialty .line.tall {
+    height: 200px; }
+  section.specialty .line:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background-color: #777;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+section.specialty .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: inline-block; }
+  section.specialty .dot.fill {
+    background-color: #dca60b; }
+
+/*--------------------------------------------------------------
+9.0 Experiecnes Section
+--------------------------------------------------------------*/
+section.experience .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0px; }
+section.experience .no {
+  font-size: 4em;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #999999; }
+section.experience .desc span {
+  display: block;
+  margin: 5px 0px; }
+  section.experience .desc span:last-child {
+    color: #999999; }
+
+/*--------------------------------------------------------------
+10.0 Hobbies Section
+--------------------------------------------------------------*/
+section.hobbies .hobby {
+  border: 1px solid #999999;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 10px 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+  section.hobbies .hobby i {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #999999;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out; }
+  section.hobbies .hobby .hobby-title {
+    text-transform: uppercase;
+    font-size: .8em; }
+  section.hobbies .hobby:hover {
+    background-color: #999999;
+    color: white; }
+    section.hobbies .hobby:hover i {
+      color: white;
+      font-size: 2em; }
+
+/*--------------------------------------------------------------
+11.0 Contacts Section
+--------------------------------------------------------------*/
+section.contacts i {
+  color: #dca60b; }
+section.contacts .cp {
+  font-size: .8em;
+  margin-top: 3em; }
+
+/*--------------------------------------------------------------
+12.0 Media Queries
+--------------------------------------------------------------*/
+@media only screen and (min-width: 576px) {
+  .sm-dir-reverse {
+    direction: rtl; } }
+@media only screen and (max-width: 991px) {
+  .menu-header {
+    background-color: #333333;
+    height: 58px; }
+
+  nav.navbar {
+    background-color: #333333; }
+
+  .cursor {
+    display: none; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=styles-light.css.map */

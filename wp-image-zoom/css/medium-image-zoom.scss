@@ -1,0 +1,76 @@
+/*!
+ * Medium Image Zoom
+ * Version: 1.0.0
+ * Created: 20 Dec 2019
+ * Last Update: 20 Dec 2019
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We carry inside us the wonders we seek outside us." -Rumi
+ *
+ */ 
+
+
+
+
+ /*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / .cs-built
+3.0 Styles 
+4.0 Media Queries
+-------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+	$transition_timing: ease-out;
+	$transition_duration: 300ms;
+	$transition_property: all;
+
+	:root {
+		--bgColor: #ccc;
+		--hoverColor: #bbb;
+		--fontSize: 1em;
+		--listHeight: 60vh;
+	}
+
+
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+3.0 Styles
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+4.0 Media Queries
+--------------------------------------------------------------*/
+
+/*Phone*/
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	
+}
+		
+
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+

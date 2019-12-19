@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA;;;;;;;;;;;GAWG;AAKF;;;;;;;qEAOoE;AAIrE;;gEAEgE;AAK/D,KAAM;EACL,SAAS,CAAC,KAAK;EACf,YAAY,CAAC,KAAK;EAClB,UAAU,CAAC,IAAI;EACf,YAAY,CAAC,KAAK;;AAIpB;;gEAEgE;AAIhE;;gEAEgE;AAIhE;;gEAEgE;AAEhE,SAAS;AAOT,qCAAqC;AACrC;;;;;;;EAOE",
+"sources": ["medium-image-zoom.scss"],
+"names": [],
+"file": "medium-image-zoom.css"
+}
