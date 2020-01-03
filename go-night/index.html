@@ -1,0 +1,64 @@
+<!doctype html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Go Night Dark Mode / Night Mode Plugin | Demo</title>
+		<meta name="description" content="A tiny JavaScript plugin to create dark mode/night mode views for your website.">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/gonight.css">
+
+		<!-- Remix Icons -->
+		<link rel="stylesheet" href="fonts/remixicon.css">
+	</head>
+	<body>
+
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 offset-sm-3 text-center">
+						<h1 class="mt-4 mb-2">Go Night Dark Mode / Night Mode Plugin</h1>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia commodi praesentium dolores eveniet, perferendis! Saepe ea nesciunt reiciendis nobis dignissimos suscipit quaerat, aut, ducimus! Neque, saepe praesentium quas cupiditate vel.</p>
+						<img src="img/landscape1.jpg" class="img-fluid">
+					</div>
+					<div class="col-sm-12 text-center">
+						<h3 class="mt-5 display-3">Features:</h3>
+						<ul class="list-unstyled lead">
+							<li>Define Custom Colors</li>
+							<li>Compatible with WordPress 5.3</li>
+							<li>Leight Weight</li>
+							<li>Device Responsive</li>
+							<li>Documented & Supported</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div class="goNightToggle" id="goNightToggle">
+			Dark Mode
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			        <g id="moon-clear-line" transform="translate(-2.000000, 0.000000)">
+			            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+			            <path d="M10,6 C9.99928403,8.84922088 11.5140071,11.4837947 13.976694,12.9167056 C16.4393808,14.3496165 19.4783183,14.3645837 21.955,12.956 C21.474,18.03 17.2,22 12,22 C6.477,22 2,17.523 2,12 C2,6.8 5.97,2.526 11.044,2.045 C10.3575564,3.24993728 9.99768299,4.61325082 10,6 Z M4,12 C4,16.418278 7.581722,20 12,20 C14.8774004,19.9998278 17.5333948,18.4555562 18.957,15.955 C18.641,15.985 18.321,16 18,16 C12.477,16 8,11.523 8,6 C8,5.679 8.015,5.36 8.045,5.043 C5.54444377,6.46660517 4.00017218,9.12259959 4,12 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+			            <path d="M18.164,2.291 L19,2.5 L19,3.5 L18.164,3.709 C17.4475681,3.88817506 16.8881751,4.44756809 16.709,5.164 L16.5,6 L15.5,6 L15.291,5.164 C15.1118249,4.44756809 14.5524319,3.88817506 13.836,3.709 L13,3.5 L13,2.5 L13.836,2.291 C14.5520463,2.11150297 15.1109953,1.55216954 15.29,0.836 L15.5,0 L16.5,0 L16.709,0.836 C16.8881751,1.55243191 17.4475681,2.11182494 18.164,2.291 Z" id="star1" class="moon-star" fill="#000000"></path>
+			            <path d="M23.164,7.291 L24,7.5 L24,8.5 L23.164,8.709 C22.4475681,8.88817506 21.8881751,9.44756809 21.709,10.164 L21.5,11 L20.5,11 L20.291,10.164 C20.1118249,9.44756809 19.5524319,8.88817506 18.836,8.709 L18,8.5 L18,7.5 L18.836,7.291 C19.5524319,7.11182494 20.1118249,6.55243191 20.291,5.836 L20.5,5 L21.5,5 L21.709,5.836 C21.8881751,6.55243191 22.4475681,7.11182494 23.164,7.291 Z" id="star2" class="moon-star" fill="#000000"></path>
+			        </g>
+			    </g>
+			</svg>
+		</div>
+
+		<script type="text/javascript" src="js/gonight.js"></script>
+		<script type="text/javascript">
+			
+				var Nightly = new Nightly();
+				document.querySelector('#goNightToggle').addEventListener('click', function(){
+					this.classList.toggle('active');
+					Nightly.toggle();
+				});
+		</script>
+	</body>
+</html>
