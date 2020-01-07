@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*!
+ * Title Animo
+ * Version: 1.0.0
+ * Created: 07 Jan 2020
+ * Last Update: 07 Jan 2020
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "We carry inside us the wonders we seek outside us." -Rumi
+ *
+ */
+ /*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 General Styles / 
+3.0 Styles 
+4.0 Media Queries
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+body {
+  background-color: #f1f1f1; }
+
+.wt-preview .browser {
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-top: 30px; }
+  .wt-preview .browser .browser-header {
+    padding: 10px 15px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .wt-preview .browser .close, .wt-preview .browser .minimize, .wt-preview .browser .maximize {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px; }
+  .wt-preview .browser .close {
+    background-color: #ff0000; }
+  .wt-preview .browser .minimize {
+    background-color: #ffb100; }
+  .wt-preview .browser .maximize {
+    background-color: #00c300; }
+  .wt-preview .browser .tab {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: bottom;
+    padding: 10px 15px 5px;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; }
+    .wt-preview .browser .tab .favicon {
+      display: inline-block;
+      margin-right: 5px; }
+      .wt-preview .browser .tab .favicon img {
+        width: 20px; }
+    .wt-preview .browser .tab .title {
+      display: inline-block;
+      overflow: hidden;
+      width: 200px;
+      height: 20px;
+      text-align: left; }
+  .wt-preview .browser .browser-body {
+    height: 200px;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 20px;
+    font-size: 1.5em;
+    font-weight: 100;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
+    .wt-preview .browser .browser-body img {
+      height: 150px;
+      margin-left: 100px; }
+
+/*--------------------------------------------------------------
+3.0 Animations
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+4.0 Media Queries
+--------------------------------------------------------------*/
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=title-animo.css.map */

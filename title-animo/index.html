@@ -1,0 +1,66 @@
+<!doctype html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Title Animo WordPress Plugin</title>
+		<meta name="description" content="A tiny JavaScript plugin to create dark mode/night mode views for your website.">
+		<meta name="viewport" content="width=device-width">
+		
+		<script type="text/javascript" src="js/title-animo-core.js"></script>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/title-animo.css">
+
+		<!-- Remix Icons -->
+		<link rel="stylesheet" href="fonts/remixicon.css">
+	</head>
+	<body>
+
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2 text-center">
+						<h1 class="mt-4 mb-2">Title Animo</h1>
+						<small>WordPress Tab Title Animation Plugin</small>
+						<p class="lead mt-4">Making the title of the page/tab animated will grab users' attention, specially when the tab is inactive and users are browsing in other tabs. Title Animo is a lightweight WordPress plugin compatible with latest WordPress version and supports all modern browsers. </p>
+						
+						<div class="wt-preview">
+							<div class="browser">
+								<div class="browser-header">
+									<div class="close"></div>
+									<div class="minimize"></div>
+									<div class="maximize"></div>
+									<div class="tab">
+										<div class="favicon">
+											<img src="img/icons/earth.svg" alt="Favicon">
+										</div>
+										<div id="wt-browser-title" class="title">
+											Welcome to Title Animo
+										</div>
+									</div>
+								</div>
+								<div class="browser-body">
+									This is how your page title will look like:
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+		
+
+		
+		<script type="text/javascript">
+			titleAnimo({
+				type: 2,
+				title: 'Welcome to Title Animo, Animated Page Titles',
+				speed:  1000,
+			});	
+		</script>
+	</body>
+</html>
