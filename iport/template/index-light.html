@@ -10,7 +10,8 @@
 		
 		<!-- Remix Icons -->
 		<link rel="stylesheet" type="text/css" href="fonts/remixicon.css">
-		<!-- Bootstrap Grid -->
+
+		<!-- Bootstrap -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- Aos Animate -->
@@ -18,10 +19,6 @@
 
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="css/styles-light.css">
-
-		<style>
-			main {overflow-x: hidden;}
-		</style>
 		
 	</head>
 	<body>
@@ -36,19 +33,19 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item">
-								<a class="nav-link pl-lg-0" href="#">About</a>
+								<a class="nav-link pl-lg-0" href="index-light.html">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Experiences</a>
+								<a class="nav-link" href="blog-light.html">Blog</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Specialties</a>
+								<a class="nav-link" href="single-blog-light.html">Single Blog</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Hobbies</a>
+								<a class="nav-link" href="work-light.html">Works</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link" href="single-work-light.html">Single Work</a>
 							</li>
 						</ul>
 						<ul class="navbar-nav ml-auto">
@@ -75,7 +72,7 @@
 							<span>My name is</span>
 							<h1 class="main-title display-1 font-weight-bold">iPort</h1>
 							<p>And I am a <strong>Personal Portfolio</strong>!</p>
-							<div class="social">
+							<div class="social mb-4">
 								<a href="#" class="facebook normal-link mr-2" target="_blank">
 									<i class="ri-facebook-circle-fill"></i>
 								</a>
@@ -86,7 +83,7 @@
 									<i class="ri-twitter-fill"></i>
 								</a>
 							</div>
-							<a href="javascript:void(0)" class="scroll">More ?</a>
+							<a href="javascript:void(0)" class="line-link">More ?</a>
 						</div>
 						<div class="col-sm-6 text-sm-right">
 							<strong class="d-block">
@@ -100,17 +97,19 @@
 			<!-- End Home Section -->
 
 			<!-- About Section -->
-			<section class="about my-5 pt-5">
+			<section class="about my-5 pt-5 overflow-x-hidden">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6" data-aos="fade-right">
-							<img src="img/about-600x800.jpg" alt="About Me" title="About Me" class="img-fluid" />
+							<div>
+								<img src="img/about-600x800.jpg" alt="About Me" title="About Me" class="img-fluid" />
+							</div>
 						</div>
 						<div class="col-md-6" data-aos="fade-left">
-							<span class="small d-block mt-3">Find out more</span>
+							<span class="lead font-weight-normal d-block mt-3">Find out more</span>
 							<h2 class="display-4 font-weight-bold mb-4">About Me</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sed repudiandae odit deserunt, quas quibusdam necessitatibus nesciunt eligendi esse sit non reprehenderit quisquam asperiores maxime blanditiis culpa vitae velit. Numquam!</p>
-							<strong class="lead text-secondary mt-5 d-block">Education:</strong>
+							<h3 class="font-weight-bold text-secondary mt-5 mb-4">Education:</h3>
 
 							<!-- Education Item -->
 							<div class="education">
@@ -163,11 +162,11 @@
 
 			
 			<!-- Specialties Section -->
-			<section class="specialty my-5 py-5">
+			<section class="specialty my-5 py-5 overflow-x-hidden">
 				<div class="container">
 					<div class="row" data-aos="fade-up">
 						<div class="col-sm-12 text-center">
-							<span class="small">What can I do?</span>
+							<span class="lead font-weight-normal">What can I do?</span>
 							<h2 class="display-4 font-weight-bold mb-4">My Specialties</h2>
 						</div>
 						<div class="col-sm-12">
@@ -198,10 +197,10 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-12 text-center">
-							<strong class="lead text-secondary mt-5 mb-3 d-block">Professional Skills</strong>
+							<h3 class="font-weight-bold text-secondary mt-5 mb-4">Professional Skills</h3>
 						</div>
 						<!-- Skill Item -->
-						<div class="col-sm-6 my-2 text-center text-sm-right" data-aos="fade-right">
+						<div class="col-sm-6 mb-2 text-center text-sm-right" data-aos="fade-right">
 							<div>MySQL</div>
 							<div class="sm-dir-reverse">
 								<span class="dot fill"></span>
@@ -217,7 +216,7 @@
 						<!-- End Skill Item -->
 
 						<!-- Skill Item -->
-						<div class="col-sm-6 my-2 text-center text-sm-left" data-aos="fade-left">
+						<div class="col-sm-6 mb-2 text-center text-sm-left" data-aos="fade-left">
 							<div>Oracle</div>
 							<div>
 								<span class="dot fill"></span>
@@ -329,7 +328,7 @@
 						<!-- End Skill Item -->
 
 						<!-- Skill Item -->
-						<div class="col-sm-6 my-2 text-center text-sm-right" data-aos="fade-right">
+						<div class="col-sm-6 mt-2 text-center text-sm-right" data-aos="fade-right">
 							<div>Database Security</div>
 							<div class="sm-dir-reverse">
 								<span class="dot fill"></span>
@@ -345,7 +344,7 @@
 						<!-- End Skill Item -->
 
 						<!-- Skill Item -->
-						<div class="col-sm-6 my-2 text-center text-sm-left" data-aos="fade-left">
+						<div class="col-sm-6 mt-2 text-center text-sm-left" data-aos="fade-left">
 							<div>Database Administration</div>
 							<div>
 								<span class="dot fill"></span>
@@ -365,13 +364,13 @@
 			<!-- End Specialties Section -->
 
 			<!-- Experience Section -->
-			<section class="experience my-5">
+			<section class="experience my-5 overflow-x-hidden">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6" data-aos="fade-right">
-							<span class="small">Where I've been working?</span>
+							<span class="lead font-weight-normal">Where I've been working?</span>
 							<h2 class="display-4 font-weight-bold mb-4">Work Experiences</h2>
-							<p>I've been working in the industry for the last 7 years!</p>
+							<p class="mb-4">I've been working in the industry for the last 7 years!</p>
 							<!-- Experience Item -->
 							<div class="experience">
 								<div class="no">01</div>
@@ -434,7 +433,7 @@
 				<div class="container">
 					<div class="row" data-aos="zoom-in">
 						<div class="col-sm-12 text-center">
-							<span class="small">What do I like?</span>
+							<span class="lead font-weight-normal">What do I like?</span>
 							<h2 class="display-4 font-weight-bold mb-4">Hobbies</h2>
 						</div>
 						<div class="col-sm-12 text-center">
@@ -498,21 +497,21 @@
 			<!-- End Hobbies Section -->
 
 			<!-- Contact Section -->
-			<section class="contacts mt-5 py-5">
+			<section class="contacts mt-5 pb-5">
 				<div class="container">
 					<div class="row" data-aos="fade-up">
 						<div class="col-sm-12 text-center">
-							<span class="small">Need to know more?</span>
+							<span class="lead font-weight-normal">Need to know more?</span>
 							<h2 class="display-4 font-weight-bold mb-4">Contact Me</h2>
 						</div>
 						<div class="col-sm-12 text-center">
 							<div class="mb-2">
 								<i class="ri-map-pin-line"></i>
-								<span>House #3, St. 4, Kabul, Afghanistan</span>
+								<address class="d-inline-block">House #3, St. 4, Kabul, Afghanistan</address>
 							</div>
 							<div class="mb-2">
 								<i class="ri-phone-line"></i>
-								<span>+93 (0) 711 111 111</span>
+								<a href="tel:+93711111111">+93 (0) 711 111 111</a>
 							</div>
 							<div class="mb-2">
 								<i class="ri-computer-line"></i>
@@ -520,7 +519,7 @@
 							</div>
 						</div>
 						<div class="col-sm-12 text-center cp">
-							<strong class="d-block">© Copyright 2019 | iPort Portfolio | All Rights Reserved</strong>
+							<strong class="d-block">© Copyright 2020 | iPort Portfolio | All Rights Reserved</strong>
 							<img src="img/signature-dark.png" alt="My Signature" title="Signature" class="signature mt-2">
 						</div>
 					</div>

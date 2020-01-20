@@ -95,6 +95,9 @@ body {
 main {
   background-color: #efefef; }
 
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
 /*Navbar*/
 nav.navbar {
   z-index: 999;
@@ -102,7 +105,7 @@ nav.navbar {
   left: 0;
   top: 0; }
   nav.navbar a {
-    color: #cccccc; }
+    color: white; }
     nav.navbar a:hover, nav.navbar a:focus {
       color: white; }
   nav.navbar .navbar-toggler {
@@ -118,11 +121,80 @@ nav.navbar {
 .signature {
   width: 140px; }
 
+.link {
+  color: black; }
+  .link:hover, .link:focus {
+    text-decoration: none; }
+
+.line-link {
+  padding-left: 20px;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  font-weight: 400;
+  display: inline-block;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  z-index: 100;
+  text-decoration: none;
+  color: #666666; }
+  .line-link:before {
+    content: '';
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #666666;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out; }
+  .line-link:hover {
+    padding-left: 40px;
+    text-decoration: none;
+    color: #333333; }
+    .line-link:hover:before {
+      width: 30px;
+      background-color: #333333; }
+
+.pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  border-radius: 0; }
+.pagination .page-item .page-link {
+  color: #4d4d4d; }
+.pagination .page-item.active .page-link {
+  background-color: #4d4d4d;
+  border-color: #404040;
+  color: white; }
+
+.first-letter:first-letter {
+  font-size: 4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  float: left;
+  padding-right: 10px;
+  line-height: 0.9; }
+
+.img-full {
+  min-width: 100%; }
+
+.blockquote {
+  padding-left: 20px;
+  margin: 30px 0;
+  position: relative; }
+  .blockquote:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #dca60b; }
+
 /*--------------------------------------------------------------
 6.0 Top Section Styles (Home)
 --------------------------------------------------------------*/
 section.home {
-  color: #cccccc;
+  color: white;
   overflow-y: hidden; }
   section.home .background-image {
     width: 100%;
@@ -137,40 +209,20 @@ section.home {
   section.home .main-title {
     color: #dca60b; }
   section.home .social a {
-    color: #cccccc; }
+    color: white; }
     section.home .social a.facebook:hover, section.home .social a.facebook:focus {
       color: #3b5998; }
     section.home .social a.twitter:hover, section.home .social a.twitter:focus {
       color: #1da1f2; }
     section.home .social a.instagram:hover, section.home .social a.instagram:focus {
       color: #e71f4d; }
-  section.home .scroll {
-    padding-left: 20px;
-    position: relative;
-    text-transform: uppercase;
-    font-size: .8em;
-    margin: 40px 0px 20px;
-    display: inline-block;
-    -webkit-transition: all 200ms ease-out;
-    transition: all 200ms ease-out;
-    z-index: 100;
-    text-decoration: none;
-    color: #cccccc; }
-    section.home .scroll:before {
-      content: '';
-      width: 10px;
-      height: 1px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      background-color: #cccccc;
-      -webkit-transition: all 200ms ease-out;
-      transition: all 200ms ease-out; }
-    section.home .scroll:hover {
-      padding-left: 40px;
+  section.home .line-link {
+    color: #e6e6e6; }
+    section.home .line-link:before {
+      background-color: #e6e6e6; }
+    section.home .line-link:hover {
       color: #e6e6e6; }
-      section.home .scroll:hover:before {
-        width: 30px;
+      section.home .line-link:hover:before {
         background-color: #e6e6e6; }
 
 /*--------------------------------------------------------------
@@ -184,10 +236,14 @@ section.about .education {
       -ms-flex-align: center;
           align-items: center;
   margin: 2em 0px; }
+  section.about .education:last-of-type {
+    margin-bottom: 0; }
+  section.about .education:first-of-type {
+    margin-top: 0; }
 section.about .year {
   font-size: 2em;
   font-weight: bold;
-  color: #999999; }
+  color: gray; }
 section.about .line {
   width: 40px;
   height: 1px;
@@ -197,7 +253,7 @@ section.about .location span {
   display: block;
   margin: 5px 0px; }
   section.about .location span:last-child {
-    color: #999999; }
+    color: #666666; }
 
 /*--------------------------------------------------------------
 8.0 Specialties Section
@@ -256,7 +312,8 @@ section.specialty .dot {
   height: 15px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.1);
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle; }
   section.specialty .dot.fill {
     background-color: #dca60b; }
 
@@ -271,17 +328,21 @@ section.experience .experience {
       -ms-flex-align: center;
           align-items: center;
   margin: 2em 0px; }
+  section.experience .experience:last-of-type {
+    margin-bottom: 0; }
+  section.experience .experience:first-of-type {
+    margin-top: 0; }
 section.experience .no {
   font-size: 4em;
   line-height: 1;
   font-weight: bold;
   margin-right: 20px;
-  color: #999999; }
+  color: gray; }
 section.experience .desc span {
   display: block;
   margin: 5px 0px; }
   section.experience .desc span:last-child {
-    color: #999999; }
+    color: #666666; }
 
 /*--------------------------------------------------------------
 10.0 Hobbies Section
@@ -300,7 +361,7 @@ section.hobbies .hobby {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0px 10px 10px;
+  margin: 0px 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -329,12 +390,74 @@ section.hobbies .hobby {
 --------------------------------------------------------------*/
 section.contacts i {
   color: #dca60b; }
+section.contacts a {
+  text-decoration: none; }
 section.contacts .cp {
   font-size: .8em;
   margin-top: 3em; }
 
 /*--------------------------------------------------------------
-12.0 Media Queries
+12.0 Blog Page
+--------------------------------------------------------------*/
+.page-header {
+  background-color: #dca60b; }
+
+/*--------------------------------------------------------------
+13.0 Single Blog Page
+--------------------------------------------------------------*/
+.single-blog-header .img-wrapper {
+  position: relative; }
+  .single-blog-header .img-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dca60b;
+    mix-blend-mode: multiply; }
+.single-blog-header img {
+  min-width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+
+/*--------------------------------------------------------------
+14.0 Works Page
+--------------------------------------------------------------*/
+.work .work-no {
+  font-size: 4em;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: 20px;
+  color: gray; }
+
+/*--------------------------------------------------------------
+15.0 Single Work Page
+--------------------------------------------------------------*/
+.single-work-header .img-wrapper {
+  position: relative; }
+  .single-work-header .img-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dca60b;
+    mix-blend-mode: multiply; }
+.single-work-header img {
+  min-width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+
+/*--------------------------------------------------------------
+16.0 Media Queries
 --------------------------------------------------------------*/
 @media only screen and (min-width: 576px) {
   .sm-dir-reverse {
