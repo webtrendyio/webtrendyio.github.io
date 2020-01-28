@@ -393,7 +393,7 @@ footer .cp {
   top: 50%;
   z-index: 9999;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   font-weight: 500;
   font-size: 12px;
   text-align: right; }
@@ -566,6 +566,12 @@ section.contact {
 
   section.home {
     padding-top: 58px; }
+    section.home .owl-item img {
+      min-height: 100vh;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    section.home .owl-item .display-4 {
+      font-size: 2.5rem !important; }
 
   section.testimonial, section.contact {
     background-size: cover; }
