@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/*!
+ * SailPoint | HTML Product Landing Page
+ * Version: 1.0.0
+ * Created: 01 Feb 2020
+ * Last Update: 01 Feb 2020
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Home Page
+7.0 About Page
+8.0 Services Page
+9.0 Works Page
+10.0 Contact Page
+11.0 Media Queries
+
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  overflow-x: hidden; }
+
+/*--------------------------------------------------------------
+4.0 Custom Cursor Styles
+--------------------------------------------------------------*/
+.custom-cursor {
+  cursor: none;
+  --top: 0;
+  --left: 0;
+  --cursor-width: 30px;
+  --color: #000000;
+  --blending-mode: normal; }
+  .custom-cursor .cursor > div {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .custom-cursor .cursor div, .custom-cursor .cursor img, .custom-cursor .cursor svg {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999;
+    mix-blend-mode: var(--blending-mode); }
+
+/*Cursor 1*/
+.cursor-1 .cursor .cursor-el1 {
+  width: var(--cursor-width);
+  height: var(--cursor-width);
+  border: calc(var(--cursor-width)/25) solid var(--color);
+  border-radius: 50%;
+  top: calc(var(--cursor-width)/-2);
+  left: calc(var(--cursor-width)/-2);
+  -webkit-transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+.cursor-1 .cursor .cursor-el2 {
+  width: calc(var(--cursor-width)/5);
+  height: calc(var(--cursor-width)/5);
+  border-radius: 50%;
+  background-color: var(--color);
+  top: calc(var(--cursor-width)/-10);
+  left: calc(var(--cursor-width)/-10); }
+.cursor-1.onlink .cursor .cursor-el1 {
+  opacity: 0; }
+.cursor-1.onlink .cursor .cursor-el2 {
+  opacity: 0; }
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+.btn-link {
+  position: relative;
+  color: #f9a806; }
+  .btn-link:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #00e6bf;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease; }
+  .btn-link:hover, .btn-link:focus {
+    text-decoration: none;
+    color: #00e6bf; }
+    .btn-link:hover:before, .btn-link:focus:before {
+      width: 100%; }
+
+.color-primary {
+  color: #f9a806; }
+
+.btn-round {
+  border-radius: 150px; }
+
+.menu-header .btn {
+  font-size: 0.9em;
+  font-weight: 300; }
+
+/*--------------------------------------------------------------
+6.0 Page Styles
+--------------------------------------------------------------*/
+/*Intro Section*/
+.intro .product-wrapper {
+  position: relative;
+  display: inline-block; }
+  .intro .product-wrapper img {
+    width: 300px; }
+  .intro .product-wrapper .scroll-stable {
+    position: relative;
+    z-index: 99;
+    width: 350px; }
+.intro .scroll-move {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -150px; }
+
+/*Info Section*/
+.info .img-wrapper {
+  position: relative; }
+  .info .img-wrapper .absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1; }
+.info .max-vh-80 {
+  max-height: 80vh; }
+
+/*Call to Action Section*/
+.cta {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-image: url(../img/background-900x500.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  .cta:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), transparent); }
+
+/*Specs Section*/
+.specs .img-wrapper {
+  position: relative; }
+  .specs .img-wrapper .absolute {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: -1; }
+
+/*Footer*/
+footer .app-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.2;
+  text-align: left;
+  font-size: 80%; }
+footer .btn-warning:hover, footer .btn-warning:focus {
+  color: #0d0d0d; }
+footer .social-media a {
+  text-decoration: none; }
+footer a:not(.btn) {
+  color: #f9a806; }
+  footer a:not(.btn):hover, footer a:not(.btn):focus {
+    color: #00e6bf; }
+footer .cp {
+  border-top: 1px solid #262626; }
+
+/*--------------------------------------------------------------
+11.0 Media Queries
+--------------------------------------------------------------*/
+@media only screen and (max-width: 991px) {
+  .intro .display-1 {
+    font-size: 3rem; }
+  .intro .product-wrapper img {
+    width: 160px; }
+  .intro .product-wrapper .scroll-stable {
+    width: 220px; }
+  .intro .scroll-move {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -80px; }
+
+  .mb-sm-large {
+    margin-bottom: 250px; }
+
+  .cursor {
+    display: none; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=styles.css.map */
