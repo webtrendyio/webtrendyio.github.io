@@ -39,6 +39,7 @@ $(document).ready(function(){
 	// Initiate Aos
 	AOS.init({
 		duration: 500,
+		disable: 'phone',
 	});
 
 	// Update on resize
