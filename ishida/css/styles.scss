@@ -1,0 +1,284 @@
+/*!
+ * Ishida | Multipurpose HTML Presentation and Product Landing Page Template
+ * Version: 1.0.1
+ * Created: 10 Feb 2020
+ * Last Update: 17 March 2020
+ * Author: gren8
+ * Copyright 2020 © gren8 (https://wrapbootstrap.com/user/gren8)
+ * Licensed under WrapBootstrap (https://wrapbootstrap.com/help/licenses)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Page Styles
+7.0 Media Queries
+
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+	$transition-cubic: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	$transition: all 600ms ease;
+
+	$primary-color: #F1511B;
+
+	$secondary-color: #ffc124;
+	$dark-color: hsla(0, 0%, 5%, 1);
+	$white-color: hsla(0, 0%, 95%, 1);
+
+
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+	/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+	body {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+
+/*--------------------------------------------------------------
+4.0 Custom Cursor Styles
+--------------------------------------------------------------*/
+	.custom-cursor {
+		cursor: none;
+		--top: 0;
+		--left: 0;
+		--cursor-width: 30px;
+		--color: #000000;
+		--blending-mode: normal;
+
+		.cursor {
+			& > div {
+				box-sizing: border-box;
+			}
+			div, img, svg {
+				position: fixed;
+				pointer-events: none;
+				z-index: 999999;
+				mix-blend-mode: var(--blending-mode);
+			}
+		}
+	}
+
+	/*Cursor 1*/
+	.cursor-1 {
+		.cursor {
+			.cursor-el1 {
+				width: var(--cursor-width);
+				height: var(--cursor-width);
+				border: calc(var(--cursor-width)/25) solid var(--color);
+				border-radius: 50%;
+				top: calc(var(--cursor-width)/-2);
+				left: calc(var(--cursor-width)/-2);
+				transition: $transition-cubic;
+			}
+			.cursor-el2 {
+				width: calc(var(--cursor-width)/5);
+				height: calc(var(--cursor-width)/5);
+				border-radius: 50%;
+				background-color: var(--color);
+				top: calc(var(--cursor-width)/-10);
+				left: calc(var(--cursor-width)/-10);
+			}
+		}
+		&.onlink {
+			.cursor {
+				.cursor-el1 {
+					opacity: 0;
+				}
+				.cursor-el2 {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+
+	main, .site-footer, .site-header {
+		background-color: lighten($dark-color, 90%);
+	}
+
+	main {
+		overflow-x: hidden;
+	}
+
+	.site-header {
+		.btn {
+			font-size: 0.9em;
+			font-weight: 300;
+		}
+	}
+
+	.primary-color {
+		color: $primary-color;
+	}
+
+	.img-full {
+		width: 100%;
+	}
+
+	.overflow-x-hidden {
+		overflow-x: hidden;
+	}
+	
+
+/*--------------------------------------------------------------
+6.0 Page Styles
+--------------------------------------------------------------*/
+	/*Top Section*/
+	.top {
+		
+	}
+
+	/*Description Section*/
+	.desc {
+		background-color: white;
+	}
+
+	/*Call to Action Section*/
+	.cta {
+		.secondary-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	/*Layouts Section*/
+	.layouts {
+		.primary-image {
+			position: relative;
+			z-index: 99;
+		}
+		.secondary-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform-origin: bottom center;
+		}
+	}
+
+	/*Info Section*/
+	.info {
+		background-color: $dark-color;
+		color: $white-color;
+		p {
+			color: darken($white-color, 40%);
+		}
+		.logo-wrapper {
+			background-color: rgba(0,0,0, 1);
+			padding: 10px 20px;
+		}
+		.logo {
+			width: 30px;
+			opacity: 0.6;
+			&:hover, &:focus {
+				opacity: 0.8;
+			}
+			&:not(:last-of-type) {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	/*Other Products Section*/
+	.other-products {
+		a {
+			text-decoration: none;
+			color: $dark-color;
+		}
+	}
+
+	/*Footer*/
+	.site-footer {
+		.app-btn {
+			display: inline-flex;
+			align-items: center;
+			line-height: 1.2;
+			text-align: left;
+			font-size: 80%;
+		}
+		.btn-warning {
+			&:hover, &:focus {
+				color: $dark-color;
+			}
+		}
+		.social-media {
+			a {
+				text-decoration: none;
+			}
+		}
+		a:not(.btn) {
+			color: $primary-color;
+			&:hover, &:focus {
+				color: $secondary-color;
+			}
+		}
+		.cp {
+			border-top: 1px solid darken($white-color, 10%);
+		}
+	}
+
+
+/*--------------------------------------------------------------
+7.0 Media Queries
+--------------------------------------------------------------*/
+	@media only screen and (max-width : 991px) {
+		.display-4 {
+			font-size: 2.5rem;
+		}
+		.h1, h1 {
+			font-size: 2rem;
+		}
+		.info {
+			.logo {
+				margin: 5px;
+			}
+		}
+		footer.site-footer {
+			.app-btn {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 10px;
+			}
+		}
+		.cursor {
+			display: none;
+		}
+	}	
+	
+
+
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/

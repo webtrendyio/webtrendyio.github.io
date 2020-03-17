@@ -1,6 +1,6 @@
 /* 
-Custom Cursor JS | By Web_Trendy
-December 17, 2019 14:12 - 😎 
+Custom Cursor JS | By gren8
+February 10, 2020 14:12 
 */
 
 const getMousePos = (e) => {
