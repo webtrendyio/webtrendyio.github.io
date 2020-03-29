@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/*!
+ * Ishida | Multipurpose HTML Presentation and Product Landing Page Template
+ * Version: 1.0.1
+ * Created: 10 Feb 2020
+ * Last Update: 17 March 2020
+ * Author: gren8
+ * Copyright 2020 © gren8 (https://wrapbootstrap.com/user/gren8)
+ * Licensed under WrapBootstrap (https://wrapbootstrap.com/help/licenses)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Page Styles
+7.0 Media Queries
+
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Ubuntu:400,700&display=swap");
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ubuntu', sans-serif; }
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth; }
+
+main, .site-footer, .site-header {
+  background-color: #f2f2f2; }
+
+main {
+  overflow-x: hidden; }
+
+.site-header .btn {
+  font-size: 0.9em;
+  font-weight: 300; }
+
+.primary-color {
+  color: #F1511B; }
+
+.img-full {
+  width: 100%; }
+
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
+.normal-link {
+  text-decoration: none; }
+  .normal-link:hover, .normal-link:focus {
+    text-decoration: none; }
+
+.rounded-15 {
+  border-radius: 15px; }
+
+[data-name="mojs-shape"] {
+  pointer-events: none; }
+
+/*--------------------------------------------------------------
+6.0 Page Styles
+--------------------------------------------------------------*/
+.virus {
+  width: 150px;
+  margin-bottom: 30px; }
+
+.cta {
+  background-image: url(../img/cta-1366x600.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  background-color: #F1511B;
+  color: white; }
+
+.demo .effect {
+  background-color: #e7e7e7;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  margin: 10px;
+  padding-top: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .demo .effect div:first-of-type {
+    font-size: 85%;
+    color: #aaa; }
+  .demo .effect div:last-of-type {
+    font-style: italic;
+    color: #aaa;
+    font-weight: 300;
+    font-size: 85%; }
+
+/*Footer*/
+.site-footer .btn {
+  font-size: 85%;
+  font-weight: 300;
+  border-radius: 100px;
+  padding: 10px 20px; }
+.site-footer .social-media a {
+  text-decoration: none; }
+.site-footer a:not(.btn) {
+  color: #F1511B; }
+  .site-footer a:not(.btn):hover, .site-footer a:not(.btn):focus {
+    color: #ffc124; }
+.site-footer .cp {
+  border-top: 1px solid #d9d9d9; }
+
+.coronavirus-container {
+  width: 35%;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: #efefef;
+  padding: 2.3em;
+  text-align: center;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease; }
+  .coronavirus-container.closed {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  .coronavirus-container .coronavirus-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer; }
+    .coronavirus-container .coronavirus-close:before, .coronavirus-container .coronavirus-close:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      -webkit-transition: all 600ms ease;
+      transition: all 600ms ease; }
+    .coronavirus-container .coronavirus-close:before {
+      top: 33.33%; }
+    .coronavirus-container .coronavirus-close:after {
+      top: 66.66%; }
+    .coronavirus-container .coronavirus-close:hover:before, .coronavirus-container .coronavirus-close:hover:after, .coronavirus-container .coronavirus-close:focus:before, .coronavirus-container .coronavirus-close:focus:after {
+      top: calc(50% - 1px); }
+    .coronavirus-container .coronavirus-close:hover:before, .coronavirus-container .coronavirus-close:focus:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .coronavirus-container .coronavirus-close:hover:after, .coronavirus-container .coronavirus-close:focus:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .coronavirus-container img {
+    width: 80px !important;
+    display: inline-block !important;
+    margin-bottom: 10px; }
+  .coronavirus-container .coronavirus-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 5px; }
+  .coronavirus-container .coronavirus-description {
+    font-size: 85%; }
+  .coronavirus-container .coronavirus-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+    .coronavirus-container .coronavirus-nav .next, .coronavirus-container .coronavirus-nav .prev {
+      width: 30px;
+      height: 30px;
+      background-color: #ccc;
+      float: left;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      cursor: pointer; }
+      .coronavirus-container .coronavirus-nav .next svg, .coronavirus-container .coronavirus-nav .prev svg {
+        width: 25px; }
+      .coronavirus-container .coronavirus-nav .next:hover, .coronavirus-container .coronavirus-nav .next:focus, .coronavirus-container .coronavirus-nav .prev:hover, .coronavirus-container .coronavirus-nav .prev:focus {
+        background-color: #aaa; }
+
+/*--------------------------------------------------------------
+7.0 Media Queries
+--------------------------------------------------------------*/
+@media only screen and (max-width: 991px) {
+  .display-4 {
+    font-size: 2.5rem; }
+
+  .h1, h1 {
+    font-size: 2rem; }
+
+  footer.site-footer .app-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px; }
+
+  .cursor {
+    display: none; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=styles.css.map */
