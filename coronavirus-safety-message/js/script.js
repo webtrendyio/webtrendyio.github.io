@@ -14,23 +14,24 @@
 $(document).ready(function(){
 
 	// Carousel Initialization
-	let owl = $(".coronavirus-carousel"), next = $('.coronavirus-nav .next'), prev = $('.coronavirus-nav .prev'), close = $('.coronavirus-close'), container = $('.coronavirus-container');
-	owl.owlCarousel({
-		items: 1,
-		loop: true,
-		autoplay: true,
-		autoplayTimeout: 10000,
-		margin: 30,
-	});
+		let owl = $(".coronavirus-carousel"), next = $('.coronavirus-nav .next'), prev = $('.coronavirus-nav .prev'), close = $('.coronavirus-close-button'), container = $('.coronavirus-container');
+		owl.owlCarousel({
+			items: 1,
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 10000,
+			margin: 30,
+			dots: false
+		});
 
-	next.on('click', function(){
-		owl.trigger('next.owl.carousel');
-	});
-	prev.on('click', function(){
-		owl.trigger('prev.owl.carousel');
-	});
+		next.on('click', function(){
+			owl.trigger('next.owl.carousel');
+		});
+		prev.on('click', function(){
+			owl.trigger('prev.owl.carousel');
+		});
 
-	close.on('click', function(){
-		container.addClass('closed');
-	});
+		close.on('click', function(){
+			container.addClass('closed');
+		});
 });
