@@ -1,0 +1,1031 @@
+/*!
+ * Darya | HTML Shopping & E-Commerce Template
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Love is out mother, we are born of LOVE!" --Rumi
+ *
+ */
+
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 General Styles
+5.0 Home Page
+6.0 About Page
+7.0 Blog Page
+8.0 Product Details Page
+9.0 Cart Page
+10.0 Checkout Page
+11.0 Contact Page
+12.0 Single Blog Page
+13.0 Shop Page
+14.0 Footer 
+15.0 Media Queries
+
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+	$transition-cubic: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	$transition: all 600ms ease;
+	$transition-fast: all 300ms ease;
+	
+	
+	
+	
+	$primary-color: #ff4316;
+	$dark-color: #212529;
+	$light-color: #f1f1f1;
+
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+	/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+	body {
+		font-family: 'Roboto', sans-serif; 
+	}
+
+/*--------------------------------------------------------------
+4.0 General Styles
+--------------------------------------------------------------*/
+	header.site-header {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		width: 100%;
+		z-index: 9999;
+		input[type='search'] {
+			padding-bottom: 0;
+		}
+		.input-group-append {
+			.input-group-text {
+				padding-bottom: 0;
+				color: $light-color;
+			}
+		}
+		.form-control {
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			background-color: transparent;
+			color: $light-color;
+			&:focus {
+				box-shadow: none;
+				border-color: $primary-color;
+				&+.input-group-append button {
+					border-bottom: 1px solid $primary-color;	
+				}
+			}
+		}
+		.site-logo {
+			width: 80px;
+		}
+	}
+	.color-primary {
+		color: $primary-color;
+	}
+	.background-primary {
+		background-color: $primary-color;	
+	}
+	.line-height-1 {
+		line-height: 1;
+	}
+	a:not(.btn) {
+		text-decoration: none;
+		color: $dark-color;
+		&:hover, &:focus {
+			color: $primary-color;
+			text-decoration: none;
+		}
+	}
+	.dot {
+		z-index: -1;
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		opacity: 0.3;
+		&.top {
+			top: 0;
+		}
+		&.bottom {
+			bottom: 0;
+		}
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
+	}
+	.cursor-pointer {
+		cursor: pointer;
+	}
+	.custom-select {
+		border-radius: 0;
+	}
+	.page-header {
+		position: relative;
+		&:before {
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 150px;
+			background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+			z-index: 9;
+		}
+	}
+	
+/*--------------------------------------------------------------
+5.0 Home Page
+--------------------------------------------------------------*/
+	/*Top Section*/
+	section.top {
+		position: relative;
+		color: $light-color;
+		min-height: 100vh;
+		overflow: hidden;
+		.bg-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: left;
+			filter: contrast(1.1) saturate(1.1) brightness(0.9);
+		}
+		.owl-nav {
+			text-align: right;
+			[class*="owl-"] {
+				width: 30px;
+				height: 30px;
+				background-color: rgba(255,255,255, 0.1) !important;
+				border-radius: 50%;
+				&:last-child {
+					margin-right: 0;
+				};
+				&:hover, &:focus {
+					background-color: $primary-color !important;
+					outline: none;
+				}
+			}
+		}
+	}
+
+	/*Info Section*/
+	section.info-2 {
+		.signature {
+			width: 200px;
+		}
+		.quote {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			padding: 10px 20px;
+			background-color: rgba(255,255,255, 0.9);
+			width: 70%;
+			.quote-small {
+				font-size: 0.65em;
+			}
+		}
+	}
+	
+	/*Featured Products Section*/
+	section.top-products-1 {
+		.image-wrapper {
+			position: relative;
+			overflow: hidden;
+			img {
+				transform: scale(1.05);
+				transition: $transition;
+			}
+			.badges {
+				position: absolute;
+				top: 5px;
+				left: 10px;
+			}
+			.add {
+				background-color: $primary-color;
+				color: white;
+				padding: 25px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				cursor: pointer;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-end;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translate(-100%, 100%);
+				transition: $transition-fast;
+				&:hover, &:focus {
+					background-color: darken($primary-color, 10%);
+				}
+			}
+		}
+		.product-wrapper {
+			.price-add {
+				overflow: hidden;
+				position: relative;
+				.price {
+					transition: $transition-fast;
+				}
+				.add {
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: $transition-fast;
+					transform: translateY(-100%);
+					color: lighten($dark-color, 50%);
+					&:hover, &:focus {
+						color: lighten($dark-color, 30%);
+					}
+				}
+			}
+			&:hover, &:focus {
+				.image-wrapper {
+					img {
+						transform: scale(1);
+					}
+					.add {
+						transform: translate(-50%, 50%);
+					}
+				}
+				.price-add {
+					.price {
+						transform: translateY(100%);
+					}
+					.add {
+						transform: translateY(0);
+					}
+				}		
+			}
+		}
+	}
+	section.top-products-2 {
+		.image-wrapper {
+			position: relative;
+			overflow: hidden;
+			img {
+				transition: $transition;
+				&:last-of-type {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: -1;
+				}
+			}
+			.badges {
+				position: absolute;
+				top: 5px;
+				left: 10px;
+			}
+			.add {
+				background-color: $dark-color;
+				color: white;
+				padding: 25px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				cursor: pointer;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-end;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translate(-100%, 100%);
+				transition: $transition-fast;
+			}
+		}
+		.product-wrapper {
+			.price-add {
+				overflow: hidden;
+				position: relative;
+				.price {
+					transition: $transition-fast;
+				}
+				.add {
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: $transition-fast;
+					transform: translateY(-100%);
+					color: lighten($dark-color, 50%);
+					&:hover, &:focus {
+						color: lighten($dark-color, 30%);
+					}
+				}
+			}
+			&:hover, &:focus {
+				.image-wrapper {
+					img:first-of-type {
+						opacity: 0;
+					}
+					.add {
+						transform: translate(-50%, 50%);
+					}
+				}
+				.price-add {
+					.price {
+						transform: translateY(100%);
+					}
+					.add {
+						transform: translateY(0);
+					}
+				}		
+			}
+		}
+	}
+	section.top-products-3 {
+		.image-wrapper {
+			position: relative;
+			overflow: hidden;
+			.badges {
+				position: absolute;
+				top: 5px;
+				left: 10px;
+			}
+			.actions {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				a {
+					background-color: white;
+					border-radius: 50%;
+					margin: 3px;
+					width: 50px;
+					height: 50px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					transition: $transition-fast;
+					transform: translateY(50%);
+					opacity: 0;
+					&:hover, &:focus {
+						background-color: $primary-color;
+						color: white;
+					}
+					&.wish {
+						transition-delay: 150ms;
+					}
+					&.add {
+						transition-delay: 300ms;
+					}
+				}
+			}
+		}
+		.product-wrapper {
+			&:hover, &:focus {
+				.actions {
+					a {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}	
+			}
+		}
+	}
+	section.top-products-4 {
+		.image-wrapper {
+			position: relative;
+			overflow: hidden;
+			.badges {
+				position: absolute;
+				top: 5px;
+				left: 10px;
+			}
+			.actions {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				a {
+					background-color: white;
+					border-radius: 50%;
+					margin: 3px;
+					width: 50px;
+					height: 50px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					transition: $transition-fast;
+					transform: translateY(50%);
+					opacity: 0;
+					&:hover, &:focus {
+						background-color: $primary-color;
+						color: white;
+					}
+					&.wish {
+						transition-delay: 150ms;
+					}
+					&.add {
+						transition-delay: 300ms;
+					}
+				}
+			}
+		}
+		.product-wrapper {
+			&:hover, &:focus {
+				.actions {
+					a {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}	
+			}
+		}
+	}
+
+	/*Features Section*/
+	section.features-2 { 
+
+	}
+
+	/*Statistics Section*/
+	section.statistics {
+		background-image: url(../img/home/cta-1366x450-2.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom;
+		color: $light-color;
+		background-blend-mode: color-burn;
+		background-color: #bf0909;
+	}
+
+	/*Call To Action Section*/
+	.cta-1 {
+		.image-label {
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+		}
+	}
+	.cta-2 {
+		background-image: url(../img/home/cta-1366x450-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.cta-3 {
+		background-image: url(../img/home/cta-850x600-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-blend-mode: lighten;
+		background-color: #dc3545;
+	}
+	.cta-4 {
+		.container {
+			position: relative;
+			overflow: hidden;
+			.cta-img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: left;
+			}
+		}
+	}
+
+	/*Testimonial Section*/
+	section.testimonial-1 {
+		background-color: lighten($dark-color, 78%);
+	}
+	section.testimonial-2 {
+		img {
+			width: 100px !important;
+			height: 100px;
+			border-radius: 50%;
+		}
+	}
+
+	/*Blog Section*/
+	section.blog-1 {
+		.image-wrapper {
+			position: relative;
+			overflow: hidden;
+			&:before {
+				content:'';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($dark-color, 0.4);
+				transition: $transition;
+				opacity: 0;
+				z-index: 1;
+			}
+			img {
+				transition: $transition;
+				will-change: transform;
+			}
+			.date {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+			}
+			.view {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transform: scale(1.05);
+				opacity: 0;
+				color: $light-color;
+				transition: $transition;
+				z-index: 2;
+				i {
+					background-color: rgba($light-color, 0.8);
+					color: $dark-color;
+					width: 60px;
+					height: 60px;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+			&:hover, &:focus {
+				&:before {
+					opacity: 1;
+				}
+				img {
+					transform: scale(1.05);
+					filter: blur(2px);
+				}
+				.view {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	
+/*--------------------------------------------------------------
+6.0 About Page
+--------------------------------------------------------------*/
+	.page-about {
+		.page-header {
+			position: relative;
+			overflow: hidden;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+		.signature {
+			width: 200px;
+		}
+		.ads-box {
+			position: relative;
+			.ads-info {
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 50px;
+			}
+		}
+		.steps {
+			background-color: lighten($dark-color, 78%);
+		}
+		.partner {
+			width: 150px;
+		}
+	}
+
+/*--------------------------------------------------------------
+7.0 Blog Page
+--------------------------------------------------------------*/
+	.page-blog {
+		.page-header {
+			position: relative;
+			overflow: hidden;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+		.ads-box {
+			position: relative;
+			.ads-info {
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 50px;
+			}
+		}
+	}
+
+/*--------------------------------------------------------------
+8.0 Product Details Page
+--------------------------------------------------------------*/
+	.page-product-details {
+		.product-header {
+			overflow: hidden;
+			position: relative;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+		.colors {
+			.color-select {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 5px;
+				cursor: pointer;
+				width: 30px;
+				height: 30px;
+				&.active {
+					background-image: url(../img/icons/check-fill.svg);
+					background-repeat: no-repeat;
+					background-size: 70%;
+					background-position: center;
+				}
+			}
+		}
+		.size {
+			span {
+				background-color: #efefef;
+				display: inline-block;
+				min-width: 30px;
+				text-align: center;
+				font-size: 85%;
+				font-weight: lighter;
+				padding: 7.5px 10px;
+				cursor: pointer;
+				&:hover, &.active {
+					background-color: darken(#efefef, 5%);
+				}
+			}
+		}
+		.quantity {
+			background-color: #efefef;
+			display: inline-block;
+			border-radius: 100px;
+			user-select: none;
+			font-size: 85%;
+			font-weight: lighter;
+			span {
+				display: inline-block;
+				&:first-of-type {
+					cursor: pointer;
+					padding: 5px 10px;
+					padding-right: 0;
+				}
+				&:last-of-type {
+					cursor: pointer;
+					padding: 5px 10px;
+					padding-left: 0;
+				}
+				&.counter {
+					min-width: 25px;
+					text-align: center;
+				}
+			}
+		}
+		.ads-box {
+			position: relative;
+			.ads-info {
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 50px;
+			}
+		}
+	}
+
+/*--------------------------------------------------------------
+9.0 Cart Page
+--------------------------------------------------------------*/
+	.page-cart {
+		.page-header {
+			overflow: hidden;
+			position: relative;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+		.cart-img {
+			width: 100px;
+		}
+		th, td {
+			vertical-align: middle;
+		}
+		.quantity {
+			background-color: #efefef;
+			display: inline-block;
+			border-radius: 100px;
+			user-select: none;
+			font-size: 85%;
+			font-weight: lighter;
+			span {
+				display: inline-block;
+				&:first-of-type {
+					cursor: pointer;
+					padding: 5px 10px;
+					padding-right: 0;
+				}
+				&:last-of-type {
+					cursor: pointer;
+					padding: 5px 10px;
+					padding-left: 0;
+				}
+				&.counter {
+					min-width: 25px;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+/*--------------------------------------------------------------
+10.0 Checkout Page
+--------------------------------------------------------------*/
+	.page-checkout {
+		.page-header {
+			overflow: hidden;
+			position: relative;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+	}
+
+/*--------------------------------------------------------------
+11.0 Contact Page
+--------------------------------------------------------------*/
+	.page-contact {
+		.page-header {
+			overflow: hidden;
+			position: relative;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+		.ads-box {
+			position: relative;
+			.ads-info {
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 50px;
+			}
+		}
+	}
+
+/*--------------------------------------------------------------
+12.0 Single Blog Page
+--------------------------------------------------------------*/
+	.page-single-blog {
+		.page-header {
+			overflow: hidden;
+			position: relative;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+		.first-letter:first-letter {
+			font-size: 4em;
+			font-weight: 700;
+			text-transform: uppercase;
+			float: left;
+		    padding-right: 10px;
+		    line-height: 0.9;
+		}
+		.social-share {
+			a {
+				display: inline-flex;
+				width: 30px;
+				height: 30px;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				&.facebook {
+					background-color: #3b5998;
+				}
+				&.twitter {
+					background-color: #00aced;
+				}
+				&.instagram {
+					background-color: #ec0c74;
+				}
+				&.linkedin {
+					background-color: #1171a9;
+				}
+				&.pinterest {
+					background-color: #f12323;
+				}
+			}
+		}
+		.avatar {
+			width: 80px;
+			height: 80px;
+		}
+		.avatar-reply {
+			width: 60px;
+			height: 60px;
+		}
+		.ads-box {
+			position: relative;
+			.ads-info {
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 50px;
+			}
+		}
+		.blockquote {
+			padding-left: 20px;
+		    border-left: 5px solid $primary-color;
+		}
+	}
+	
+/*--------------------------------------------------------------
+13.0 Shop Page
+--------------------------------------------------------------*/
+	.page-shop {
+		.page-header {
+			overflow: hidden;
+			position: relative;
+			.header-info {
+				position: absolute;
+				width: 100%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+	}
+
+/*--------------------------------------------------------------
+14.0 Footer
+--------------------------------------------------------------*/
+	footer.site-footer {
+		background-color: lighten($dark-color, 78%);
+	}
+	
+/*--------------------------------------------------------------
+15.0 Media Queries
+--------------------------------------------------------------*/
+	
+	@media only screen and (max-width : 812px) {
+		.dot {
+			display: none;
+		}
+		section.testimonial-1 {
+			.testimonial-wrapper {
+				.testimonial-info {
+					padding: 0 15px 5px;
+					background-color: white;
+				}
+			}
+		}
+		section.blog-1 {
+			.blog-wrapper {
+				p {
+
+				}
+			}
+		}
+		footer.site-footer {
+			.small {
+				font-size: 90%;
+			}
+		}
+		.page-header {
+			img {
+				min-height: 100vh;
+				object-fit: cover;
+			}
+		}
+		.w-75 {
+			width: 100% !important;
+		}
+		.ads-box.wide {
+			img {
+				min-height: 405px;
+			    object-fit: cover;
+			}
+		}
+		.cta-4 {
+			.container {
+				.cta-img {
+					object-position: 30%;
+				}
+			}
+		}
+		.cart {
+			.quantity {
+				min-width: 80px;
+			}
+			.item-title {
+				min-width: 200px;
+			}
+		}
+	}
+
+	@media screen and (max-width : 812px) and (orientation:landscape) {
+	    section.top {
+	    	h1 {
+			    font-size: 2.5rem;
+	    	}
+	    }
+	    .cta-4 {
+			.container {
+				.cta-img {
+					object-position: 23%;
+				}
+			}
+		}
+		footer.site-footer {
+			.small {
+				font-size: 80%;
+			}
+		}
+		.statistics {
+			.display-3 {
+				font-size: 3.5rem;
+			}
+			span.font-weight-light {
+				font-size: 90%;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 813px) {
+		section.testimonial-1 {
+			.testimonial-wrapper {
+				position: relative;
+				padding-right: 20%;
+				.testimonial-info {
+					position: absolute;
+					bottom: 0px;
+					right: 0;
+					padding: 50px;
+					width: 40%;
+					background-color: white;
+				}
+			}
+		}
+	}
+	
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
