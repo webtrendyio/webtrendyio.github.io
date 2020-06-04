@@ -1,0 +1,334 @@
+/*!
+ * Trendex | HTML Product Landing Page
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Home Page
+7.0 About Page
+8.0 Services Page
+9.0 Works Page
+10.0 Contact Page
+11.0 Blog Page
+12.0 Single Blog Page
+13.0 Single Works Page
+14.0 Footer 
+15.0 Animations
+16.0 Media Queries
+
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+	$transition: all 300ms ease-out;
+	$transition-slow: all 600ms ease;
+
+	$primary-color: #ff3313;
+	$secondary-color: #f2eee0;
+	$dark-color: #212529;
+
+	:root {
+		/*--background-color: #070707;*/
+		--background-color: #270067;
+		--background-color-darker: #000000;
+		--border-color: #351280;
+		--text-color: #eeeeee;
+		--light-text-color: #bdbdbd;
+	}
+
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+	/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Noto+Serif:400,700&display=swap');
+
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+	body {
+		font-family: 'Roboto', sans-serif;
+	}
+	h1, h2, h3 {
+		font-family: 'Noto Serif', serif;
+	}
+
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+	.overflow-x-hidden {
+		overflow-x: hidden;
+	}
+	
+	.primary-color {
+		color: $primary-color;
+	}
+
+	.line-height-1 {
+		line-height: 1;
+	}
+
+	
+/*--------------------------------------------------------------
+6.0 Home Page
+--------------------------------------------------------------*/
+	
+	body {
+		background-color: var(--background-color);
+		color: var(--text-color);
+	}
+
+	.text-black {
+		color: #000000;
+	}
+
+	.text-sub {
+		color: var(--light-text-color);
+	}
+
+	.tl-n10 {
+		transform: translateX(-100px);
+	}
+
+	.border-radius-theme {
+		border-radius: 15px;
+	}
+	
+	/*Top Section*/
+	section.top {
+		.mask-wrapper {
+			max-height: 100vh;
+		}
+		.mask {
+			max-height: 100%;
+			user-select: none;
+			-webkit-user-drag: none;
+			filter: saturate(1.5);
+			&:hover, &:focus {
+
+			}
+		}
+		.info {
+			border-left: 2px solid $primary-color;
+		}
+	}
+
+	/*About Section*/
+	section.about {
+		.logo {
+			width: 50px;
+		}
+	}
+	
+	/*Features Section*/
+	section.features {
+		.feature-wrapper {
+			.content {
+				position: relative;
+				&:before {
+					content: '';
+					background: linear-gradient(90deg, #b70f7c, #ec7209);
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+					border-radius: 15px;
+					transition: $transition;
+				}
+			}
+			.header {
+				transition: $transition;
+			}
+			.description {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translateY(-20px);
+				opacity: 0;
+				transition: $transition;
+			}
+			&:hover, &:focus {
+				.content {
+					&:before {
+						height: calc(100% + 50px);
+					}
+				}
+				.header {
+					transform: translateY(-50px);
+				}
+				.description {
+					transform: translateY(0);
+					transition-delay: 200ms;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	/*Demo Section*/
+	section.demo {
+		.demo-wrapper {
+			position: relative;
+			height: 200px;
+			background: rgba(255,255,255, 0.8);
+			color: $dark-color;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				z-index: -1;
+				opacity: 0;
+				transform: scale(1.1);
+				transition: $transition;
+			}
+			&:hover, &:focus {
+				img {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	/*Options Section*/
+	section.options {
+		.option-wrapper {
+			border: 2px solid var(--border-color);
+		}
+	}
+
+	/*Call to Action 1 Section*/
+	section.cta-1 {
+		.image-wrapper {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 300px;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				background: linear-gradient(90deg, transparent, rgba(0,0,0, 0.5));
+			}
+		}
+	}
+
+	/*Call to Action 2 Section*/
+	section.cta-2 {
+		
+	}
+
+	/*Other Products Section*/
+	section.products {
+		.product-wrapper {
+			transition: $transition;
+			&:hover, &:focus {
+				transform: translateY(-10px);
+			}
+		}
+	}
+
+
+/*--------------------------------------------------------------
+14.0 Footer
+--------------------------------------------------------------*/
+	footer.site-footer {
+		/*background-color: darken($dark-color, 20%);*/
+		background: linear-gradient(90deg, #b70f7c, #ec7209);
+		.logo {
+			width: 200px;
+		}
+		.mini {
+			font-size: 90%;
+			font-weight: 500;
+		}
+		font-size: 90%;
+		a {
+			text-decoration: none;
+			transition: $transition;
+			font-weight: 300;
+			color: darken($dark-color, 80%);
+				&:hover, &:focus {
+					color: lighten($dark-color, 100%);
+				}
+		}
+		.cp {
+			border-top: 1px solid rgba(255,255,255, 0.2);
+			a {
+				color: lighten($secondary-color, 0%);
+				&:hover, &:focus {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+	
+
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+	$transitionProperty: all;
+	$transitionDuration: 100ms;
+	$transitionTiming: ease-out;
+
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+	
+
+/*--------------------------------------------------------------
+4.0 Media Queries
+--------------------------------------------------------------*/
+
+	@media only screen and (max-width : 576px) {
+		section.top {
+			h1.title {
+				font-size: 2.5rem;
+			}
+			.min-vh-100 {
+				min-height: auto !important;
+			}
+		}
+		.tl-n10 {
+			transform: none;
+		}
+	}
+
+
+
+
+	
+
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
