@@ -15,17 +15,10 @@
 2.0 Google Fonts
 3.0 Set Font-families
 4.0 General Styles
-5.0 Home Page
-6.0 About Page
-7.0 Blog Page
-8.0 Product Details Page
-9.0 Cart Page
-10.0 Checkout Page
-11.0 Contact Page
-12.0 Single Blog Page
-13.0 Shop Page
-14.0 Footer 
-15.0 Media Queries
+5.0 Page Styles
+6.0 Header Styles
+7.0 Footer Styles
+8.0 Media Queries
 
 -------------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -117,13 +110,6 @@ a, a:hover {
 .works-item:not(:first-child) {
   border-top: 1px solid #e1e4e7; }
 
-.blog-header {
-  position: relative; }
-  .blog-header .blog-title {
-    position: absolute;
-    bottom: 30px;
-    left: 40px; }
-
 .stats {
   border-top: 1px solid #e1e4e7; }
 
@@ -160,8 +146,9 @@ a, a:hover {
   height: 60px; }
 
 /*--------------------------------------------------------------
-5.0 Home Page
+5.0 Page Styles
 --------------------------------------------------------------*/
+/*General Page Styles*/
 /*Works Section*/
 section.works {
   margin-top: 35vh; }
@@ -212,6 +199,7 @@ section.contact .social-media a {
 section.contact-form .input-group-text i {
   color: #b7bec5; }
 
+/*Home Page Layout 1 Specific Styles*/
 .layout-1 {
   /*General*/
   /*Info Section*/ }
@@ -228,6 +216,7 @@ section.contact-form .input-group-text i {
     border-left: 1px solid #555;
     padding: 20px; }
 
+/*Home Page Layout 2 Specific Styles*/
 .layout-2 {
   /*General*/
   /*Works Section*/ }
@@ -288,6 +277,7 @@ section.contact-form .input-group-text i {
         -webkit-transform: translateY(0);
                 transform: translateY(0); }
 
+/*Home Page Layout 3 Specific Styles*/
 .layout-3 {
   /*Works Section*/
   /*Info Section*/
@@ -307,10 +297,10 @@ section.contact-form .input-group-text i {
     .layout-3 section.works .work-item {
       padding-bottom: 0;
       margin: 0 60px; }
-      .layout-3 section.works .work-item:not(:last-of-type) h2 {
+      .layout-3 section.works .work-item:not(:last-of-type) h2:not(.work-title-placeholder) {
         position: relative;
         margin-bottom: 0; }
-        .layout-3 section.works .work-item:not(:last-of-type) h2:after {
+        .layout-3 section.works .work-item:not(:last-of-type) h2:not(.work-title-placeholder):after {
           content: '';
           position: absolute;
           right: -70px;
@@ -322,24 +312,30 @@ section.contact-form .input-group-text i {
           background-color: #ff4316;
           pointer-events: none;
           z-index: -1; }
+      .layout-3 section.works .work-item.active .work-title-placeholder {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -30%);
+                transform: translate(-50%, -30%); }
       .layout-3 section.works .work-item img {
-        bottom: 20%; }
+        bottom: -20%; }
     .layout-3 section.works .work-title-placeholder {
+      font-size: 4rem;
       color: black;
       -webkit-text-fill-color: white;
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: black;
       opacity: 0;
-      -webkit-transform: translateY(10px);
-              transform: translateY(10px);
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
       -webkit-transition: all 300ms ease-out;
       transition: all 300ms ease-out;
       position: absolute;
-      top: 0; }
-      .layout-3 section.works .work-title-placeholder.active {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-                transform: translateY(0); }
+      pointer-events: none;
+      top: 80%;
+      left: 50%;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content; }
   .layout-3 section.info .info-item .left-line {
     border-left: 1px solid #b7bec5;
     margin-left: 20px;
@@ -351,28 +347,7 @@ section.contact-form .input-group-text i {
     border-left: 1px solid #b7bec5; }
 
 /*--------------------------------------------------------------
-6.0 About Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-7.0 Blog Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-8.0 Product Details Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-9.0 Cart Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-10.0 Checkout Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-11.0 Contact Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-12.0 Single Blog Page
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-13.0 Header
+6.0 Header
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
@@ -393,7 +368,7 @@ section.contact-form .input-group-text i {
       width: calc(100% - 10px); }
 
 /*--------------------------------------------------------------
-14.0 Footer
+7.0 Footer
 --------------------------------------------------------------*/
 footer.site-footer {
   border-top: 1px solid #eff1f3; }
@@ -403,14 +378,46 @@ footer.site-footer {
       color: #ff4316; }
 
 /*--------------------------------------------------------------
-15.0 Media Queries
+8.0 Media Queries
 --------------------------------------------------------------*/
+/*Only Mobile*/
 @media only screen and (max-width: 812px) {
+  .display-1 {
+    font-size: 4rem; }
+
+  .display-3 {
+    font-size: 3rem; }
+
+  .h1 {
+    font-size: 2rem; }
+
+  .side-text {
+    left: 0; }
+
+  section.works {
+    margin-top: 5vh; }
+
+  .layout-3 {
+    /*Works Section*/ }
+    .layout-3 section.works .work-item {
+      margin: 0 30px; }
+      .layout-3 section.works .work-item:not(:last-of-type) h2:not(.work-title-placeholder):after {
+        right: -30px;
+        top: 30%; }
+    .layout-3 section.works .work-title-placeholder {
+      width: auto; }
+    .layout-3 section.blog .blog-item .left-line {
+      border-left: none; } }
+/* Mobile (portrait) */
+@media only screen and (max-width: 812px) and (orientation: portrait) {
   section.works {
     margin-top: 5vh; }
     section.works .work-item .display-1 {
-      font-size: 4rem; } }
-@media only screen and (min-width: 813px) {
+      font-size: 3rem; }
+    section.works .work-item img {
+      width: 80vw; } }
+/*ipad and above*/
+@media only screen and (min-width: 812px) {
   .text-vertical {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -418,7 +425,14 @@ footer.site-footer {
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
-    margin: 0; } }
+    margin: 0; }
+
+  .blog-header {
+    position: relative; }
+    .blog-header .blog-title {
+      position: absolute;
+      bottom: 30px;
+      left: 40px; } }
 /* :) Let's meke internet BEAUTIFUL*/
 /*
  _       __     __       ______                    __

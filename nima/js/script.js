@@ -45,6 +45,7 @@ $(document).ready(function(){
 			movable.image = $(this).find('img');
 			movable.imgWidth = $(this).find('img').width();
 			movable.image.addClass('active');
+			$(this).addClass('active');
 
 			if (placeholder.length > 0) {
 				placeholder.html($(this).attr('data-title'));
@@ -53,6 +54,7 @@ $(document).ready(function(){
 		});
 		$(this).on('mouseleave', function(){
 			movable.image.removeClass('active');
+			$(this).removeClass('active');
 			if (placeholder.length > 0) {
 				placeholder.removeClass('active');
 			}
