@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*!
+ * WP Font Resizer | WordPress Accessibility Plugin
+ * Author: Web_Trendy
+ * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Open your hands if you want to be held." -Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Page Styles
+7.0 Media Queries
+
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Ubuntu:400,700&display=swap");
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ubuntu', sans-serif; }
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth; }
+
+main, .site-footer, .site-header {
+  background-color: #f2f2f2; }
+
+main {
+  overflow-x: hidden; }
+
+.site-header .btn {
+  font-size: 0.9em;
+  font-weight: 300; }
+
+.primary-color {
+  color: #F1511B; }
+
+.img-full {
+  width: 100%; }
+
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
+.normal-link {
+  text-decoration: none; }
+  .normal-link:hover, .normal-link:focus {
+    text-decoration: none; }
+
+.rounded-15 {
+  border-radius: 15px; }
+
+[data-name="mojs-shape"] {
+  pointer-events: none; }
+
+/*--------------------------------------------------------------
+6.0 Page Styles
+--------------------------------------------------------------*/
+.virus {
+  width: 150px;
+  margin-bottom: 30px; }
+
+.cta {
+  background-image: url(../img/cta-1366x600.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  background-color: #F1511B;
+  color: white; }
+
+/*Footer*/
+.site-footer .btn {
+  font-size: 85%;
+  font-weight: 300;
+  border-radius: 100px;
+  padding: 10px 20px; }
+.site-footer .social-media a {
+  text-decoration: none; }
+.site-footer a:not(.btn) {
+  color: #F1511B; }
+  .site-footer a:not(.btn):hover, .site-footer a:not(.btn):focus {
+    color: #ffc124; }
+.site-footer .cp {
+  border-top: 1px solid #d9d9d9; }
+
+:root {
+  --wpfr-font-size: initial;
+  --wpfr-button-width: 35px;
+  --wpfr-button-margin: 10px; }
+
+html, body {
+  font-size: var(--wpfr-font-size) !important; }
+
+.wpfr-button {
+  z-index: 99999999;
+  margin: var(--wpfr-button-margin); }
+
+.wpfr-button-wrapper-2 {
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+  .wpfr-button-wrapper-2 .wpfr-up, .wpfr-button-wrapper-2 .wpfr-down {
+    width: var(--wpfr-button-width);
+    height: var(--wpfr-button-width);
+    border-radius: 50%;
+    background-color: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 5px;
+    cursor: pointer; }
+    .wpfr-button-wrapper-2 .wpfr-up svg, .wpfr-button-wrapper-2 .wpfr-down svg {
+      width: 50%; }
+
+/*--------------------------------------------------------------
+7.0 Media Queries
+--------------------------------------------------------------*/
+@media only screen and (max-width: 991px) {
+  .display-4 {
+    font-size: 2.5rem; }
+
+  .h1, h1 {
+    font-size: 2rem; }
+
+  footer.site-footer .app-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px; }
+
+  .cursor {
+    display: none; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=styles.css.map */
