@@ -1,0 +1,1022 @@
+<!doctype html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>3D Image Hover Effect | JavaScript Hover Animation Plugin</title>
+		<meta name="description" content="Large image menu plugin, hover based image menu plugin.">
+		<meta name="viewport" content="width=device-width">
+		
+		<link rel="stylesheet" href="css/3dimagehover.css">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<style>
+			.tag {
+				font-size: 12px;
+				background-color: beige;
+				display: inline-block;
+				padding: 3px 7px;
+				border-radius: 4px;
+				margin-top: 10px;
+			}
+		</style>
+		
+	</head>
+	<body>
+
+		<section class="header py-5 mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2 text-center">
+						<h1>3D Image Hover Effect</h1>
+						<small>JavaScript Hover Animation Plugin</small>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="demo">
+			<div class="container">
+				<div class="row mb-2">
+					<div class="col-sm-12">
+						<div class="lead">Only Image:</div>
+					</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Default</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper intense">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Intensity: 40</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper reverse">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Reverse: true</div>
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper bottomleft">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Pivot: BottomLeft</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper bottomright">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Pivot: BottomRight</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper topleft">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Pivot: TopLeft</div>
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper topright">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Pivot: TopRight</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper radius">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Radius: 45</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper hue">
+							<div class="wt-image">
+								<img src="img/landscape2.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Hue: true</div>
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper saturate">
+							<div class="wt-image">
+								<img src="img/landscape2.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Saturate: true</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper contrast">
+							<div class="wt-image">
+								<img src="img/landscape2.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Contrast: true</div>
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper zoom">
+							<div class="wt-image">
+								<img src="img/landscape1.jpg" alt="3D Image Hover Effect" />
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+
+						<div class="tag">Zoom: true</div>
+					</div>
+				</div>
+
+				<div class="row mb-2">
+					<div class="col-sm-12">
+						<div class="lead">Static Captions:</div>
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-1">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Violet</div>
+									<div class="wt-desc">Color of everything</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-2">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Violet</div>
+									<div class="wt-desc">Color of everything</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-3">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Monk</div>
+									<div class="wt-desc">Treasure of the sea</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-4">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-5">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-6">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-7">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-8">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-9">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-10">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-11">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-12">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-13">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-14">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">88</div>
+									<div class="wt-desc">Black Beauty</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-15">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Netherland</div>
+									<div class="wt-desc">country of flowers</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-16">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Antarctica</div>
+									<div class="wt-desc">Land of snow</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-17">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Braka</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-18">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Antarctica</div>
+									<div class="wt-desc">Land of snow</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-19">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Antarctica</div>
+									<div class="wt-desc">
+										<span>Land of snow</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-20">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">#do</div>
+									<div class="wt-desc">Land of snow</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-21">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Sadaf</div>
+									<div class="wt-desc">Treasure of the sea</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-22">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Monk</div>
+									<div class="wt-desc">Treasure of the sea</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-23">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-24">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-2">
+					<div class="col-sm-12">
+						<div class="lead">Animated Captions:</div>
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-1">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Violet</span>
+									</div>
+									<div class="wt-desc">
+										<span>Color of everything</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-2">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Violet</span>
+									</div>
+									<div class="wt-desc">Color of everything</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-3">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Monk</span>
+									</div>
+									<div class="wt-desc">
+										<span>Treasure of the sea</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-4">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">
+										<span>Artist of history</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-5">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">
+										<span>Artist of history</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-6">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-7">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-8">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-9">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-10">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-11">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">
+										<span>Artist of history</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-12">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Chaplin</span>
+									</div>
+									<div class="wt-desc">
+										<span>Artist of history</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-13">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">
+										<span>Artist of history</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-14">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">88</div>
+									<div class="wt-desc">Black Beauty</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-15">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Netherland</span>
+									</div>
+									<div class="wt-desc">
+										<span>country of flowers</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-16">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Antarctica</div>
+									<div class="wt-desc">
+										<span>Land of snow</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-17">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Braka</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-18">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Antarctica</span>
+									</div>
+									<div class="wt-desc">
+										<span>Land of snow</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-19">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Antarctica</div>
+									<div class="wt-desc">
+										<span>Land of snow</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-20">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">#do</div>
+									<div class="wt-desc">Land of snow</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-21">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Sadaf</div>
+									<div class="wt-desc">Treasure of the sea</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-22">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">
+										<span>Monk</span>
+									</div>
+									<div class="wt-desc">
+										<span>Treasure of the sea</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-23">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+					<div class="col-sm-4">
+						<!-- 3D Image Wrapper -->
+						<div class="wt-image-wrapper thumb text-style-anim-24">
+							<div class="wt-image">
+								<img src="img/landscape3.jpg" alt="3D Image Hover Effect" />
+								<div class="wt-image-info">
+									<div class="wt-title">Chaplin</div>
+									<div class="wt-desc">Artist of history</div>
+								</div>
+							</div>
+						</div>
+						<!-- End 3D Image Wrapper -->
+					</div>
+				</div>
+
+			</div>
+		</section>
+		
+
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/3dimagehover.js"></script>
+	<script type="text/javascript">
+		(function(){
+			const img1 = new ImageHover3d({
+				el: $('.thumb'),
+				intensity: 15
+			});
+
+			const img2 = new ImageHover3d({
+				el: $('.intense'),
+				intensity: 40
+			});
+
+			const img3 = new ImageHover3d({
+				el: $('.reverse'),
+				reverse: true
+			});
+
+			const img4 = new ImageHover3d({
+				el: $('.bottomleft'),
+				pivot: 'BottomLeft'
+			});
+
+			const img5 = new ImageHover3d({
+				el: $('.bottomright'),
+				pivot: 'BottomRight'
+			});
+
+			const img6 = new ImageHover3d({
+				el: $('.topleft'),
+				pivot: 'TopLeft'
+			});
+
+			const img7 = new ImageHover3d({
+				el: $('.topright'),
+				pivot: 'TopRight'
+			});
+
+			const img8 = new ImageHover3d({
+				el: $('.radius'),
+				radius: 45
+			});
+
+			const img9 = new ImageHover3d({
+				el: $('.hue'),
+				hue: true
+			});
+
+			const img10 = new ImageHover3d({
+				el: $('.saturate'),
+				saturate: true
+			});
+
+			const img11 = new ImageHover3d({
+				el: $('.contrast'),
+				contrast: true
+			});
+
+			const img12 = new ImageHover3d({
+				el: $('.zoom'),
+				zoom: true
+			});
+		})();
+	</script>
+</body>
+</html>
