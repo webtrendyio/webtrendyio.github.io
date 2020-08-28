@@ -9,8 +9,6 @@
  */ 
 
 
-(function($){
-
 	const rotateCoords = (e, el, pow) => {
 		let posX = e.clientX - el.offset().left + $(window).scrollLeft();
         let posY = e.clientY - el.offset().top + $(window).scrollTop();
@@ -158,7 +156,6 @@
 
 	
 
-})(jQuery);
 
 
 
