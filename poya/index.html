@@ -956,7 +956,7 @@
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/3dimagehover.js"></script>
 	<script type="text/javascript">
-		(function(){
+		$(document).ready(function(){
 			const img1 = new ImageHover3d({
 				el: $('.thumb'),
 				intensity: 15
@@ -1016,7 +1016,7 @@
 				el: $('.zoom'),
 				zoom: true
 			});
-		})();
+		});
 	</script>
 </body>
 </html>
