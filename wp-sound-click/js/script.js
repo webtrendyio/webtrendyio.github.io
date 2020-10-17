@@ -68,7 +68,7 @@ $(document).ready(function(){
             {name: "water_droplet_2"},
             {name: "water_droplet_3"}
         ],
-        path: "sounds/",
+        path: "js/sounds/",
         preload: true,
         multiplay: true
     });
