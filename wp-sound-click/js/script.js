@@ -76,7 +76,7 @@ $(document).ready(function(){
 
 
 	$("#beer_can").on('click', ()=>{
-		ion.sound.play('beer_can_opening');
+		ion.sound.play('beer');
 	});
 	$("#big_button").on('click', ()=>{
 		ion.sound.play('button_push');
@@ -118,7 +118,7 @@ $(document).ready(function(){
 		ion.sound.play('metal_plate_2');
 	});
 	$("#water_droplet_1").on('click', ()=>{
-		ion.sound.play('water_droplet_1');
+		ion.sound.play('water_droplet');
 	});
 	$("#button_click").on('click', ()=>{
 		ion.sound.play('button_click');
