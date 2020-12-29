@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/*!
+ * Sahar Animated Grid | Elementor Image Grid
+ * Author: Web_Trendy
+ * Copyright 2021 © Web_Trendy (https://codecanyon.net/user/web_trendy/portfolio)
+ * Licensed under Envato (https://codecanyon.net/licenses/standard)
+ *
+ * "Life is balance of holding on and letting go." --Rumi
+ *
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Variables
+2.0 Google Fonts
+3.0 Set Font-families
+4.0 Custom Cursor Styles
+5.0 General Styles
+6.0 Home Page
+7.0 About Page
+8.0 Services Page
+9.0 Works Page
+10.0 Contact Page
+11.0 Blog Page
+12.0 Single Blog Page
+13.0 Single Works Page
+14.0 Footer 
+15.0 Animations
+16.0 Media Queries
+
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+:root {
+  --background-color-dark: #efefef;
+  --background-color-dark: #222222;
+  --text-color-light: #222;
+  --text-color-dark: #eee;
+  --light-subtext-color: #777;
+  --dark-subtext-color: #999;
+  --background-gradient: linear-gradient(90deg, #de534a, #ec7209); }
+
+/*--------------------------------------------------------------
+2.0 Google Fonts
+--------------------------------------------------------------*/
+/*To change the fonts, get the font link from (https://www.google.com/fonts) and replace with this line, then update the font-family section below.*/
+/*--------------------------------------------------------------
+3.0 Set Font-families
+--------------------------------------------------------------*/
+body {
+  font-family: 'Roboto', sans-serif; }
+
+/*--------------------------------------------------------------
+5.0 General Styles
+--------------------------------------------------------------*/
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
+.overflow-y-hidden {
+  overflow-y: hidden; }
+
+.primary-color {
+  color: #ff3313; }
+
+.line-height-1 {
+  line-height: 1; }
+
+body {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark); }
+
+.vertical-grid .img-full {
+  width: 100%; }
+
+.diagonal-grid .img-full {
+  width: 22vw; }
+
+.row-offset {
+  margin-left: -10vw; }
+
+.row-offset-reverse {
+  margin-left: -22vw; }
+
+.row-offset-2 {
+  margin-left: -5vw; }
+
+.col-offset {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
+
+.col-offset-reverse {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
+
+.ty-1 {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px); }
+
+.ty-2 {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px); }
+
+.ty-n1 {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px); }
+
+.ty-2 {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px); }
+
+.rotator {
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg); }
+
+/*--------------------------------------------------------------
+6.0 Home Page
+--------------------------------------------------------------*/
+.text-black {
+  color: #000000; }
+
+.text-sub {
+  color: var(--dark-subtext-color); }
+
+.tl-n10 {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px); }
+
+.border-radius-theme {
+  border-radius: 15px; }
+
+/*Top Section*/
+section.top .mask-wrapper {
+  max-height: 100vh; }
+section.top .mask {
+  max-height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -webkit-filter: saturate(1.5);
+          filter: saturate(1.5); }
+section.top .info {
+  border-left: 3px solid #ff3313; }
+
+/*About Section*/
+section.about .logo {
+  width: 50px; }
+
+/*Features Section*/
+section.features .feature-wrapper .content {
+  position: relative; }
+  section.features .feature-wrapper .content:before {
+    content: '';
+    background: var(--background-gradient);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 15px;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out; }
+section.features .feature-wrapper .header {
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out; }
+section.features .feature-wrapper .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  opacity: 0;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out; }
+section.features .feature-wrapper:hover .content:before, section.features .feature-wrapper:focus .content:before {
+  height: calc(100% + 50px); }
+section.features .feature-wrapper:hover .header, section.features .feature-wrapper:focus .header {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px); }
+section.features .feature-wrapper:hover .description, section.features .feature-wrapper:focus .description {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+  opacity: 1; }
+
+/*Demo Section*/
+/*Options Section*/
+/*Call to Action 1 Section*/
+section.cta-1 .image-wrapper {
+  position: relative; }
+  section.cta-1 .image-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.5)));
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5)); }
+
+/*Call to Action 2 Section*/
+/*Other Products Section*/
+section.products .product-wrapper {
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out; }
+  section.products .product-wrapper:hover, section.products .product-wrapper:focus {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+
+/*--------------------------------------------------------------
+14.0 Footer
+--------------------------------------------------------------*/
+footer.site-footer {
+  background: var(--background-gradient);
+  font-size: 90%; }
+  footer.site-footer .logo {
+    width: 200px; }
+  footer.site-footer svg.banner {
+    margin-top: -10px; }
+    footer.site-footer svg.banner path {
+      fill: var(--background-color-dark); }
+  footer.site-footer .mini {
+    font-size: 90%;
+    font-weight: 500; }
+  footer.site-footer a {
+    text-decoration: none;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    font-weight: 300;
+    color: black; }
+    footer.site-footer a:hover, footer.site-footer a:focus {
+      color: white; }
+  footer.site-footer .cp {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); }
+    footer.site-footer .cp a {
+      color: #f2eee0; }
+      footer.site-footer .cp a:hover, footer.site-footer .cp a:focus {
+        color: #f2eee0; }
+
+/*--------------------------------------------------------------
+3.0 Animations
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 General Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+4.0 Media Queries
+--------------------------------------------------------------*/
+@media only screen and (max-width: 576px) {
+  section.top h1.title {
+    font-size: 2.5rem; }
+  section.top .min-vh-100 {
+    min-height: auto !important; }
+
+  .tl-n10 {
+    -webkit-transform: none;
+            transform: none; } }
+/* :) Let's meke internet BEAUTIFUL*/
+/*
+ _       __     __       ______                    __
+| |     / /__  / /_     /_  __/_______  ____  ____/ /_  __
+| | /| / / _ \/ __ \     / / / ___/ _ \/ __ \/ __  / / / /
+| |/ |/ /  __/ /_/ /    / / / /  /  __/ / / / /_/ / /_/ /
+|__/|__/\___/_.___/    /_/ /_/   \___/_/ /_/\__,_/\__, /
+                                                 /____/
+*/
+
+/*# sourceMappingURL=styles.css.map */
