@@ -476,6 +476,18 @@ body {
 /*--------------------------------------------------------------
 6.0 Home Page
 --------------------------------------------------------------*/
+
+.menu-image img.active-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+.menu-image .position-relative:hover img.active-img {
+  opacity: 1;
+}
 .text-black {
   color: #000000; }
 
