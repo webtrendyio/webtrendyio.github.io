@@ -1,0 +1,30 @@
+.preload-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: beige;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .preload-wrapper.style-1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .preload-wrapper.style-1 .preload-precent {
+      font-size: 8rem; }
+    .preload-wrapper.style-1 .preload-progress {
+      background-color: orange;
+      height: 20px; }
+
+/*# sourceMappingURL=preload.css.map */
