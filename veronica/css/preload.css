@@ -7,27 +7,32 @@
   height: 100vh;
   width: 100vw;
   background-color: white;
-  z-index: 9999999; }
-  .preload-wrapper .preload-precent, .preload-wrapper .preload-progress-wrapper {
+  z-index: 9999999;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out; }
+  .preload-wrapper .preload-percent-wrapper, .preload-wrapper .preload-progress-wrapper {
     position: absolute; }
   .preload-wrapper.style-1 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .preload-wrapper.style-1 .preload-precent {
-      font-size: 5rem;
-      /*font-weight: 700;*/
-      line-height: 1;
-      font-family: 'Cinzel', serif;
-      color: #212529;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: #212529;
+    .preload-wrapper.style-1 .preload-percent-wrapper {
       bottom: 20%;
-      left: 5%; }
-      .preload-wrapper.style-1 .preload-precent:after {
-        content: '%'; }
+      left: 5%;
+      overflow: hidden; }
+      .preload-wrapper.style-1 .preload-percent-wrapper .preload-percent {
+        font-size: 5rem;
+        line-height: 1;
+        font-family: 'Cinzel', serif;
+        color: #212529;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #212529;
+        -webkit-transition: all 300ms ease-out;
+        transition: all 300ms ease-out; }
+        .preload-wrapper.style-1 .preload-percent-wrapper .preload-percent:after {
+          content: '%'; }
     .preload-wrapper.style-1 .preload-progress-wrapper {
       background-color: orange;
       height: 2px;

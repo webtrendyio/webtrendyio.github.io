@@ -21,26 +21,29 @@
 	        // Create Markup
 	        let percentNode = document.createElement('div'),
 	        	progressNode = document.createElement('div'),
+	        	percentWrapper = document.createElement('div'),
 	        	progressWrapper = document.createElement('div'),
 	        	preloadWrapper = document.createElement('div');
 
-	        percentNode.classList.add('preload-precent');
+	        percentNode.classList.add('preload-percent');
 	        percentNode.innerHTML = '00';
+	        percentWrapper.classList.add('preload-percent-wrapper');
 	        progressWrapper.classList.add('preload-progress-wrapper');
 	        progressNode.classList.add('preload-progress');
 	        preloadWrapper.classList.add('preload-wrapper');
 	        preloadWrapper.classList.add('style-1');
 
+	        percentWrapper.appendChild(percentNode);
 	        progressWrapper.appendChild(progressNode);
 
 	        preloadWrapper.appendChild(progressWrapper);
-	        preloadWrapper.appendChild(percentNode);
+	        preloadWrapper.appendChild(percentWrapper);
 
 	        body.prepend(preloadWrapper);
 
 	        let pageStatus = null;
 		    let progress = null;
-		    let animationInterval = 33;
+		    let animationInterval = 40;
 		    
 		   
 		    
@@ -53,7 +56,7 @@
 		            setTimeout(function(){
 		                body.classList.remove('loading');
 		                body.classList.add('loaded');
-		            }, 700);
+		            }, 0);
 		        }
 		        else{            
 		            if(progress == null){
@@ -93,7 +96,7 @@
 		            }
 		            else if(progress >= 100){
 		                percentNode.innerHTML = 99;
-		                progressNode.style.width = progress + "%";
+		                progressNode.style.width = "99%";
 		            }
 		            setTimeout(updateProgress, animationInterval);
 		        }

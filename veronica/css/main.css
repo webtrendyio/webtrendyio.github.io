@@ -41,6 +41,13 @@ h1, h2, h3, h4, h5, .font-serif {
 /*--------------------------------------------------------------
 4.0 General Styles
 --------------------------------------------------------------*/
+body.loaded .preload-wrapper {
+  height: 0;
+  pointer-events: none; }
+  body.loaded .preload-wrapper .preload-percent-wrapper .preload-percent {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+
 .header-logo {
   width: 50px; }
 
@@ -376,7 +383,12 @@ section.review q:before, section.review q:after {
   footer.footer .w-75 {
     width: 100% !important; } }
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .theme-heading-1 {
+    font-size: 6rem; } }
+/* Tablet and PC ----------- */
+@media only screen and (min-width: 768px) {
   .theme-mr-n-1 {
     margin-right: -50px; }
 
@@ -384,13 +396,8 @@ section.review q:before, section.review q:after {
     margin-right: -100px; }
 
   .theme-heading-1 {
-    font-size: 4.2rem; } }
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  .theme-heading-1 {
-    font-size: 6rem; } }
-/* Tablet and PC ----------- */
-@media only screen and (min-width: 768px) {
+    font-size: 4.2rem; }
+
   section.info .info-columns {
     -webkit-transform: translateY(-60%);
             transform: translateY(-60%); } }
