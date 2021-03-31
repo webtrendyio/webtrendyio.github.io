@@ -21,15 +21,19 @@
 	        // Create Markup
 	        let percentNode = document.createElement('div'),
 	        	progressNode = document.createElement('div'),
+	        	progressWrapper = document.createElement('div'),
 	        	preloadWrapper = document.createElement('div');
 
 	        percentNode.classList.add('preload-precent');
 	        percentNode.innerHTML = '00';
+	        progressWrapper.classList.add('preload-progress-wrapper');
 	        progressNode.classList.add('preload-progress');
 	        preloadWrapper.classList.add('preload-wrapper');
 	        preloadWrapper.classList.add('style-1');
 
-	        preloadWrapper.appendChild(progressNode);
+	        progressWrapper.appendChild(progressNode);
+
+	        preloadWrapper.appendChild(progressWrapper);
 	        preloadWrapper.appendChild(percentNode);
 
 	        body.prepend(preloadWrapper);
