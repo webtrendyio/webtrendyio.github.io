@@ -53,10 +53,9 @@
 		        if(pageStatus == "complete"){
 		            percentNode.innerHTML = 100;
 		            progressNode.style.width = "100%";
-		            setTimeout(function(){
-		                body.classList.remove('loading');
-		                body.classList.add('loaded');
-		            }, 0);
+		            
+		            body.classList.remove('loading');
+	                body.classList.add('loaded');
 		        }
 		        else{            
 		            if(progress == null){
@@ -107,7 +106,6 @@
 		    window.document.addEventListener("readystatechange", function(){
 		        if(document.readyState == "complete"){
 		            pageStatus = "complete";
-		            console.log("ready")
 		        }
 		    }, false);
 		}
