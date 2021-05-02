@@ -194,6 +194,8 @@ footer.site-footer {
   font-size: 90%; }
   footer.site-footer .logo {
     width: 200px; }
+  footer.site-footer .footer-banner path {
+    fill: var(--background-color); }
   footer.site-footer .mini {
     font-size: 90%;
     font-weight: 500; }

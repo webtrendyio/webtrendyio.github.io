@@ -244,6 +244,11 @@
 		.logo {
 			width: 200px;
 		}
+		.footer-banner {  
+			path {
+				fill: var(--background-color);
+			}
+		}
 		.mini {
 			font-size: 90%;
 			font-weight: 500;
